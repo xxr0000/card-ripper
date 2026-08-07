@@ -1,0 +1,148 @@
+import { useEffect, useState } from 'react';
+import './App.css';
+import { Collection } from './components/Collection';
+import { RipView } from './components/RipView';
+import { Shop } from './components/Shop';
+import { ripBox } from './engine/rip';
+import {
+  loadBalance,
+  loadCollection,
+  RECHARGE_AMOUNT,
+  saveBalance,
+  saveCollection,
+} from './store';
+import type { PackData, PulledCard, SeriesConfig } from './types';
+import { CardFace } from './components/CardFace';
+import { PLAYERS } from './data/players';
+import { SERIES } from './data/series';
+
+type View = 'shop' | 'rip' | 'collection';
+
+/** 开发用：?preview 一次性渲染各系列/各稀有度卡面 */
+function PreviewGallery() {
+  const samples: PulledCard[] = [];
+  for (const s of SERIES) {
+    const pool = PLAYERS.filter(
+      (p) => s.leagues === 'all' || (s.leagues as string[]).includes(p.league),
+    );
+    const star = pool.find((p) => p.tier === 1) ?? pool[0];
+    const rookie = pool.find((p) => p.rookie) ?? pool[1];
+    s.parallels.forEach((parallel, i) => {
+      const player = i % 2 === 0 ? star : rookie;
+      samples.push({
+        uid: `pv-${s.id}-${parallel.id}`,
+        playerId: player.id,
+        seriesId: s.id,
+        kind: 'base',
+        parallel,
+        serialNumber: parallel.serialTo ? Math.ceil(parallel.serialTo / 2) : null,
+        rookie: !!player.rookie && player === rookie,
+        pulledAt: Date.now(),
+      });
+    });
+    samples.push({
+      uid: `pv-${s.id}-auto`,
+      playerId: star.id,
+      seriesId: s.id,
+      kind: 'auto',
+      parallel: s.autoParallels[0],
+      serialNumber: s.autoParallels[0].serialTo ? 5 : null,
+      rookie: false,
+      pulledAt: Date.now(),
+    });
+    samples.push({
+      uid: `pv-${s.id}-relic`,
+      playerId: star.id,
+      seriesId: s.id,
+      kind: 'relic',
+      parallel: s.relicParallels[1],
+      serialNumber: s.relicParallels[1].serialTo ? 5 : null,
+      relicKind: 'patch',
+      rookie: false,
+      pulledAt: Date.now(),
+    });
+  }
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, padding: 20 }}>
+      {samples.map((c) => (
+        <CardFace key={c.uid} card={c} size="sm" />
+      ))}
+    </div>
+  );
+}
+
+export default function App() {
+  const [view, setView] = useState<View>('shop');
+  const [balance, setBalance] = useState(loadBalance);
+  const [collection, setCollection] = useState<PulledCard[]>(loadCollection);
+  const [currentBox, setCurrentBox] = useState<{
+    series: SeriesConfig;
+    packs: PackData[];
+  } | null>(null);
+
+  useEffect(() => saveBalance(balance), [balance]);
+  useEffect(() => saveCollection(collection), [collection]);
+
+  if (new URLSearchParams(window.location.search).has('preview')) {
+    return <PreviewGallery />;
+  }
+
+  function buyBox(series: SeriesConfig) {
+    if (balance < series.price) return;
+    setBalance((b) => b - series.price);
+    setCurrentBox({ series, packs: ripBox(series) });
+    setView('rip');
+  }
+
+  return (
+    <div className="app">
+      <header className="app-header">
+        <div className="app-title">
+          <span className="app-logo">⚽</span>
+          <span>球星卡模拟拆卡器</span>
+        </div>
+        <nav className="app-nav">
+          <button
+            className={view === 'shop' ? 'is-active' : ''}
+            onClick={() => setView('shop')}
+          >
+            卡店
+          </button>
+          <button
+            className={view === 'collection' ? 'is-active' : ''}
+            onClick={() => setView('collection')}
+          >
+            收藏册
+          </button>
+        </nav>
+        <div className="wallet">
+          <span className="wallet-balance">¥{balance.toLocaleString()}</span>
+          <button
+            className="btn btn-small"
+            onClick={() => setBalance((b) => b + RECHARGE_AMOUNT)}
+          >
+            +充值
+          </button>
+        </div>
+      </header>
+
+      <main className="app-main">
+        {view === 'shop' && <Shop balance={balance} onBuy={buyBox} />}
+        {view === 'rip' && currentBox && (
+          <RipView
+            series={currentBox.series}
+            packs={currentBox.packs}
+            onCardRevealed={(card) => setCollection((c) => [...c, card])}
+            onExit={() => {
+              setCurrentBox(null);
+              setView('shop');
+            }}
+          />
+        )}
+        {view === 'collection' && <Collection cards={collection} />}
+      </main>
+
+      <footer className="app-footer">模拟娱乐用途 · 卡面为程序生成的致敬设计</footer>
+    </div>
+  );
+}
