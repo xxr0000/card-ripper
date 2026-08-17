@@ -1,4 +1,5 @@
 import type { Player } from '../types';
+import { PRIZM_EPL_PLAYERS } from './checklists';
 
 const p = (
   id: string,
@@ -137,7 +138,7 @@ export const PLAYERS: Player[] = [
 ];
 
 export const PLAYER_MAP: Record<string, Player> = Object.fromEntries(
-  PLAYERS.map((pl) => [pl.id, pl]),
+  [...PLAYERS, ...PRIZM_EPL_PLAYERS].map((pl) => [pl.id, pl]),
 );
 
 /** 球队主色（卡面渐变用） */
@@ -176,4 +177,24 @@ export const TEAM_COLORS: Record<string, [string, string]> = {
   利雅得胜利: ['#FFDD00', '#1C3A70'],
   利雅得新月: ['#0F52BA', '#ffffff'],
   吉达联合: ['#FFD400', '#000000'],
+  'Manchester City': ['#6CABDD', '#1C2C5B'],
+  'Liverpool FC': ['#C8102E', '#00B2A9'],
+  Arsenal: ['#EF0107', '#023474'],
+  'Aston Villa': ['#670E36', '#95BFE5'],
+  'Tottenham Hotspur': ['#132257', '#ffffff'],
+  'Chelsea FC': ['#034694', '#0a1e3f'],
+  'Newcastle United': ['#241F20', '#41B6E6'],
+  'Manchester United': ['#DA291C', '#FBE122'],
+  'West Ham United': ['#7A263A', '#1BB1E7'],
+  'Crystal Palace': ['#1B458F', '#C4122E'],
+  'Brighton & Hove Albion': ['#0057B8', '#FFCD00'],
+  'AFC Bournemouth': ['#DA291C', '#000000'],
+  Fulham: ['#000000', '#ffffff'],
+  'Wolverhampton Wanderers': ['#FDB913', '#231F20'],
+  Everton: ['#003399', '#ffffff'],
+  Brentford: ['#e30613', '#140e0f'],
+  'Nottingham Forest FC': ['#DD0000', '#ffffff'],
+  'Leicester City': ['#003090', '#FDBE11'],
+  'Ipswich Town FC': ['#0044A9', '#ffffff'],
+  Southampton: ['#D71920', '#ffffff'],
 };

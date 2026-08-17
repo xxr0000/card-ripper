@@ -85,7 +85,7 @@ export function CardFace({
         <div className="cf-namebar">
           <div className="cf-name">{player.name}</div>
           <div className="cf-meta">
-            {player.team} · {player.country}
+            {player.team}{player.country ? ` · ${player.country}` : ''}
           </div>
         </div>
 

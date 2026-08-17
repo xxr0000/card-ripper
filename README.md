@@ -18,20 +18,23 @@
 ## 本地开发
 
 ```bash
-npm install
+npm ci
 npm run dev     # 开发服务器
 npm run build   # 生产构建，输出到 dist/
+npm run check   # lint + 21 项测试 + 类型检查 + 生产构建
 ```
 
 调试辅助：
 
 - 访问 `/?preview` 可一次性预览所有系列、所有平行的卡面样式
-- `npx tsx scripts/simulate.ts` 批量模拟拆盒，验证保底与爆率分布
+- `npm run simulate -- --boxes 2000 --seed 20240818` 可重复模拟拆盒
+- `npm run import-checklist -- ...` 将 CSV/XLSX 规范化为系列独立卡目
 
 ## 文档
 
 - [项目简介与目录结构](docs/项目简介.md)
-- [真实化升级计划：卡图 · 卡池 · 概率](docs/真实卡图升级计划.md)（规划中，未实施）
+- [真实化升级计划：卡图 · 卡池 · 概率](docs/真实卡图升级计划.md)
+- [真实化升级执行计划与进度](docs/真实化升级执行计划.md)
 
 ## 技术
 

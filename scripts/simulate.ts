@@ -1,10 +1,33 @@
-/* 批量模拟拆盒，验证保底命中与爆率分布：npx tsx scripts/simulate.ts */
+/* 批量模拟拆盒，验证保底命中与爆率分布：npm run simulate -- --boxes 10000 */
 import { ripBox } from '../src/engine/rip';
 import { SERIES } from '../src/data/series';
 
-const BOXES = 2000;
+function numberArg(name: string, fallback: number): number {
+  const index = process.argv.indexOf(name);
+  if (index === -1) return fallback;
+  const value = Number(process.argv[index + 1]);
+  if (!Number.isInteger(value) || value <= 0) {
+    throw new Error(`${name} 必须是正整数`);
+  }
+  return value;
+}
 
-for (const series of SERIES) {
+function seededRandom(seed: number): () => number {
+  let state = seed >>> 0;
+  return () => {
+    state += 0x6d2b79f5;
+    let value = state;
+    value = Math.imul(value ^ (value >>> 15), value | 1);
+    value ^= value + Math.imul(value ^ (value >>> 7), value | 61);
+    return ((value ^ (value >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+const BOXES = numberArg('--boxes', 2000);
+const SEED = numberArg('--seed', 20240817);
+
+for (const [seriesIndex, series] of SERIES.entries()) {
+  const random = seededRandom(SEED + seriesIndex);
   const guaranteed = series.hitsPerBox.reduce((s, h) => s + h.count, 0);
   let minHits = Infinity;
   let totalCards = 0;
@@ -13,7 +36,7 @@ for (const series of SERIES) {
   let serialOk = true;
 
   for (let i = 0; i < BOXES; i++) {
-    const packs = ripBox(series);
+    const packs = ripBox(series, { random });
     const cards = packs.flatMap((p) => p.cards);
     totalCards += cards.length;
     const hits = cards.filter((c) => c.kind !== 'base');
@@ -44,4 +67,4 @@ for (const series of SERIES) {
     console.log(`  ${name.padEnd(24)} ${n}（1 张/${(totalCards / n).toFixed(0)} 卡）`);
   }
 }
-console.log('\n模拟完成');
+console.log(`\n模拟完成（每系列 ${BOXES} 盒，seed=${SEED}）`);

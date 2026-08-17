@@ -1,4 +1,5 @@
 import { PLAYERS } from '../data/players';
+import { PRIZM_EPL_AUTO_PLAYERS, PRIZM_EPL_BASE_PLAYERS } from '../data/checklists';
 import type {
   HitType,
   PackData,
@@ -8,9 +9,21 @@ import type {
   SeriesConfig,
 } from '../types';
 
-function weightedPick<T extends { weight: number }>(pool: T[]): T {
+export type RandomSource = () => number;
+
+export interface RipOptions {
+  /** 测试与模拟可注入带种子的随机源；生产环境默认使用 Math.random。 */
+  random?: RandomSource;
+  /** 测试可固定时间，避免生成结果随系统时钟变化。 */
+  now?: () => number;
+}
+
+function weightedPick<T extends { weight: number }>(
+  pool: T[],
+  random: RandomSource,
+): T {
   const total = pool.reduce((s, x) => s + x.weight, 0);
-  let r = Math.random() * total;
+  let r = random() * total;
   for (const item of pool) {
     r -= item.weight;
     if (r <= 0) return item;
@@ -18,7 +31,10 @@ function weightedPick<T extends { weight: number }>(pool: T[]): T {
   return pool[pool.length - 1];
 }
 
-function playersForSeries(series: SeriesConfig): Player[] {
+function playersForSeries(series: SeriesConfig, forHit = false): Player[] {
+  if (series.id === 'prizm-epl') {
+    return forHit ? PRIZM_EPL_AUTO_PLAYERS : PRIZM_EPL_BASE_PLAYERS;
+  }
   if (series.leagues === 'all') return PLAYERS;
   return PLAYERS.filter((p) => (series.leagues as string[]).includes(p.league));
 }
@@ -31,48 +47,55 @@ const HIT_TIER_WEIGHT: Record<Player['tier'], number> = {
   4: 4.5,
 };
 
-function pickPlayer(pool: Player[], forHit: boolean): Player {
-  if (!forHit) return pool[Math.floor(Math.random() * pool.length)];
+function pickPlayer(
+  pool: Player[],
+  forHit: boolean,
+  random: RandomSource,
+): Player {
+  if (!forHit) return pool[Math.floor(random() * pool.length)];
   return weightedPick(
     pool.map((p) => ({ p, weight: HIT_TIER_WEIGHT[p.tier] })),
+    random,
   ).p;
 }
 
-function rollSerial(parallel: Parallel): number | null {
+function rollSerial(parallel: Parallel, random: RandomSource): number | null {
   if (parallel.serialTo === null) return null;
-  return 1 + Math.floor(Math.random() * parallel.serialTo);
+  return 1 + Math.floor(random() * parallel.serialTo);
 }
 
 let uidCounter = 0;
-function nextUid(): string {
+function nextUid(random: RandomSource, now: () => number): string {
   uidCounter += 1;
-  return `${Date.now().toString(36)}-${uidCounter}-${Math.random().toString(36).slice(2, 8)}`;
+  return `${now().toString(36)}-${uidCounter}-${random().toString(36).slice(2, 8)}`;
 }
 
 function makeCard(
   series: SeriesConfig,
   kind: 'base' | HitType,
   pool: Player[],
+  random: RandomSource,
+  now: () => number,
 ): PulledCard {
-  const player = pickPlayer(pool, kind !== 'base');
+  const player = pickPlayer(pool, kind !== 'base', random);
   const parallelPool =
-    kind === 'auto'
+    kind === 'auto' || kind === 'auto-relic'
       ? series.autoParallels
       : kind === 'relic'
         ? series.relicParallels
         : series.parallels;
-  const parallel = weightedPick(parallelPool);
+  const parallel = weightedPick(parallelPool, random);
   const card: PulledCard = {
-    uid: nextUid(),
+    uid: nextUid(random, now),
     playerId: player.id,
     seriesId: series.id,
     kind,
     parallel,
-    serialNumber: rollSerial(parallel),
+    serialNumber: rollSerial(parallel, random),
     rookie: !!player.rookie,
-    pulledAt: Date.now(),
+    pulledAt: now(),
   };
-  if (kind === 'relic') {
+  if (kind === 'relic' || kind === 'auto-relic') {
     card.relicKind = parallel.id.includes('patch') || parallel.id.includes('logo')
       ? 'patch'
       : 'jersey';
@@ -80,33 +103,46 @@ function makeCard(
   return card;
 }
 
+function shuffle<T>(items: T[], random: RandomSource): T[] {
+  const result = [...items];
+  for (let i = result.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
 /** 生成一整盒卡：先铺满普通卡位，再把保底命中随机塞进不同的包 */
-export function ripBox(series: SeriesConfig): PackData[] {
-  const pool = playersForSeries(series);
+export function ripBox(series: SeriesConfig, options: RipOptions = {}): PackData[] {
+  const random = options.random ?? Math.random;
+  const now = options.now ?? Date.now;
+  const basePool = playersForSeries(series);
+  const hitPool = playersForSeries(series, true);
 
   const packs: PackData[] = Array.from({ length: series.packsPerBox }, (_, i) => ({
     index: i,
     cards: Array.from({ length: series.cardsPerPack }, () =>
-      makeCard(series, 'base', pool),
+      makeCard(series, 'base', basePool, random, now),
     ),
   }));
 
   const hits: PulledCard[] = [];
   for (const spec of series.hitsPerBox) {
     for (let i = 0; i < spec.count; i++) {
-      hits.push(makeCard(series, spec.type, pool));
+      hits.push(makeCard(series, spec.type, hitPool, random, now));
     }
   }
   // 小概率额外命中，模拟"爆盒"惊喜
-  if (Math.random() < 0.12) {
-    const spec = series.hitsPerBox[Math.floor(Math.random() * series.hitsPerBox.length)];
-    hits.push(makeCard(series, spec.type, pool));
+  if (random() < 0.12) {
+    const spec = series.hitsPerBox[Math.floor(random() * series.hitsPerBox.length)];
+    hits.push(makeCard(series, spec.type, hitPool, random, now));
   }
 
   // 把命中分配到随机的包，替换该包末尾的普通卡位
-  const packOrder = packs
-    .map((p) => p.index)
-    .sort(() => Math.random() - 0.5);
+  const packOrder = shuffle(
+    packs.map((p) => p.index),
+    random,
+  );
   const replacedCount: Record<number, number> = {};
   hits.forEach((hit, i) => {
     const packIdx = packOrder[i % packOrder.length];
