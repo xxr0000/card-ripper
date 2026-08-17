@@ -246,6 +246,12 @@
   font-weight: 600;
 }
 .rip-hint { font-size: 13px; color: #6b7690; }
+.rip-controls {
+  display: flex;
+  justify-content: center;
+  min-height: 38px;
+}
+.rip-controls .btn { min-width: 168px; }
 
 /* 3D 翻卡 */
 .flip-card {

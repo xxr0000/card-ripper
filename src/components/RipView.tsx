@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { effectLevel, rarityRank } from '../engine/rip';
 import type { PackData, PulledCard, SeriesConfig } from '../types';
 import { CardBack, CardFace } from './CardFace';
@@ -26,6 +26,8 @@ export function RipView({
   const [flipped, setFlipped] = useState(false);
   const [revealed, setRevealed] = useState<PulledCard[]>([]);
   const [burst, setBurst] = useState<{ level: number; key: number } | null>(null);
+  const [autoRipping, setAutoRipping] = useState(false);
+  const [pausedCardUid, setPausedCardUid] = useState<string | null>(null);
 
   const allDone = openedPacks.length === packs.length;
 
@@ -38,9 +40,11 @@ export function RipView({
     setActive(pack);
     setRevealIdx(0);
     setFlipped(false);
+    setAutoRipping(false);
+    setPausedCardUid(null);
   }
 
-  function handleCardClick() {
+  const handleCardClick = useCallback(() => {
     if (!active) return;
     const current = active.cards[revealIdx];
     if (!flipped) {
@@ -57,7 +61,27 @@ export function RipView({
     } else {
       setOpenedPacks((o) => [...o, active.index]);
       setActive(null);
+      setAutoRipping(false);
+      setPausedCardUid(null);
     }
+  }, [active, flipped, onCardRevealed, revealIdx]);
+
+  useEffect(() => {
+    if (!autoRipping || !active) return;
+    const current = active.cards[revealIdx];
+    if (flipped && effectLevel(current) >= 3 && pausedCardUid !== current.uid) {
+      setPausedCardUid(current.uid);
+      setAutoRipping(false);
+      return;
+    }
+
+    const timer = window.setTimeout(handleCardClick, flipped ? 340 : 260);
+    return () => window.clearTimeout(timer);
+  }, [active, autoRipping, flipped, handleCardClick, pausedCardUid, revealIdx]);
+
+  function handleManualCardClick() {
+    setAutoRipping(false);
+    handleCardClick();
   }
 
   function confirmExit() {
@@ -117,9 +141,9 @@ export function RipView({
             role="button"
             tabIndex={0}
             aria-label={flipped ? '下一张' : '翻开卡片'}
-            onClick={handleCardClick}
+            onClick={handleManualCardClick}
             onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') handleCardClick();
+              if (e.key === 'Enter' || e.key === ' ') handleManualCardClick();
             }}
           >
             <div className="flip-inner">
@@ -132,12 +156,26 @@ export function RipView({
             </div>
           </div>
           <p className="rip-hint">
-            {flipped
+            {autoRipping
+              ? '正在自动拆包，点击暂停'
+              : flipped
               ? revealIdx + 1 < active.cards.length
                 ? '再点一下看下一张'
                 : '点击收起这一包'
               : '点击卡片翻开'}
           </p>
+          <div className="rip-controls">
+            <button
+              className={`btn ${autoRipping ? 'btn-ghost' : 'btn-primary'}`}
+              onClick={() => setAutoRipping((running) => !running)}
+            >
+              {autoRipping
+                ? '暂停连翻'
+                : flipped && pausedCardUid === current.uid
+                  ? '看完大卡，继续连翻'
+                  : '一键拆开这一包'}
+            </button>
+          </div>
           {packRevealed.length > 0 && (
             <div className="rip-tray">
               {packRevealed.map((c) => (
