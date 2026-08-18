@@ -1,4 +1,9 @@
-import { useEffect, useState, type CSSProperties } from 'react';
+import {
+  useEffect,
+  useState,
+  type CSSProperties,
+  type PointerEvent as ReactPointerEvent,
+} from 'react';
 import { PLAYER_MAP, TEAM_COLORS } from '../data/players';
 import { SERIES_MAP } from '../data/series';
 import { resolveCardAsset } from '../data/card-assets';
@@ -102,9 +107,13 @@ function FallbackCardLayer({
 export function CardFace({
   card,
   size = 'md',
+  interactive = false,
+  motionEnabled = true,
 }: {
   card: PulledCard;
   size?: 'lg' | 'md' | 'sm';
+  interactive?: boolean;
+  motionEnabled?: boolean;
 }) {
   const asset = resolveCardAsset(card);
   const [loadedUrl, setLoadedUrl] = useState<string | null>(null);
@@ -123,10 +132,31 @@ export function CardFace({
   const [c1, c2] = TEAM_COLORS[player.team] ?? ['#334155', '#0f172a'];
   const fx = effectLevel(card);
 
+  function handlePointerMove(event: ReactPointerEvent<HTMLDivElement>) {
+    if (!interactive || !motionEnabled) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+    const y = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));
+    event.currentTarget.style.setProperty('--card-rx', `${(0.5 - y) * 10}deg`);
+    event.currentTarget.style.setProperty('--card-ry', `${(x - 0.5) * 12}deg`);
+    event.currentTarget.style.setProperty('--holo-x', `${x * 100}%`);
+    event.currentTarget.style.setProperty('--holo-y', `${y * 100}%`);
+  }
+
+  function resetTilt(event: ReactPointerEvent<HTMLDivElement>) {
+    event.currentTarget.style.removeProperty('--card-rx');
+    event.currentTarget.style.removeProperty('--card-ry');
+    event.currentTarget.style.removeProperty('--holo-x');
+    event.currentTarget.style.removeProperty('--holo-y');
+  }
+
   return (
     <div
-      className={`card-face theme-${series.design.theme} pstyle-${card.parallel.style} size-${size} fx-${fx} ${hasRealImage ? 'has-real-image' : 'uses-fallback'}`}
+      className={`card-face theme-${series.design.theme} pstyle-${card.parallel.style} size-${size} fx-${fx} ${hasRealImage ? 'has-real-image' : 'uses-fallback'} ${interactive && motionEnabled ? 'is-interactive' : ''}`}
       style={{ '--t1': c1, '--t2': c2, '--acc': series.design.accent } as CSSProperties}
+      onPointerMove={handlePointerMove}
+      onPointerLeave={resetTilt}
+      onPointerCancel={resetTilt}
     >
       <div className="cf-bg" />
       {assetUrl && failedUrl !== assetUrl && (
@@ -139,6 +169,7 @@ export function CardFace({
         />
       )}
       <div className="cf-foil" />
+      {interactive && motionEnabled && <div className="cf-interactive-holo" />}
       <div className="cf-inner">
         {!hasRealImage && (
           <FallbackCardLayer card={card} player={player} series={series} colors={[c1, c2]} />

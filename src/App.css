@@ -186,6 +186,44 @@
 
 /* ===== 拆卡 ===== */
 .rip { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.experience-controls {
+  width: min(760px, 100%);
+  margin: 0;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.experience-controls legend {
+  padding: 0 5px;
+  color: #6b7690;
+  font-size: 11px;
+}
+.experience-controls button {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #8b96ad;
+  font-size: 11px;
+}
+.experience-controls button[aria-pressed='true'] {
+  color: #dbeafe;
+  border-color: rgba(99, 140, 255, 0.5);
+  background: rgba(99, 140, 255, 0.14);
+}
+.experience-controls label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8b96ad;
+  font-size: 11px;
+}
+.experience-controls input { width: 82px; accent-color: #638cff; }
 .rip-packs-head { text-align: center; margin-top: 8px; }
 .rip-packs-head h2 { font-size: 20px; margin-bottom: 6px; }
 .rip-packs-head p { color: #8b96ad; font-size: 14px; }
@@ -198,6 +236,8 @@
   max-width: 760px;
 }
 .pack {
+  position: relative;
+  overflow: hidden;
   aspect-ratio: 3 / 4.2;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -211,7 +251,41 @@
     radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--acc, #6366f1) 55%, transparent), transparent 60%),
     linear-gradient(165deg, #232c42, #101625);
   transition: transform 0.12s, box-shadow 0.12s;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
 }
+.pack > span:not(.pack-tear) { position: relative; z-index: 2; }
+.pack-tear {
+  position: absolute;
+  z-index: 3;
+  top: 17%;
+  left: 8%;
+  width: 84%;
+  height: 2px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+}
+.pack-tear::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--tear-progress, 0) * 100%);
+  border-radius: inherit;
+  background: #fff;
+  box-shadow: 0 0 9px rgba(255, 255, 255, 0.8);
+}
+.pack-tear span {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-align: center;
+}
+.pack.is-tearing { transform: translateX(calc(var(--tear-progress, 0) * 5px)); }
 .pack.theme-prizm { --acc: #8b5cf6; }
 .pack.theme-select { --acc: #f59e0b; }
 .pack.theme-obsidian { --acc: #a855f7; }
@@ -252,6 +326,9 @@
   min-height: 38px;
 }
 .rip-controls .btn { min-width: 168px; }
+.motion-disabled .rip-stage,
+.motion-disabled .flip-inner,
+.motion-disabled .pack { animation: none; transition: none; }
 
 /* 3D 翻卡 */
 .flip-card {
@@ -346,6 +423,22 @@
   gap: 10px;
   max-width: 900px;
   margin: 8px 0 14px;
+}
+
+@media (max-width: 560px) {
+  .experience-controls { flex-wrap: wrap; }
+  .experience-controls label { width: 100%; justify-content: center; }
+  .rip-packs-head p { max-width: 300px; line-height: 1.5; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rip-stage,
+  .flip-inner,
+  .pack,
+  .burst,
+  .burst span { animation: none !important; transition: none !important; }
+  .burst { display: none; }
+  .flip-card.is-flipped .flip-inner { transform: rotateY(180deg); }
 }
 
 /* ===== 收藏册 ===== */

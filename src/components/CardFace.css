@@ -26,6 +26,25 @@
 
 .cf-bg { position: absolute; inset: 0; z-index: 0; }
 .cf-foil { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.card-face.is-interactive {
+  transform: perspective(900px) rotateX(var(--card-rx, 0deg)) rotateY(var(--card-ry, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 140ms ease-out;
+  will-change: transform;
+}
+.cf-interactive-holo {
+  position: absolute;
+  inset: -20%;
+  z-index: 2;
+  opacity: 0.16;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at var(--holo-x, 50%) var(--holo-y, 50%), rgba(255, 255, 255, 0.85), transparent 18%),
+    linear-gradient(120deg, transparent 25%, rgba(56, 189, 248, 0.28), rgba(244, 114, 182, 0.25), transparent 70%);
+  mix-blend-mode: screen;
+  transition: opacity 160ms ease-out;
+}
+.card-face.is-interactive:hover .cf-interactive-holo { opacity: 0.38; }
 .cf-real-image {
   position: absolute;
   inset: 0;
@@ -42,6 +61,12 @@
   margin: -6% -7%;
   padding: 8% 7% 6%;
   background: linear-gradient(transparent, rgba(3, 7, 18, 0.82));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-face.is-interactive { transform: none !important; transition: none; }
+  .cf-interactive-holo { display: none; }
+  .cf-real-image { transition: none; }
 }
 
 .cf-header {
