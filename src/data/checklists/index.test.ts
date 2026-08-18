@@ -40,4 +40,11 @@ describe('Prizm EPL checklist', () => {
     expect(PRIZM_EPL_CHECKLIST.sources).toHaveLength(2);
     expect(PRIZM_EPL_CHECKLIST.sources.every((source) => source.url && source.accessedAt)).toBe(true);
   });
+
+  it('支持显式素材元数据且保留无素材卡目', () => {
+    expect(PRIZM_EPL_CHECKLIST.entries.find((entry) => entry.id === 'base-9')?.assets?.base)
+      .toMatchObject({ path: 'cards/prizm-epl/base-9.webp', source: 'self-made' });
+    expect(PRIZM_EPL_CHECKLIST.entries.find((entry) => entry.id === 'base-11')?.assets)
+      .toBeUndefined();
+  });
 });

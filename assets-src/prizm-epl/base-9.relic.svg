@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="700" viewBox="0 0 500 700">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#082f49"/><stop offset="1" stop-color="#334155"/></linearGradient></defs>
+  <rect width="500" height="700" rx="28" fill="url(#bg)"/>
+  <path d="M175 130l-85 55 45 105 50-30v245h130V260l50 30 45-105-85-55c-20 35-130 35-150 0z" fill="#7dd3fc" stroke="#fff" stroke-width="9"/>
+  <text x="250" y="320" text-anchor="middle" fill="#172554" font-family="Arial" font-size="88" font-weight="900">9</text>
+  <rect x="160" y="415" width="180" height="150" rx="20" fill="#e2e8f0" stroke="#fbbf24" stroke-width="12"/>
+  <path d="M175 430l150 120m-150-60l90 75m-45-135l105 85" stroke="#38bdf8" stroke-width="18"/>
+  <text x="35" y="55" fill="#fff" font-family="Arial" font-size="22" font-weight="700">M3 SELF-MADE TEST ART</text>
+  <text x="250" y="630" text-anchor="middle" fill="#fff" font-family="Arial" font-size="26" font-weight="900">RELIC VARIANT</text>
+</svg>

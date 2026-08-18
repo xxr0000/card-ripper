@@ -3,6 +3,8 @@ import { dirname, extname, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import readXlsxFile from 'read-excel-file/node';
 import type {
+  CardAssetMetadata,
+  CardAssetVariant,
   ChecklistCategory,
   ChecklistEntry,
   ChecklistSubject,
@@ -109,6 +111,29 @@ function required(row: CsvRow, key: string, rowNumber: number): string {
   return value;
 }
 
+function assetsFromRow(row: CsvRow, rowNumber: number): CardAssetMetadata | undefined {
+  const source = (row.assetSource?.trim() || 'reference') as CardAssetVariant['source'];
+  if (!['self-made', 'licensed', 'reference'].includes(source)) {
+    throw new Error(`第 ${rowNumber} 行 assetSource 值无效：${source}`);
+  }
+  const fields: Array<[keyof CardAssetMetadata, string]> = [
+    ['base', 'assetBase'],
+    ['auto', 'assetAuto'],
+    ['relic', 'assetRelic'],
+    ['autoRelic', 'assetAutoRelic'],
+  ];
+  const assets: CardAssetMetadata = {};
+  for (const [kind, field] of fields) {
+    const path = row[field]?.trim();
+    if (!path) continue;
+    if (path.startsWith('/') || !path.endsWith('.webp') || path.includes('..')) {
+      throw new Error(`第 ${rowNumber} 行 ${field} 必须是 public/ 下安全的 .webp 相对路径`);
+    }
+    assets[kind] = { path, source };
+  }
+  return Object.keys(assets).length > 0 ? assets : undefined;
+}
+
 function importRows(rows: CsvRow[], options: ImportOptions): SeriesChecklist {
   const rookieNumbers = new Set(options.rookieCardNumbers ?? []);
   const allowedTeams = options.allowedTeams ? new Set(options.allowedTeams) : null;
@@ -138,6 +163,7 @@ function importRows(rows: CsvRow[], options: ImportOptions): SeriesChecklist {
       throw new Error(`第 ${rowNumber} 行 printRun 值无效：${printRunText}`);
     }
     const teamZh = row.teamZh?.trim() || options.teamTranslations?.[teamEn];
+    const assets = assetsFromRow(row, rowNumber);
     const subject: ChecklistSubject = {
       playerId,
       playerName,
@@ -150,7 +176,11 @@ function importRows(rows: CsvRow[], options: ImportOptions): SeriesChecklist {
     const id = `${subsetId}-${cardNumber.toLowerCase()}`;
     const existing = grouped.get(id);
     if (existing) {
-      if (existing.category !== category || existing.printRun !== printRun) {
+      if (
+        existing.category !== category ||
+        existing.printRun !== printRun ||
+        JSON.stringify(existing.assets) !== JSON.stringify(assets)
+      ) {
         throw new Error(`重复卡片 ID 的类型或印量不一致：${id}`);
       }
       if (existing.subjects.some((item) => item.playerId === playerId)) {
@@ -165,6 +195,7 @@ function importRows(rows: CsvRow[], options: ImportOptions): SeriesChecklist {
         subset,
         category,
         ...(printRun === undefined ? {} : { printRun }),
+        ...(assets ? { assets } : {}),
       });
     }
   });

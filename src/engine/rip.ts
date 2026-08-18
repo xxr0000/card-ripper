@@ -3,7 +3,9 @@ import {
   PRIZM_EPL_AUTO_PLAYERS,
   PRIZM_EPL_BASE_PLAYERS,
   PRIZM_EPL_INSERT_PLAYERS,
+  checklistEntriesFor,
 } from '../data/checklists';
+import type { ChecklistCategory } from '../data/checklists/types';
 import { SERIES_ODDS_MAP, type BoxSlotRule } from '../data/odds';
 import type {
   CardKind,
@@ -71,6 +73,11 @@ function makeCard(
 ): PulledCard {
   const pool = playersForSeries(series, kind);
   const player = pickPlayer(pool, random);
+  const checklistCategory: ChecklistCategory = kind === 'auto-relic' ? 'auto' : kind;
+  const checklistEntries = checklistEntriesFor(series.id, player.id, checklistCategory);
+  const checklistEntry = checklistEntries.length > 0
+    ? checklistEntries[Math.floor(random() * checklistEntries.length)]
+    : undefined;
   const parallelPool =
     kind === 'auto' || kind === 'auto-relic'
       ? series.autoParallels
@@ -84,6 +91,7 @@ function makeCard(
     uid: nextUid(random, now),
     playerId: player.id,
     seriesId: series.id,
+    ...(checklistEntry ? { cardId: checklistEntry.id } : {}),
     kind,
     parallel,
     serialNumber: rollSerial(parallel, random),

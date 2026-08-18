@@ -101,6 +101,7 @@ describe('ripBox', () => {
     for (const card of cards) {
       const expected = card.kind === 'auto' ? autoIds : card.kind === 'insert' ? insertIds : baseIds;
       expect(expected).toContain(card.playerId);
+      expect(card.cardId).toBeDefined();
     }
   });
 });

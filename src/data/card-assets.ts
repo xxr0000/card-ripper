@@ -1,0 +1,33 @@
+import { CHECKLIST_ENTRY_MAP } from './checklists';
+import type { CardAssetMetadata, CardAssetVariant } from './checklists/types';
+import type { PulledCard } from '../types';
+
+function assetForKind(
+  assets: CardAssetMetadata,
+  kind: PulledCard['kind'],
+): CardAssetVariant | undefined {
+  if (kind === 'auto-relic') {
+    return assets.autoRelic ?? assets.auto ?? assets.relic ?? assets.base;
+  }
+  if (kind === 'auto') return assets.auto ?? assets.base;
+  if (kind === 'relic') return assets.relic ?? assets.base;
+  return assets.base;
+}
+
+export function joinAssetUrl(baseUrl: string, path: string): string {
+  const normalizedBase = `/${baseUrl.split('/').filter(Boolean).join('/')}`;
+  const normalizedPath = path.replace(/^\/+/, '');
+  return `${normalizedBase === '/' ? '/' : `${normalizedBase}/`}${normalizedPath}`;
+}
+
+/** 没有 cardId、元数据或匹配素材时返回 undefined，让 CardFace 使用绘制回退层。 */
+export function resolveCardAsset(
+  card: PulledCard,
+  baseUrl = import.meta.env.BASE_URL,
+): CardAssetVariant & { url: string } | undefined {
+  if (!card.cardId) return undefined;
+  const entry = CHECKLIST_ENTRY_MAP[card.seriesId]?.[card.cardId];
+  if (!entry?.assets) return undefined;
+  const asset = assetForKind(entry.assets, card.kind);
+  return asset ? { ...asset, url: joinAssetUrl(baseUrl, asset.path) } : undefined;
+}

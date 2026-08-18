@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "simulate": "tsx scripts/simulate.ts",
+    "assets": "tsx scripts/assets.ts",
     "import-checklist": "tsx scripts/import-checklist.ts",
     "check": "oxlint && vitest run && tsc -b && vite build"
   },
@@ -24,6 +25,7 @@
     "@vitejs/plugin-react": "^6.0.4",
     "oxlint": "^1.75.0",
     "read-excel-file": "^9.3.10",
+    "sharp": "^0.34.5",
     "tsx": "^4.23.12",
     "typescript": "~6.0.2",
     "vite": "^8.2.0",

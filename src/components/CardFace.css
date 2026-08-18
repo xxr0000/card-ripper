@@ -24,8 +24,25 @@
   z-index: 3;
 }
 
-.cf-bg { position: absolute; inset: 0; z-index: 1; }
+.cf-bg { position: absolute; inset: 0; z-index: 0; }
 .cf-foil { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.cf-real-image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 160ms ease-out;
+}
+.cf-real-image.is-loaded { opacity: 1; }
+.has-real-image .cf-inner { justify-content: flex-end; }
+.has-real-image .cf-footer {
+  margin: -6% -7%;
+  padding: 8% 7% 6%;
+  background: linear-gradient(transparent, rgba(3, 7, 18, 0.82));
+}
 
 .cf-header {
   display: flex;
@@ -80,8 +97,8 @@
 }
 .cf-rc {
   position: absolute;
-  top: 5%;
-  left: 4%;
+  top: 13%;
+  left: 9%;
   font-size: 0.62em;
   font-weight: 900;
   font-style: italic;

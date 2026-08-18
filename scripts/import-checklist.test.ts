@@ -74,6 +74,21 @@ describe('importChecklist', () => {
     ]);
   });
 
+  it('导入显式图片元数据并拒绝不安全路径', () => {
+    const result = importChecklist(
+      'cardNumber,playerName,teamEn,assetBase,assetAuto,assetSource\n9,Erling Haaland,Manchester City,cards/prizm-epl/base-9.webp,cards/prizm-epl/base-9.auto.webp,self-made',
+      options,
+    );
+    expect(result.entries[0].assets).toEqual({
+      base: { path: 'cards/prizm-epl/base-9.webp', source: 'self-made' },
+      auto: { path: 'cards/prizm-epl/base-9.auto.webp', source: 'self-made' },
+    });
+    expect(() => importChecklist(
+      'cardNumber,playerName,teamEn,assetBase\n9,Erling Haaland,Manchester City,../secret.webp',
+      options,
+    )).toThrow('安全的 .webp 相对路径');
+  });
+
   it('从展开 XLSX 行中过滤正式子系列并叠加 RC', () => {
     const result = importExpandedChecklist([
       ['Set', 'Number', 'Name', 'Team', 'Print Run'],

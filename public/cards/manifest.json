@@ -1,0 +1,25 @@
+{
+  "assets": [
+    {
+      "path": "cards/prizm-epl/base-9.auto.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 15642,
+      "sha256": "b4b2cd0228bca89e9f0ef9b4089d6bb41f932aaf7b386f963cdc26529101344c"
+    },
+    {
+      "path": "cards/prizm-epl/base-9.relic.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 14862,
+      "sha256": "0928785019ae25cbc1d47e64b8aa44e601930e83312b964798c75c1bd2b5828c"
+    },
+    {
+      "path": "cards/prizm-epl/base-9.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 14494,
+      "sha256": "5e51fa52dd8a51f14b646b663115c3c25780f1c7a925eae1a67c337af7ff16db"
+    }
+  ]
+}

@@ -79,6 +79,8 @@ export interface PulledCard {
   uid: string;
   playerId: string;
   seriesId: string;
+  /** 新卡使用 checklist 中的稳定 ID；旧存档缺失时自动回退绘制卡面。 */
+  cardId?: string;
   kind: CardKind;
   parallel: Parallel;
   /** 例如 23（配合 parallel.serialTo 显示 23/99） */
