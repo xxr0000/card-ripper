@@ -24,7 +24,7 @@ describe('asset processing pipeline', () => {
     await writeFile(resolve(input, 'test.png'), await readFile(resolve(root, 'source.png')));
 
     const manifest = await processAssets(input, output);
-    const metadata = await sharp(resolve(output, 'test.webp')).metadata();
+    const metadata = await sharp(await readFile(resolve(output, 'test.webp'))).metadata();
     expect(manifest).toHaveLength(1);
     expect(metadata.width).toBe(CARD_WIDTH);
     expect(metadata.height).toBe(CARD_HEIGHT);

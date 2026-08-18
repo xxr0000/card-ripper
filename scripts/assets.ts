@@ -48,15 +48,15 @@ export async function processAssets(
       .resize(CARD_WIDTH, CARD_HEIGHT, { fit: 'cover', position: 'centre' })
       .webp({ quality: 82, smartSubsample: true })
       .toFile(output);
-    const metadata = await sharp(output).metadata();
     const bytes = (await stat(output)).size;
+    const contents = await readFile(output);
+    const metadata = await sharp(contents).metadata();
     if (metadata.width !== CARD_WIDTH || metadata.height !== CARD_HEIGHT) {
       throw new Error(`${relativeSource}: 输出尺寸不是 ${CARD_WIDTH}x${CARD_HEIGHT}`);
     }
     if (bytes > MAX_CARD_BYTES) {
       throw new Error(`${relativeSource}: ${bytes} bytes 超过 ${MAX_CARD_BYTES} bytes`);
     }
-    const contents = await readFile(output);
     manifest.push({
       path: `cards/${relative(inputRoot, source).replace(/\.[^.]+$/, '.webp')}`,
       width: metadata.width,
