@@ -39,6 +39,14 @@ npm run import-checklist -- \
 
 Prizm EPL 的 33 张 RC 编号由 TCDB Rookie Gallery 交叉核对，配置固定在导入器中；生成结果应为 692 张实体卡目、700 个球员记录，其中 Base 300 张、Insert 300 张、Auto 92 张。
 
+M6 继续使用同一导入器处理 Checklist Center 的展开 XLSX，并只保留未展开的基础子系列、插卡、签名和物料名单：
+
+- Select La Liga：646 张，其中 Base 250、Insert 200、Auto 86、Relic 100、Auto Relic 10。
+- Obsidian：471 张，其中 Base 107、Insert 166、Auto 70、Relic 83、Auto Relic 45。
+- Topps Chrome UCL：738 张，其中 Base 200、Insert 251、Auto 287。
+
+扩展系列的自动生成球员 ID 带系列前缀，避免同一球员在不同年份或球队下覆盖全局资料。Select Future、Bowman Youth、Radiating Rookies、Wonderkids 与 Youthquake 中出现的球员会将 RC 标记传播到同系列其他卡目。各系列具体的允许子系列映射固定在 `scripts/import-checklist.ts`，重复执行输出稳定。
+
 人工修订同样固定在导入配置和生成文件来源备注中：源表的 `Anthony rdon` 根据官方产品 PDF 与 TCDB 修订为 `Anthony Gordon`。不要直接修改生成 JSON。
 
 ## 图片素材

@@ -21,7 +21,7 @@ Topps Chrome 的平行概率直接采用官方逐包赔率。未公开的内部�
 npm ci
 npm run dev     # 开发服务器
 npm run build   # 生产构建，输出到 dist/
-npm run check   # lint + 25 项测试 + 类型检查 + 生产构建
+npm run check   # lint + 42 项测试 + 类型检查 + 生产构建 + 体积门禁
 ```
 
 调试辅助：
@@ -36,6 +36,13 @@ npm run check   # lint + 25 项测试 + 类型检查 + 生产构建
 - [真实化升级计划：卡图 · 卡池 · 概率](docs/真实卡图升级计划.md)
 - [真实化升级执行计划与进度](docs/真实化升级执行计划.md)
 - [M2 概率与盒规来源、估算项及模拟报告](docs/M2概率与盒规报告.md)
+- [M6 系列扩展、性能与部署报告](docs/M6-扩展性能与部署报告.md)
+
+## 私有部署
+
+仓库保密后可直接导入 Vercel。项目已包含 `vercel.json`；将环境变量
+`VITE_BASE_PATH` 设为 `/`。不设置该变量时继续使用 GitHub Pages 的
+`/card-ripper/` 子路径。图片随构建产物发布，不需要额外对象存储。
 
 ## 技术
 

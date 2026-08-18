@@ -1,0 +1,7239 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "obsidian",
+  "productName": "2024-25 Panini Obsidian Soccer",
+  "releaseDate": "2025-07-25",
+  "sources": [
+    {
+      "name": "Checklist Center XLSX export",
+      "url": "https://www.checklistcenter.com/2024-25-panini-obsidian-soccer-card-checklist/",
+      "kind": "reference",
+      "accessedAt": "2026-08-18"
+    }
+  ],
+  "entries": [
+    {
+      "id": "atomic-material-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-francesco-camarda",
+          "playerName": "Francesco Camarda",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "atomic-material-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-josip-sutalo",
+          "playerName": "Josip Sutalo",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 99
+    },
+    {
+      "id": "atomic-material-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-samuel-lino",
+          "playerName": "Samuel Lino",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-jeremie-frimpong",
+          "playerName": "Jeremie Frimpong",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 75
+    },
+    {
+      "id": "atomic-material-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-jean-matteo-bahoya",
+          "playerName": "Jean-Matteo Bahoya",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-pau-cubarsi",
+          "playerName": "Pau Cubarsi",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-alessandro-bastoni",
+          "playerName": "Alessandro Bastoni",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-khephren-thuram",
+          "playerName": "Khephren Thuram",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "atomic-material-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-guus-til",
+          "playerName": "Guus Til",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-luka-modric",
+          "playerName": "Luka Modric",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-julian-alvarez",
+          "playerName": "Julian Alvarez",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-savinho",
+          "playerName": "Savinho",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "atomic-material-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-jarrod-bowen",
+          "playerName": "Jarrod Bowen",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-william-saliba",
+          "playerName": "William Saliba",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "atomic-material-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-nico-schlotterbeck",
+          "playerName": "Nico Schlotterbeck",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-giacomo-raspadori",
+          "playerName": "Giacomo Raspadori",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-nico-williams",
+          "playerName": "Nico Williams",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-yunus-musah",
+          "playerName": "Yunus Musah",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-sophia-wilson",
+          "playerName": "Sophia Wilson",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "atomic-material-26",
+      "cardNumber": "26",
+      "subjects": [
+        {
+          "playerId": "obsidian-wesley-fofana",
+          "playerName": "Wesley Fofana",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "atomic-material-34",
+      "cardNumber": "34",
+      "subjects": [
+        {
+          "playerId": "obsidian-kylian-mbappe",
+          "playerName": "Kylian Mbappe",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Atomic Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "base-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-jude-bellingham",
+          "playerName": "Jude Bellingham",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-vini-jr",
+          "playerName": "Vini Jr.",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-kylian-mbappe",
+          "playerName": "Kylian Mbappe",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-federico-valverde",
+          "playerName": "Federico Valverde",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-hugo-ekitike",
+          "playerName": "Hugo Ekitike",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-can-uzun",
+          "playerName": "Can Uzun",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-hugo-larsson",
+          "playerName": "Hugo Larsson",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-igor-matanovic",
+          "playerName": "Igor Matanovic",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-robert-lewandowski",
+          "playerName": "Robert Lewandowski",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-marc-bernal",
+          "playerName": "Marc Bernal",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-lamine-yamal",
+          "playerName": "Lamine Yamal",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-pau-victor",
+          "playerName": "Pau Victor",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-lautaro-martinez",
+          "playerName": "Lautaro Martinez",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-henrikh-mkhitaryan",
+          "playerName": "Henrikh Mkhitaryan",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-marcus-thuram",
+          "playerName": "Marcus Thuram",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-yann-sommer",
+          "playerName": "Yann Sommer",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-17",
+      "cardNumber": "17",
+      "subjects": [
+        {
+          "playerId": "obsidian-johan-bakayoko",
+          "playerName": "Johan Bakayoko",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-ryan-flamingo",
+          "playerName": "Ryan Flamingo",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-joey-veerman",
+          "playerName": "Joey Veerman",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-tygo-land",
+          "playerName": "Tygo Land",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-21",
+      "cardNumber": "21",
+      "subjects": [
+        {
+          "playerId": "obsidian-jeremie-frimpong",
+          "playerName": "Jeremie Frimpong",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-22",
+      "cardNumber": "22",
+      "subjects": [
+        {
+          "playerId": "obsidian-patrik-schick",
+          "playerName": "Patrik Schick",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-23",
+      "cardNumber": "23",
+      "subjects": [
+        {
+          "playerId": "obsidian-florian-wirtz",
+          "playerName": "Florian Wirtz",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-24",
+      "cardNumber": "24",
+      "subjects": [
+        {
+          "playerId": "obsidian-granit-xhaka",
+          "playerName": "Granit Xhaka",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-25",
+      "cardNumber": "25",
+      "subjects": [
+        {
+          "playerId": "obsidian-conor-gallagher",
+          "playerName": "Conor Gallagher",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-26",
+      "cardNumber": "26",
+      "subjects": [
+        {
+          "playerId": "obsidian-alexander-sorloth",
+          "playerName": "Alexander Sorloth",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-27",
+      "cardNumber": "27",
+      "subjects": [
+        {
+          "playerId": "obsidian-julian-alvarez",
+          "playerName": "Julian Alvarez",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-28",
+      "cardNumber": "28",
+      "subjects": [
+        {
+          "playerId": "obsidian-antoine-griezmann",
+          "playerName": "Antoine Griezmann",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-29",
+      "cardNumber": "29",
+      "subjects": [
+        {
+          "playerId": "obsidian-alex-jimenez",
+          "playerName": "Alex Jimenez",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-30",
+      "cardNumber": "30",
+      "subjects": [
+        {
+          "playerId": "obsidian-theo-hernandez",
+          "playerName": "Theo Hernandez",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-31",
+      "cardNumber": "31",
+      "subjects": [
+        {
+          "playerId": "obsidian-lorenzo-torriani",
+          "playerName": "Lorenzo Torriani",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-32",
+      "cardNumber": "32",
+      "subjects": [
+        {
+          "playerId": "obsidian-rafael-leao",
+          "playerName": "Rafael Leao",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-33",
+      "cardNumber": "33",
+      "subjects": [
+        {
+          "playerId": "obsidian-jorrel-hato",
+          "playerName": "Jorrel Hato",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-34",
+      "cardNumber": "34",
+      "subjects": [
+        {
+          "playerId": "obsidian-brian-brobbey",
+          "playerName": "Brian Brobbey",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-35",
+      "cardNumber": "35",
+      "subjects": [
+        {
+          "playerId": "obsidian-kenneth-taylor",
+          "playerName": "Kenneth Taylor",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-36",
+      "cardNumber": "36",
+      "subjects": [
+        {
+          "playerId": "obsidian-julian-rijkhoff",
+          "playerName": "Julian Rijkhoff",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-37",
+      "cardNumber": "37",
+      "subjects": [
+        {
+          "playerId": "obsidian-kian-fitz-jim",
+          "playerName": "Kian Fitz-Jim",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-38",
+      "cardNumber": "38",
+      "subjects": [
+        {
+          "playerId": "obsidian-ahmetcan-kaplan",
+          "playerName": "Ahmetcan Kaplan",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-39",
+      "cardNumber": "39",
+      "subjects": [
+        {
+          "playerId": "obsidian-dusan-vlahovic",
+          "playerName": "Dusan Vlahovic",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-40",
+      "cardNumber": "40",
+      "subjects": [
+        {
+          "playerId": "obsidian-vasilije-adzic",
+          "playerName": "Vasilije Adzic",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-41",
+      "cardNumber": "41",
+      "subjects": [
+        {
+          "playerId": "obsidian-kenan-yildiz",
+          "playerName": "Kenan Yildiz",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-42",
+      "cardNumber": "42",
+      "subjects": [
+        {
+          "playerId": "obsidian-samuel-mbangula",
+          "playerName": "Samuel Mbangula",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-43",
+      "cardNumber": "43",
+      "subjects": [
+        {
+          "playerId": "obsidian-alvaro-morata",
+          "playerName": "Alvaro Morata",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-44",
+      "cardNumber": "44",
+      "subjects": [
+        {
+          "playerId": "obsidian-lamine-yamal",
+          "playerName": "Lamine Yamal",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-45",
+      "cardNumber": "45",
+      "subjects": [
+        {
+          "playerId": "obsidian-mikel-oyarzabal",
+          "playerName": "Mikel Oyarzabal",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-46",
+      "cardNumber": "46",
+      "subjects": [
+        {
+          "playerId": "obsidian-pedri",
+          "playerName": "Pedri",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-47",
+      "cardNumber": "47",
+      "subjects": [
+        {
+          "playerId": "obsidian-rodri",
+          "playerName": "Rodri",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-48",
+      "cardNumber": "48",
+      "subjects": [
+        {
+          "playerId": "obsidian-nico-williams",
+          "playerName": "Nico Williams",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-49",
+      "cardNumber": "49",
+      "subjects": [
+        {
+          "playerId": "obsidian-pau-cubarsi",
+          "playerName": "Pau Cubarsi",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-50",
+      "cardNumber": "50",
+      "subjects": [
+        {
+          "playerId": "obsidian-fabian-ruiz",
+          "playerName": "Fabian Ruiz",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-51",
+      "cardNumber": "51",
+      "subjects": [
+        {
+          "playerId": "obsidian-endrick",
+          "playerName": "Endrick",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-52",
+      "cardNumber": "52",
+      "subjects": [
+        {
+          "playerId": "obsidian-gabriel",
+          "playerName": "Gabriel",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-53",
+      "cardNumber": "53",
+      "subjects": [
+        {
+          "playerId": "obsidian-rodrygo",
+          "playerName": "Rodrygo",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-54",
+      "cardNumber": "54",
+      "subjects": [
+        {
+          "playerId": "obsidian-vini-jr",
+          "playerName": "Vini Jr.",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-55",
+      "cardNumber": "55",
+      "subjects": [
+        {
+          "playerId": "obsidian-savinho",
+          "playerName": "Savinho",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-56",
+      "cardNumber": "56",
+      "subjects": [
+        {
+          "playerId": "obsidian-andre",
+          "playerName": "Andre",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-57",
+      "cardNumber": "57",
+      "subjects": [
+        {
+          "playerId": "obsidian-bruno-guimaraes",
+          "playerName": "Bruno Guimaraes",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-58",
+      "cardNumber": "58",
+      "subjects": [
+        {
+          "playerId": "obsidian-gabriel-martinelli",
+          "playerName": "Gabriel Martinelli",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-59",
+      "cardNumber": "59",
+      "subjects": [
+        {
+          "playerId": "obsidian-joshua-kimmich",
+          "playerName": "Joshua Kimmich",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-60",
+      "cardNumber": "60",
+      "subjects": [
+        {
+          "playerId": "obsidian-aleksandar-pavlovic",
+          "playerName": "Aleksandar Pavlovic",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-61",
+      "cardNumber": "61",
+      "subjects": [
+        {
+          "playerId": "obsidian-deniz-undav",
+          "playerName": "Deniz Undav",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-62",
+      "cardNumber": "62",
+      "subjects": [
+        {
+          "playerId": "obsidian-alexander-nubel",
+          "playerName": "Alexander Nubel",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-63",
+      "cardNumber": "63",
+      "subjects": [
+        {
+          "playerId": "obsidian-jonathan-tah",
+          "playerName": "Jonathan Tah",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-64",
+      "cardNumber": "64",
+      "subjects": [
+        {
+          "playerId": "obsidian-antonio-rudiger",
+          "playerName": "Antonio Rudiger",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-65",
+      "cardNumber": "65",
+      "subjects": [
+        {
+          "playerId": "obsidian-maximilian-beier",
+          "playerName": "Maximilian Beier",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-66",
+      "cardNumber": "66",
+      "subjects": [
+        {
+          "playerId": "obsidian-niclas-fullkrug",
+          "playerName": "Niclas Fullkrug",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-67",
+      "cardNumber": "67",
+      "subjects": [
+        {
+          "playerId": "obsidian-trinity-rodman",
+          "playerName": "Trinity Rodman",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-68",
+      "cardNumber": "68",
+      "subjects": [
+        {
+          "playerId": "obsidian-mallory-swanson",
+          "playerName": "Mallory Swanson",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-69",
+      "cardNumber": "69",
+      "subjects": [
+        {
+          "playerId": "obsidian-lily-yohannes",
+          "playerName": "Lily Yohannes",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-70",
+      "cardNumber": "70",
+      "subjects": [
+        {
+          "playerId": "obsidian-sophia-wilson",
+          "playerName": "Sophia Wilson",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-71",
+      "cardNumber": "71",
+      "subjects": [
+        {
+          "playerId": "obsidian-enzo-fernandez",
+          "playerName": "Enzo Fernandez",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-72",
+      "cardNumber": "72",
+      "subjects": [
+        {
+          "playerId": "obsidian-lautaro-martinez",
+          "playerName": "Lautaro Martinez",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-73",
+      "cardNumber": "73",
+      "subjects": [
+        {
+          "playerId": "obsidian-julian-alvarez",
+          "playerName": "Julian Alvarez",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-74",
+      "cardNumber": "74",
+      "subjects": [
+        {
+          "playerId": "obsidian-lionel-messi",
+          "playerName": "Lionel Messi",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-75",
+      "cardNumber": "75",
+      "subjects": [
+        {
+          "playerId": "obsidian-cristiano-ronaldo",
+          "playerName": "Cristiano Ronaldo",
+          "teamEn": "Al Nassr FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-76",
+      "cardNumber": "76",
+      "subjects": [
+        {
+          "playerId": "obsidian-angelo",
+          "playerName": "Angelo",
+          "teamEn": "Al Nassr FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-77",
+      "cardNumber": "77",
+      "subjects": [
+        {
+          "playerId": "obsidian-jhon-duran",
+          "playerName": "Jhon Duran",
+          "teamEn": "Al Nassr FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-78",
+      "cardNumber": "78",
+      "subjects": [
+        {
+          "playerId": "obsidian-wesley",
+          "playerName": "Wesley",
+          "teamEn": "Al Nassr FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-79",
+      "cardNumber": "79",
+      "subjects": [
+        {
+          "playerId": "obsidian-harry-kane",
+          "playerName": "Harry Kane",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-80",
+      "cardNumber": "80",
+      "subjects": [
+        {
+          "playerId": "obsidian-declan-rice",
+          "playerName": "Declan Rice",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-81",
+      "cardNumber": "81",
+      "subjects": [
+        {
+          "playerId": "obsidian-phil-foden",
+          "playerName": "Phil Foden",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-82",
+      "cardNumber": "82",
+      "subjects": [
+        {
+          "playerId": "obsidian-bukayo-saka",
+          "playerName": "Bukayo Saka",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-83",
+      "cardNumber": "83",
+      "subjects": [
+        {
+          "playerId": "obsidian-jude-bellingham",
+          "playerName": "Jude Bellingham",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-84",
+      "cardNumber": "84",
+      "subjects": [
+        {
+          "playerId": "obsidian-cole-palmer",
+          "playerName": "Cole Palmer",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-85",
+      "cardNumber": "85",
+      "subjects": [
+        {
+          "playerId": "obsidian-jordan-pickford",
+          "playerName": "Jordan Pickford",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-86",
+      "cardNumber": "86",
+      "subjects": [
+        {
+          "playerId": "obsidian-john-stones",
+          "playerName": "John Stones",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-87",
+      "cardNumber": "87",
+      "subjects": [
+        {
+          "playerId": "obsidian-ibrahima-konate",
+          "playerName": "Ibrahima Konate",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-88",
+      "cardNumber": "88",
+      "subjects": [
+        {
+          "playerId": "obsidian-warren-zaire-emery",
+          "playerName": "Warren Zaire-Emery",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-89",
+      "cardNumber": "89",
+      "subjects": [
+        {
+          "playerId": "obsidian-randal-kolo-muani",
+          "playerName": "Randal Kolo Muani",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-90",
+      "cardNumber": "90",
+      "subjects": [
+        {
+          "playerId": "obsidian-bradley-barcola",
+          "playerName": "Bradley Barcola",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-91",
+      "cardNumber": "91",
+      "subjects": [
+        {
+          "playerId": "obsidian-ousmane-dembele",
+          "playerName": "Ousmane Dembele",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-92",
+      "cardNumber": "92",
+      "subjects": [
+        {
+          "playerId": "obsidian-kylian-mbappe",
+          "playerName": "Kylian Mbappe",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-93",
+      "cardNumber": "93",
+      "subjects": [
+        {
+          "playerId": "obsidian-manu-kone",
+          "playerName": "Manu Kone",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-94",
+      "cardNumber": "94",
+      "subjects": [
+        {
+          "playerId": "obsidian-michael-olise",
+          "playerName": "Michael Olise",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-95",
+      "cardNumber": "95",
+      "subjects": [
+        {
+          "playerId": "obsidian-ricardo-pepi",
+          "playerName": "Ricardo Pepi",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-96",
+      "cardNumber": "96",
+      "subjects": [
+        {
+          "playerId": "obsidian-christian-pulisic",
+          "playerName": "Christian Pulisic",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-97",
+      "cardNumber": "97",
+      "subjects": [
+        {
+          "playerId": "obsidian-matt-turner",
+          "playerName": "Matt Turner",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-98",
+      "cardNumber": "98",
+      "subjects": [
+        {
+          "playerId": "obsidian-yunus-musah",
+          "playerName": "Yunus Musah",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-99",
+      "cardNumber": "99",
+      "subjects": [
+        {
+          "playerId": "obsidian-joe-scally",
+          "playerName": "Joe Scally",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-100",
+      "cardNumber": "100",
+      "subjects": [
+        {
+          "playerId": "obsidian-cavan-sullivan",
+          "playerName": "Cavan Sullivan",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-101",
+      "cardNumber": "101",
+      "subjects": [
+        {
+          "playerId": "obsidian-niccolo-pisilli",
+          "playerName": "Niccolo Pisilli",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-102",
+      "cardNumber": "102",
+      "subjects": [
+        {
+          "playerId": "obsidian-nicolo-barella",
+          "playerName": "Nicolo Barella",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-103",
+      "cardNumber": "103",
+      "subjects": [
+        {
+          "playerId": "obsidian-riccardo-calafiori",
+          "playerName": "Riccardo Calafiori",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-104",
+      "cardNumber": "104",
+      "subjects": [
+        {
+          "playerId": "obsidian-alessandro-bastoni",
+          "playerName": "Alessandro Bastoni",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-105",
+      "cardNumber": "105",
+      "subjects": [
+        {
+          "playerId": "obsidian-tyrique-george",
+          "playerName": "Tyrique George",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-106",
+      "cardNumber": "106",
+      "subjects": [
+        {
+          "playerId": "obsidian-cole-palmer",
+          "playerName": "Cole Palmer",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "base-107",
+      "cardNumber": "107",
+      "subjects": [
+        {
+          "playerId": "obsidian-noni-madueke",
+          "playerName": "Noni Madueke",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Base",
+      "category": "base",
+      "printRun": 145
+    },
+    {
+      "id": "black-color-blast-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-trinity-rodman",
+          "playerName": "Trinity Rodman",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-kylian-mbappe",
+          "playerName": "Kylian Mbappe",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-nico-williams",
+          "playerName": "Nico Williams",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-endrick",
+          "playerName": "Endrick",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-sophia-wilson",
+          "playerName": "Sophia Wilson",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-cristiano-ronaldo",
+          "playerName": "Cristiano Ronaldo",
+          "teamEn": "Al Nassr FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-florian-wirtz",
+          "playerName": "Florian Wirtz",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-lionel-messi",
+          "playerName": "Lionel Messi",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-mallory-swanson",
+          "playerName": "Mallory Swanson",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-robert-lewandowski",
+          "playerName": "Robert Lewandowski",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-savinho",
+          "playerName": "Savinho",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-cole-palmer",
+          "playerName": "Cole Palmer",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-paolo-maldini",
+          "playerName": "Paolo Maldini",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-didier-drogba",
+          "playerName": "Didier Drogba",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-toni-kroos",
+          "playerName": "Toni Kroos",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-pele",
+          "playerName": "Pele",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "black-color-blast-17",
+      "cardNumber": "17",
+      "subjects": [
+        {
+          "playerId": "obsidian-diego-maradona",
+          "playerName": "Diego Maradona",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Black Color Blast",
+      "category": "insert"
+    },
+    {
+      "id": "cutting-edge-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-theo-hernandez",
+          "playerName": "Theo Hernandez",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "cutting-edge-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-kenneth-taylor",
+          "playerName": "Kenneth Taylor",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 99
+    },
+    {
+      "id": "cutting-edge-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-antoine-griezmann",
+          "playerName": "Antoine Griezmann",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "cutting-edge-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-robert-andrich",
+          "playerName": "Robert Andrich",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 40
+    },
+    {
+      "id": "cutting-edge-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-ansgar-knauff",
+          "playerName": "Ansgar Knauff",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "cutting-edge-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-marc-bernal",
+          "playerName": "Marc Bernal",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "cutting-edge-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-davide-frattesi",
+          "playerName": "Davide Frattesi",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "cutting-edge-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-teun-koopmeiners",
+          "playerName": "Teun Koopmeiners",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "cutting-edge-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-noa-lang",
+          "playerName": "Noa Lang",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "cutting-edge-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-arda-guler",
+          "playerName": "Arda Guler",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "cutting-edge-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-lautaro-martinez",
+          "playerName": "Lautaro Martinez",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "cutting-edge-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-vini-jr",
+          "playerName": "Vini Jr.",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "cutting-edge-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-anthony-rdon",
+          "playerName": "Anthony rdon",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "cutting-edge-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-michael-olise",
+          "playerName": "Michael Olise",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "cutting-edge-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-florian-wirtz",
+          "playerName": "Florian Wirtz",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "cutting-edge-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-andrea-cambiaso",
+          "playerName": "Andrea Cambiaso",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "cutting-edge-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-pedri",
+          "playerName": "Pedri",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 99
+    },
+    {
+      "id": "cutting-edge-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-joe-scally",
+          "playerName": "Joe Scally",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "cutting-edge-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-jaedyn-shaw",
+          "playerName": "Jaedyn Shaw",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "cutting-edge-25",
+      "cardNumber": "25",
+      "subjects": [
+        {
+          "playerId": "obsidian-josh-acheampong",
+          "playerName": "Josh Acheampong",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "cutting-edge-33",
+      "cardNumber": "33",
+      "subjects": [
+        {
+          "playerId": "obsidian-robert-lewandowski",
+          "playerName": "Robert Lewandowski",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Cutting Edge",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-giovani-lo-celso",
+          "playerName": "Giovani Lo Celso",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-lautaro-martinez",
+          "playerName": "Lautaro Martinez",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 99
+    },
+    {
+      "id": "dual-jersey-ink-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-antoine-griezmann",
+          "playerName": "Antoine Griezmann",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "dual-jersey-ink-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-reinildo-mandava",
+          "playerName": "Reinildo Mandava",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 99
+    },
+    {
+      "id": "dual-jersey-ink-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-rodrigo-de-paul",
+          "playerName": "Rodrigo de Paul",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-douglas-costa",
+          "playerName": "Douglas Costa",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 12
+    },
+    {
+      "id": "dual-jersey-ink-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-luiz-henrique",
+          "playerName": "Luiz Henrique",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 99
+    },
+    {
+      "id": "dual-jersey-ink-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-marquinhos-d",
+          "playerName": "Marquinhos (D)",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "dual-jersey-ink-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-harry-kane",
+          "playerName": "Harry Kane",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "dual-jersey-ink-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-fermin-lopez",
+          "playerName": "Fermin Lopez",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-17",
+      "cardNumber": "17",
+      "subjects": [
+        {
+          "playerId": "obsidian-marc-bernal",
+          "playerName": "Marc Bernal",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-pau-victor",
+          "playerName": "Pau Victor",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-robert-lewandowski",
+          "playerName": "Robert Lewandowski",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "dual-jersey-ink-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-sergi-dominguez",
+          "playerName": "Sergi Dominguez",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-21",
+      "cardNumber": "21",
+      "subjects": [
+        {
+          "playerId": "obsidian-bradley-barcola",
+          "playerName": "Bradley Barcola",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-24",
+      "cardNumber": "24",
+      "subjects": [
+        {
+          "playerId": "obsidian-moise-kean",
+          "playerName": "Moise Kean",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-26",
+      "cardNumber": "26",
+      "subjects": [
+        {
+          "playerId": "obsidian-kylian-mbappe",
+          "playerName": "Kylian Mbappe",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "dual-jersey-ink-27",
+      "cardNumber": "27",
+      "subjects": [
+        {
+          "playerId": "obsidian-david-raya",
+          "playerName": "David Raya",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-28",
+      "cardNumber": "28",
+      "subjects": [
+        {
+          "playerId": "obsidian-inigo-martinez",
+          "playerName": "Inigo Martinez",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-29",
+      "cardNumber": "29",
+      "subjects": [
+        {
+          "playerId": "obsidian-paxten-aaronson",
+          "playerName": "Paxten Aaronson",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-30",
+      "cardNumber": "30",
+      "subjects": [
+        {
+          "playerId": "obsidian-timothy-weah",
+          "playerName": "Timothy Weah",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 59
+    },
+    {
+      "id": "dual-jersey-ink-31",
+      "cardNumber": "31",
+      "subjects": [
+        {
+          "playerId": "obsidian-lily-yohannes",
+          "playerName": "Lily Yohannes",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "dual-jersey-ink-32",
+      "cardNumber": "32",
+      "subjects": [
+        {
+          "playerId": "obsidian-naomi-girma",
+          "playerName": "Naomi Girma",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 117
+    },
+    {
+      "id": "dual-jersey-ink-33",
+      "cardNumber": "33",
+      "subjects": [
+        {
+          "playerId": "obsidian-trinity-rodman",
+          "playerName": "Trinity Rodman",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Dual Jersey Ink",
+      "category": "auto",
+      "printRun": 59
+    },
+    {
+      "id": "equinox-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-kylian-mbappe",
+          "playerName": "Kylian Mbappe",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-hugo-ekitike",
+          "playerName": "Hugo Ekitike",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-raphinha",
+          "playerName": "Raphinha",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-alessandro-bastoni",
+          "playerName": "Alessandro Bastoni",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-malik-tillman",
+          "playerName": "Malik Tillman",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-alejandro-grimaldo",
+          "playerName": "Alejandro Grimaldo",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-jan-oblak",
+          "playerName": "Jan Oblak",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-tammy-abraham",
+          "playerName": "Tammy Abraham",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-wout-weghorst",
+          "playerName": "Wout Weghorst",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-timothy-weah",
+          "playerName": "Timothy Weah",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-nico-williams",
+          "playerName": "Nico Williams",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-endrick",
+          "playerName": "Endrick",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-antonio-rudiger",
+          "playerName": "Antonio Rudiger",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-rose-lavelle",
+          "playerName": "Rose Lavelle",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-alexis-mac-allister",
+          "playerName": "Alexis Mac Allister",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-aymeric-laporte",
+          "playerName": "Aymeric Laporte",
+          "teamEn": "Al Nassr FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-17",
+      "cardNumber": "17",
+      "subjects": [
+        {
+          "playerId": "obsidian-rico-lewis",
+          "playerName": "Rico Lewis",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-eduardo-camavinga",
+          "playerName": "Eduardo Camavinga",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-cavan-sullivan",
+          "playerName": "Cavan Sullivan",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-mateo-retegui",
+          "playerName": "Mateo Retegui",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-21",
+      "cardNumber": "21",
+      "subjects": [
+        {
+          "playerId": "obsidian-alexander-nubel",
+          "playerName": "Alexander Nubel",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "equinox-22",
+      "cardNumber": "22",
+      "subjects": [
+        {
+          "playerId": "obsidian-moises-caicedo",
+          "playerName": "Moises Caicedo",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Equinox",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "eruption-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-tijjani-reijnders",
+          "playerName": "Tijjani Reijnders",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "eruption-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-bertrand-traore",
+          "playerName": "Bertrand Traore",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "eruption-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-marcos-llorente",
+          "playerName": "Marcos Llorente",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "eruption-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-florian-wirtz",
+          "playerName": "Florian Wirtz",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 75
+    },
+    {
+      "id": "eruption-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-hugo-ekitike",
+          "playerName": "Hugo Ekitike",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "eruption-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-lamine-yamal",
+          "playerName": "Lamine Yamal",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "eruption-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-lautaro-martinez",
+          "playerName": "Lautaro Martinez",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "eruption-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-manuel-locatelli",
+          "playerName": "Manuel Locatelli",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "eruption-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-ricardo-pepi",
+          "playerName": "Ricardo Pepi",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "eruption-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-endrick",
+          "playerName": "Endrick",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "eruption-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-rodrigo-de-paul",
+          "playerName": "Rodrigo de Paul",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "eruption-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-gabriel-martinelli",
+          "playerName": "Gabriel Martinelli",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "eruption-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-curtis-jones",
+          "playerName": "Curtis Jones",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "eruption-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-eduardo-camavinga",
+          "playerName": "Eduardo Camavinga",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "eruption-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-kai-havertz",
+          "playerName": "Kai Havertz",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "eruption-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-sandro-tonali",
+          "playerName": "Sandro Tonali",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "eruption-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-pau-cubarsi",
+          "playerName": "Pau Cubarsi",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "eruption-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-matt-turner",
+          "playerName": "Matt Turner",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "eruption-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-trinity-rodman",
+          "playerName": "Trinity Rodman",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "eruption-26",
+      "cardNumber": "26",
+      "subjects": [
+        {
+          "playerId": "obsidian-cole-palmer",
+          "playerName": "Cole Palmer",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Eruption",
+      "category": "insert",
+      "printRun": 125
+    },
+    {
+      "id": "galaxy-gear-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-samuel-chukwueze",
+          "playerName": "Samuel Chukwueze",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "galaxy-gear-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-jordan-henderson",
+          "playerName": "Jordan Henderson",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "galaxy-gear-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-koke",
+          "playerName": "Koke",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "galaxy-gear-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-edmond-tapsoba",
+          "playerName": "Edmond Tapsoba",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 75
+    },
+    {
+      "id": "galaxy-gear-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-robin-koch",
+          "playerName": "Robin Koch",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "galaxy-gear-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-pedri",
+          "playerName": "Pedri",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "galaxy-gear-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-nicolo-barella",
+          "playerName": "Nicolo Barella",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 99
+    },
+    {
+      "id": "galaxy-gear-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-weston-mckennie",
+          "playerName": "Weston McKennie",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "galaxy-gear-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-malik-tillman",
+          "playerName": "Malik Tillman",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "galaxy-gear-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-aurelien-tchouameni",
+          "playerName": "Aurelien Tchouameni",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "galaxy-gear-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-cristian-romero",
+          "playerName": "Cristian Romero",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "galaxy-gear-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-bruno-guimaraes",
+          "playerName": "Bruno Guimaraes",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "galaxy-gear-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-bukayo-saka",
+          "playerName": "Bukayo Saka",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "galaxy-gear-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-ousmane-dembele",
+          "playerName": "Ousmane Dembele",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "galaxy-gear-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-robin-gosens",
+          "playerName": "Robin Gosens",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 99
+    },
+    {
+      "id": "galaxy-gear-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-mateo-retegui",
+          "playerName": "Mateo Retegui",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "galaxy-gear-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-lamine-yamal",
+          "playerName": "Lamine Yamal",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "galaxy-gear-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-ricardo-pepi",
+          "playerName": "Ricardo Pepi",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "galaxy-gear-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-mallory-swanson",
+          "playerName": "Mallory Swanson",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "galaxy-gear-25",
+      "cardNumber": "25",
+      "subjects": [
+        {
+          "playerId": "obsidian-nicolas-jackson",
+          "playerName": "Nicolas Jackson",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "galaxy-gear-34",
+      "cardNumber": "34",
+      "subjects": [
+        {
+          "playerId": "obsidian-ibrahima-konate",
+          "playerName": "Ibrahima Konate",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Gear",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "galaxy-ink-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-alana-cook",
+          "playerName": "Alana Cook",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 99
+    },
+    {
+      "id": "galaxy-ink-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-david-villa",
+          "playerName": "David Villa",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "galaxy-ink-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-diego-forlan",
+          "playerName": "Diego Forlan",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "galaxy-ink-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-bernd-schneider",
+          "playerName": "Bernd Schneider",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 99
+    },
+    {
+      "id": "galaxy-ink-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-oliver-neuville",
+          "playerName": "Oliver Neuville",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 99
+    },
+    {
+      "id": "galaxy-ink-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-careca",
+          "playerName": "Careca",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "galaxy-ink-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-julio-cesar",
+          "playerName": "Julio Cesar",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "galaxy-ink-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-gianfranco-zola",
+          "playerName": "Gianfranco Zola",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "galaxy-ink-17",
+      "cardNumber": "17",
+      "subjects": [
+        {
+          "playerId": "obsidian-jonathan-ikone",
+          "playerName": "Jonathan Ikone",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "galaxy-ink-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-toni-kroos",
+          "playerName": "Toni Kroos",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "galaxy-ink-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-domenico-berardi",
+          "playerName": "Domenico Berardi",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "galaxy-ink-21",
+      "cardNumber": "21",
+      "subjects": [
+        {
+          "playerId": "obsidian-jurgen-kohler",
+          "playerName": "Jurgen Kohler",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "galaxy-ink-30",
+      "cardNumber": "30",
+      "subjects": [
+        {
+          "playerId": "obsidian-ricardo-pepi",
+          "playerName": "Ricardo Pepi",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "galaxy-ink-31",
+      "cardNumber": "31",
+      "subjects": [
+        {
+          "playerId": "obsidian-sami-khedira",
+          "playerName": "Sami Khedira",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Galaxy Ink",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "iridescent-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-jude-bellingham",
+          "playerName": "Jude Bellingham",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Iridescent",
+      "category": "insert"
+    },
+    {
+      "id": "iridescent-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-cavan-sullivan",
+          "playerName": "Cavan Sullivan",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Iridescent",
+      "category": "insert"
+    },
+    {
+      "id": "iridescent-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-lamine-yamal",
+          "playerName": "Lamine Yamal",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Iridescent",
+      "category": "insert"
+    },
+    {
+      "id": "iridescent-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-pedri",
+          "playerName": "Pedri",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Iridescent",
+      "category": "insert"
+    },
+    {
+      "id": "iridescent-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-christian-pulisic",
+          "playerName": "Christian Pulisic",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Iridescent",
+      "category": "insert"
+    },
+    {
+      "id": "iridescent-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-kobbie-mainoo",
+          "playerName": "Kobbie Mainoo",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Iridescent",
+      "category": "insert"
+    },
+    {
+      "id": "iridescent-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-lily-yohannes",
+          "playerName": "Lily Yohannes",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Iridescent",
+      "category": "insert"
+    },
+    {
+      "id": "iridescent-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-zinedine-zidane",
+          "playerName": "Zinedine Zidane",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Iridescent",
+      "category": "insert"
+    },
+    {
+      "id": "iridescent-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-eden-hazard",
+          "playerName": "Eden Hazard",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Iridescent",
+      "category": "insert"
+    },
+    {
+      "id": "lightning-strike-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-gabriel-batistuta",
+          "playerName": "Gabriel Batistuta",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "lightning-strike-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-julian-alvarez",
+          "playerName": "Julian Alvarez",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "lightning-strike-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-aleix-garcia",
+          "playerName": "Aleix Garcia",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 99
+    },
+    {
+      "id": "lightning-strike-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-pele",
+          "playerName": "Pele",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 7
+    },
+    {
+      "id": "lightning-strike-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-noni-madueke",
+          "playerName": "Noni Madueke",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 10
+    },
+    {
+      "id": "lightning-strike-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-andreas-moller",
+          "playerName": "Andreas Moller",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 99
+    },
+    {
+      "id": "lightning-strike-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-gerard-pique",
+          "playerName": "Gerard Pique",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 50
+    },
+    {
+      "id": "lightning-strike-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-javier-mascherano",
+          "playerName": "Javier Mascherano",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 50
+    },
+    {
+      "id": "lightning-strike-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-lily-yohannes",
+          "playerName": "Lily Yohannes",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "lightning-strike-17",
+      "cardNumber": "17",
+      "subjects": [
+        {
+          "playerId": "obsidian-nabil-fekir",
+          "playerName": "Nabil Fekir",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "lightning-strike-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-zinedine-zidane",
+          "playerName": "Zinedine Zidane",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "lightning-strike-21",
+      "cardNumber": "21",
+      "subjects": [
+        {
+          "playerId": "obsidian-franz-beckenbauer",
+          "playerName": "Franz Beckenbauer",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "lightning-strike-22",
+      "cardNumber": "22",
+      "subjects": [
+        {
+          "playerId": "obsidian-giorgio-chiellini",
+          "playerName": "Giorgio Chiellini",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "lightning-strike-24",
+      "cardNumber": "24",
+      "subjects": [
+        {
+          "playerId": "obsidian-gianluca-frabotta",
+          "playerName": "Gianluca Frabotta",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 76
+    },
+    {
+      "id": "lightning-strike-30",
+      "cardNumber": "30",
+      "subjects": [
+        {
+          "playerId": "obsidian-jurgen-locadia",
+          "playerName": "Jurgen Locadia",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 128
+    },
+    {
+      "id": "lightning-strike-32",
+      "cardNumber": "32",
+      "subjects": [
+        {
+          "playerId": "obsidian-christian-pulisic",
+          "playerName": "Christian Pulisic",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 7
+    },
+    {
+      "id": "lightning-strike-33",
+      "cardNumber": "33",
+      "subjects": [
+        {
+          "playerId": "obsidian-christen-press",
+          "playerName": "Christen Press",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Lightning Strike",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "magmatic-signatures-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-juan-sebastian-veron",
+          "playerName": "Juan Sebastian Veron",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "magmatic-signatures-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-paulo-dybala",
+          "playerName": "Paulo Dybala",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "magmatic-signatures-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-renan-lodi",
+          "playerName": "Renan Lodi",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 99
+    },
+    {
+      "id": "magmatic-signatures-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-dida",
+          "playerName": "Dida",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "magmatic-signatures-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-roberto-firmino",
+          "playerName": "Roberto Firmino",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 99
+    },
+    {
+      "id": "magmatic-signatures-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-thiago-silva",
+          "playerName": "Thiago Silva",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "magmatic-signatures-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-eric-dier",
+          "playerName": "Eric Dier",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 154
+    },
+    {
+      "id": "magmatic-signatures-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-zlatan-ibrahimovic",
+          "playerName": "Zlatan Ibrahimovic",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 5
+    },
+    {
+      "id": "magmatic-signatures-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-ledley-king",
+          "playerName": "Ledley King",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 99
+    },
+    {
+      "id": "magmatic-signatures-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-patrick-kluivert",
+          "playerName": "Patrick Kluivert",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 25
+    },
+    {
+      "id": "magmatic-signatures-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-rafael-marquez",
+          "playerName": "Rafael Marquez",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "magmatic-signatures-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-mario-gomez",
+          "playerName": "Mario Gomez",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "magmatic-signatures-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-ciro-immobile",
+          "playerName": "Ciro Immobile",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 99
+    },
+    {
+      "id": "magmatic-signatures-30",
+      "cardNumber": "30",
+      "subjects": [
+        {
+          "playerId": "obsidian-cavan-sullivan",
+          "playerName": "Cavan Sullivan",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 199
+    },
+    {
+      "id": "magmatic-signatures-32",
+      "cardNumber": "32",
+      "subjects": [
+        {
+          "playerId": "obsidian-ashley-sanchez",
+          "playerName": "Ashley Sanchez",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Magmatic Signatures",
+      "category": "auto",
+      "printRun": 49
+    },
+    {
+      "id": "matrix-material-autographs-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-alvaro-morata",
+          "playerName": "Alvaro Morata",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "matrix-material-autographs-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-fikayo-tomori",
+          "playerName": "Fikayo Tomori",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 49
+    },
+    {
+      "id": "matrix-material-autographs-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-leandro-paredes",
+          "playerName": "Leandro Paredes",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 99
+    },
+    {
+      "id": "matrix-material-autographs-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-marcos-acuna",
+          "playerName": "Marcos Acuna",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 99
+    },
+    {
+      "id": "matrix-material-autographs-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-pablo-barrios",
+          "playerName": "Pablo Barrios",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 99
+    },
+    {
+      "id": "matrix-material-autographs-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-rodrigo-riquelme",
+          "playerName": "Rodrigo Riquelme",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "matrix-material-autographs-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-eric-garcia",
+          "playerName": "Eric Garcia",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "matrix-material-autographs-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-neymar-jr",
+          "playerName": "Neymar Jr",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 25
+    },
+    {
+      "id": "matrix-material-autographs-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-gavi",
+          "playerName": "Gavi",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 25
+    },
+    {
+      "id": "matrix-material-autographs-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-pablo-torre",
+          "playerName": "Pablo Torre",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 99
+    },
+    {
+      "id": "matrix-material-autographs-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-pedri",
+          "playerName": "Pedri",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 25
+    },
+    {
+      "id": "matrix-material-autographs-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-ronald-araujo",
+          "playerName": "Ronald Araujo",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 99
+    },
+    {
+      "id": "matrix-material-autographs-17",
+      "cardNumber": "17",
+      "subjects": [
+        {
+          "playerId": "obsidian-carlos-augusto",
+          "playerName": "Carlos Augusto",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 99
+    },
+    {
+      "id": "matrix-material-autographs-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-denzel-dumfries",
+          "playerName": "Denzel Dumfries",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 117
+    },
+    {
+      "id": "matrix-material-autographs-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-federico-dimarco",
+          "playerName": "Federico Dimarco",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 49
+    },
+    {
+      "id": "matrix-material-autographs-22",
+      "cardNumber": "22",
+      "subjects": [
+        {
+          "playerId": "obsidian-william-saliba",
+          "playerName": "William Saliba",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "matrix-material-autographs-24",
+      "cardNumber": "24",
+      "subjects": [
+        {
+          "playerId": "obsidian-mattia-zaccagni",
+          "playerName": "Mattia Zaccagni",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 99
+    },
+    {
+      "id": "matrix-material-autographs-29",
+      "cardNumber": "29",
+      "subjects": [
+        {
+          "playerId": "obsidian-aymeric-laporte",
+          "playerName": "Aymeric Laporte",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "matrix-material-autographs-30",
+      "cardNumber": "30",
+      "subjects": [
+        {
+          "playerId": "obsidian-joselu",
+          "playerName": "Joselu",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 49
+    },
+    {
+      "id": "matrix-material-autographs-32",
+      "cardNumber": "32",
+      "subjects": [
+        {
+          "playerId": "obsidian-cavan-sullivan",
+          "playerName": "Cavan Sullivan",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "matrix-material-autographs-33",
+      "cardNumber": "33",
+      "subjects": [
+        {
+          "playerId": "obsidian-joe-scally",
+          "playerName": "Joe Scally",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Matrix Material Autographs",
+      "category": "auto-relic",
+      "printRun": 59
+    },
+    {
+      "id": "nucleus-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-christian-pulisic",
+          "playerName": "Christian Pulisic",
+          "teamEn": "AC Milan",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-theo-hernandez",
+          "playerName": "Theo Hernandez",
+          "teamEn": "AC Milan",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-rafael-leao",
+          "playerName": "Rafael Leao",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-kenneth-taylor",
+          "playerName": "Kenneth Taylor",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-mika-godts",
+          "playerName": "Mika Godts",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-davy-klaassen",
+          "playerName": "Davy Klaassen",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-koke",
+          "playerName": "Koke",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-antoine-griezmann",
+          "playerName": "Antoine Griezmann",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-jan-oblak",
+          "playerName": "Jan Oblak",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-granit-xhaka",
+          "playerName": "Granit Xhaka",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-victor-boniface",
+          "playerName": "Victor Boniface",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-florian-wirtz",
+          "playerName": "Florian Wirtz",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-kevin-trapp",
+          "playerName": "Kevin Trapp",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-robin-koch",
+          "playerName": "Robin Koch",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-hugo-ekitike",
+          "playerName": "Hugo Ekitike",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-lamine-yamal",
+          "playerName": "Lamine Yamal",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-pedri",
+          "playerName": "Pedri",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-gavi",
+          "playerName": "Gavi",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-nicolo-barella",
+          "playerName": "Nicolo Barella",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-lautaro-martinez",
+          "playerName": "Lautaro Martinez",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-alessandro-bastoni",
+          "playerName": "Alessandro Bastoni",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-kenan-yildiz",
+          "playerName": "Kenan Yildiz",
+          "teamEn": "Juventus",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-manuel-locatelli",
+          "playerName": "Manuel Locatelli",
+          "teamEn": "Juventus",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-dusan-vlahovic",
+          "playerName": "Dusan Vlahovic",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-johan-bakayoko",
+          "playerName": "Johan Bakayoko",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-malik-tillman",
+          "playerName": "Malik Tillman",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-ryan-flamingo",
+          "playerName": "Ryan Flamingo",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-kylian-mbappe",
+          "playerName": "Kylian Mbappe",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-vini-jr",
+          "playerName": "Vini Jr.",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-jude-bellingham",
+          "playerName": "Jude Bellingham",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-emiliano-martinez",
+          "playerName": "Emiliano Martinez",
+          "teamEn": "Argentina",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-enzo-fernandez",
+          "playerName": "Enzo Fernandez",
+          "teamEn": "Argentina",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-lionel-messi",
+          "playerName": "Lionel Messi",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-florian-wirtz",
+          "playerName": "Florian Wirtz",
+          "teamEn": "Germany",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-jamal-musiala",
+          "playerName": "Jamal Musiala",
+          "teamEn": "Germany",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-kai-havertz",
+          "playerName": "Kai Havertz",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-sadio-mane",
+          "playerName": "Sadio Mane",
+          "teamEn": "Al Nassr FC",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-cristiano-ronaldo",
+          "playerName": "Cristiano Ronaldo",
+          "teamEn": "Al Nassr FC",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-jhon-duran",
+          "playerName": "Jhon Duran",
+          "teamEn": "Al Nassr FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-lamine-yamal",
+          "playerName": "Lamine Yamal",
+          "teamEn": "Spain",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-pedri",
+          "playerName": "Pedri",
+          "teamEn": "Spain",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-nico-williams",
+          "playerName": "Nico Williams",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-mallory-swanson",
+          "playerName": "Mallory Swanson",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-sophia-wilson",
+          "playerName": "Sophia Wilson",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-trinity-rodman",
+          "playerName": "Trinity Rodman",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "nucleus-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-cole-palmer",
+          "playerName": "Cole Palmer",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-moises-caicedo",
+          "playerName": "Moises Caicedo",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        },
+        {
+          "playerId": "obsidian-levi-colwill",
+          "playerName": "Levi Colwill",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Nucleus",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "orbital-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-cole-palmer",
+          "playerName": "Cole Palmer",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Orbital",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "orbital-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-pascal-gross",
+          "playerName": "Pascal Gross",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Orbital",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "orbital-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-christian-pulisic",
+          "playerName": "Christian Pulisic",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Orbital",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "orbital-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-cristiano-ronaldo",
+          "playerName": "Cristiano Ronaldo",
+          "teamEn": "Al Nassr FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Orbital",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "orbital-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-maximilian-mittelstadt",
+          "playerName": "Maximilian Mittelstadt",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Orbital",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "orbital-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-warren-zaire-emery",
+          "playerName": "Warren Zaire-Emery",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Orbital",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "solar-swatches-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-yunus-musah",
+          "playerName": "Yunus Musah",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-christian-rasmussen",
+          "playerName": "Christian Rasmussen",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-jose-maria-gimenez",
+          "playerName": "Jose Maria Gimenez",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "solar-swatches-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-jonathan-tah",
+          "playerName": "Jonathan Tah",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 50
+    },
+    {
+      "id": "solar-swatches-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-fares-chaibi",
+          "playerName": "Fares Chaibi",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-gerard-martin",
+          "playerName": "Gerard Martin",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-hakan-calhanoglu",
+          "playerName": "Hakan Calhanoglu",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-kenan-yildiz",
+          "playerName": "Kenan Yildiz",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-joey-veerman",
+          "playerName": "Joey Veerman",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-eduardo-camavinga",
+          "playerName": "Eduardo Camavinga",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "solar-swatches-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-alejandro-garnacho",
+          "playerName": "Alejandro Garnacho",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-endrick",
+          "playerName": "Endrick",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "solar-swatches-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-trent-alexander-arnold",
+          "playerName": "Trent Alexander-Arnold",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-aurelien-tchouameni",
+          "playerName": "Aurelien Tchouameni",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-serge-gnabry",
+          "playerName": "Serge Gnabry",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-davide-frattesi",
+          "playerName": "Davide Frattesi",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "solar-swatches-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-rodri",
+          "playerName": "Rodri",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-cavan-sullivan",
+          "playerName": "Cavan Sullivan",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-alyssa-thompson",
+          "playerName": "Alyssa Thompson",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "solar-swatches-25",
+      "cardNumber": "25",
+      "subjects": [
+        {
+          "playerId": "obsidian-pedro-neto",
+          "playerName": "Pedro Neto",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "solar-swatches-33",
+      "cardNumber": "33",
+      "subjects": [
+        {
+          "playerId": "obsidian-manu-kone",
+          "playerName": "Manu Kone",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Solar Swatches",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "supernova-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-florian-wirtz",
+          "playerName": "Florian Wirtz",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-mario-gotze",
+          "playerName": "Mario Gotze",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-maximilian-beier",
+          "playerName": "Maximilian Beier",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-mike-maignan",
+          "playerName": "Mike Maignan",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-davy-klaassen",
+          "playerName": "Davy Klaassen",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-michael-olise",
+          "playerName": "Michael Olise",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-antoine-griezmann",
+          "playerName": "Antoine Griezmann",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-lamine-yamal",
+          "playerName": "Lamine Yamal",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-luuk-de-jong",
+          "playerName": "Luuk de Jong",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-lionel-messi",
+          "playerName": "Lionel Messi",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-yeremy-pino",
+          "playerName": "Yeremy Pino",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-yunus-musah",
+          "playerName": "Yunus Musah",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-jude-bellingham",
+          "playerName": "Jude Bellingham",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-vini-jr",
+          "playerName": "Vini Jr.",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-joshua-kimmich",
+          "playerName": "Joshua Kimmich",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-nicolo-barella",
+          "playerName": "Nicolo Barella",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-17",
+      "cardNumber": "17",
+      "subjects": [
+        {
+          "playerId": "obsidian-francisco-conceicao",
+          "playerName": "Francisco Conceicao",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-bradley-barcola",
+          "playerName": "Bradley Barcola",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-moise-kean",
+          "playerName": "Moise Kean",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-mohamed-simakan",
+          "playerName": "Mohamed Simakan",
+          "teamEn": "Al Nassr FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-21",
+      "cardNumber": "21",
+      "subjects": [
+        {
+          "playerId": "obsidian-lily-yohannes",
+          "playerName": "Lily Yohannes",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "supernova-22",
+      "cardNumber": "22",
+      "subjects": [
+        {
+          "playerId": "obsidian-ollie-watkins",
+          "playerName": "Ollie Watkins",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Supernova",
+      "category": "insert",
+      "printRun": 120
+    },
+    {
+      "id": "trifecta-material-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-rafael-leao",
+          "playerName": "Rafael Leao",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "trifecta-material-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-mika-godts",
+          "playerName": "Mika Godts",
+          "teamEn": "AFC Ajax",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 99
+    },
+    {
+      "id": "trifecta-material-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-robin-le-normand",
+          "playerName": "Robin Le Normand",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "trifecta-material-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-victor-boniface",
+          "playerName": "Victor Boniface",
+          "teamEn": "Bayer 04 Leverkusen",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 75
+    },
+    {
+      "id": "trifecta-material-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-nathaniel-brown",
+          "playerName": "Nathaniel Brown",
+          "teamEn": "Eintracht Frankfurt",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "trifecta-material-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-gavi",
+          "playerName": "Gavi",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "trifecta-material-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-marcus-thuram",
+          "playerName": "Marcus Thuram",
+          "teamEn": "FC Internazionale Milano",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "trifecta-material-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-nicolo-savona",
+          "playerName": "Nicolo Savona",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "trifecta-material-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-johan-bakayoko",
+          "playerName": "Johan Bakayoko",
+          "teamEn": "PSV Eindhoven",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 99
+    },
+    {
+      "id": "trifecta-material-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-thibaut-courtois",
+          "playerName": "Thibaut Courtois",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "trifecta-material-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-lionel-messi",
+          "playerName": "Lionel Messi",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "trifecta-material-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-rodrygo",
+          "playerName": "Rodrygo",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "trifecta-material-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-kyle-walker",
+          "playerName": "Kyle Walker",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "trifecta-material-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-randal-kolo-muani",
+          "playerName": "Randal Kolo Muani",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 125
+    },
+    {
+      "id": "trifecta-material-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-robert-andrich",
+          "playerName": "Robert Andrich",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "trifecta-material-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-giovanni-di-lorenzo",
+          "playerName": "Giovanni Di Lorenzo",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "trifecta-material-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-dani-olmo",
+          "playerName": "Dani Olmo",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "trifecta-material-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-christian-pulisic",
+          "playerName": "Christian Pulisic",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "trifecta-material-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-korbin-albert",
+          "playerName": "Korbin Albert",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "trifecta-material-25",
+      "cardNumber": "25",
+      "subjects": [
+        {
+          "playerId": "obsidian-christopher-nkunku",
+          "playerName": "Christopher Nkunku",
+          "teamEn": "Chelsea FC",
+          "rookie": false
+        }
+      ],
+      "subset": "Trifecta Material",
+      "category": "relic",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-19-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-abby-dahlkemper",
+          "playerName": "Abby Dahlkemper",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 19",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-19-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-alex-morgan",
+          "playerName": "Alex Morgan",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 19",
+      "category": "insert",
+      "printRun": 49
+    },
+    {
+      "id": "uswnt-class-of-19-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-ali-krieger",
+          "playerName": "Ali Krieger",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 19",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-19-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-christen-press",
+          "playerName": "Christen Press",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 19",
+      "category": "insert",
+      "printRun": 49
+    },
+    {
+      "id": "uswnt-class-of-19-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-megan-rapinoe",
+          "playerName": "Megan Rapinoe",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 19",
+      "category": "insert",
+      "printRun": 49
+    },
+    {
+      "id": "uswnt-class-of-99-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-brandi-chastain",
+          "playerName": "Brandi Chastain",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 25
+    },
+    {
+      "id": "uswnt-class-of-99-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-briana-scurry",
+          "playerName": "Briana Scurry",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-carla-overbeck",
+          "playerName": "Carla Overbeck",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-christie-pearce",
+          "playerName": "Christie Pearce",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-cindy-parlow-cone",
+          "playerName": "Cindy Parlow Cone",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-danielle-fotopoulos",
+          "playerName": "Danielle Fotopoulos",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-joy-fawcett",
+          "playerName": "Joy Fawcett",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-julie-foudy",
+          "playerName": "Julie Foudy",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 99
+    },
+    {
+      "id": "uswnt-class-of-99-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-kate-markgraf",
+          "playerName": "Kate Markgraf",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-10",
+      "cardNumber": "10",
+      "subjects": [
+        {
+          "playerId": "obsidian-kristine-lilly",
+          "playerName": "Kristine Lilly",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-11",
+      "cardNumber": "11",
+      "subjects": [
+        {
+          "playerId": "obsidian-lorrie-fair",
+          "playerName": "Lorrie Fair",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-mia-hamm",
+          "playerName": "Mia Hamm",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 25
+    },
+    {
+      "id": "uswnt-class-of-99-13",
+      "cardNumber": "13",
+      "subjects": [
+        {
+          "playerId": "obsidian-michelle-akers",
+          "playerName": "Michelle Akers",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-sara-whalen",
+          "playerName": "Sara Whalen",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-saskia-webber",
+          "playerName": "Saskia Webber",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-shannon-macmillan",
+          "playerName": "Shannon MacMillan",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-17",
+      "cardNumber": "17",
+      "subjects": [
+        {
+          "playerId": "obsidian-tiffany-roberts",
+          "playerName": "Tiffany Roberts",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-tiffeny-milbrett",
+          "playerName": "Tiffeny Milbrett",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-tisha-venturini",
+          "playerName": "Tisha Venturini",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "uswnt-class-of-99-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-tracy-noonan",
+          "playerName": "Tracy Noonan",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "USWNT Class of 99",
+      "category": "insert",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-christian-pulisic",
+          "playerName": "Christian Pulisic",
+          "teamEn": "AC Milan",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 49
+    },
+    {
+      "id": "volcanic-material-signatures-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-cesar-azpilicueta",
+          "playerName": "Cesar Azpilicueta",
+          "teamEn": "Atletico de Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-eder-militao",
+          "playerName": "Eder Militao",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 99
+    },
+    {
+      "id": "volcanic-material-signatures-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-endrick",
+          "playerName": "Endrick",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 99
+    },
+    {
+      "id": "volcanic-material-signatures-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-vini-jr",
+          "playerName": "Vini Jr.",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 175
+    },
+    {
+      "id": "volcanic-material-signatures-9",
+      "cardNumber": "9",
+      "subjects": [
+        {
+          "playerId": "obsidian-yan-couto",
+          "playerName": "Yan Couto",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-12",
+      "cardNumber": "12",
+      "subjects": [
+        {
+          "playerId": "obsidian-nick-pope",
+          "playerName": "Nick Pope",
+          "teamEn": "England",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-14",
+      "cardNumber": "14",
+      "subjects": [
+        {
+          "playerId": "obsidian-ansu-fati",
+          "playerName": "Ansu Fati",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-15",
+      "cardNumber": "15",
+      "subjects": [
+        {
+          "playerId": "obsidian-ferran-torres",
+          "playerName": "Ferran Torres",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-16",
+      "cardNumber": "16",
+      "subjects": [
+        {
+          "playerId": "obsidian-lamine-yamal",
+          "playerName": "Lamine Yamal",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 175
+    },
+    {
+      "id": "volcanic-material-signatures-17",
+      "cardNumber": "17",
+      "subjects": [
+        {
+          "playerId": "obsidian-warren-zaire-emery",
+          "playerName": "Warren Zaire-Emery",
+          "teamEn": "France",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-18",
+      "cardNumber": "18",
+      "subjects": [
+        {
+          "playerId": "obsidian-gianluigi-donnarumma",
+          "playerName": "Gianluigi Donnarumma",
+          "teamEn": "Italy",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-19",
+      "cardNumber": "19",
+      "subjects": [
+        {
+          "playerId": "obsidian-dusan-vlahovic",
+          "playerName": "Dusan Vlahovic",
+          "teamEn": "Juventus",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 49
+    },
+    {
+      "id": "volcanic-material-signatures-20",
+      "cardNumber": "20",
+      "subjects": [
+        {
+          "playerId": "obsidian-yeremy-pino",
+          "playerName": "Yeremy Pino",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 189
+    },
+    {
+      "id": "volcanic-material-signatures-23",
+      "cardNumber": "23",
+      "subjects": [
+        {
+          "playerId": "obsidian-brahim-diaz",
+          "playerName": "Brahim Diaz",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-24",
+      "cardNumber": "24",
+      "subjects": [
+        {
+          "playerId": "obsidian-federico-valverde",
+          "playerName": "Federico Valverde",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 49
+    },
+    {
+      "id": "volcanic-material-signatures-25",
+      "cardNumber": "25",
+      "subjects": [
+        {
+          "playerId": "obsidian-jacobo-ramon",
+          "playerName": "Jacobo Ramon",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 99
+    },
+    {
+      "id": "volcanic-material-signatures-26",
+      "cardNumber": "26",
+      "subjects": [
+        {
+          "playerId": "obsidian-lucas-vazquez",
+          "playerName": "Lucas Vazquez",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-27",
+      "cardNumber": "27",
+      "subjects": [
+        {
+          "playerId": "obsidian-dani-vivian",
+          "playerName": "Dani Vivian",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-28",
+      "cardNumber": "28",
+      "subjects": [
+        {
+          "playerId": "obsidian-martin-zubimendi",
+          "playerName": "Martin Zubimendi",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-29",
+      "cardNumber": "29",
+      "subjects": [
+        {
+          "playerId": "obsidian-mikel-oyarzabal",
+          "playerName": "Mikel Oyarzabal",
+          "teamEn": "Spain",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 199
+    },
+    {
+      "id": "volcanic-material-signatures-31",
+      "cardNumber": "31",
+      "subjects": [
+        {
+          "playerId": "obsidian-weston-mckennie",
+          "playerName": "Weston McKennie",
+          "teamEn": "United States",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 49
+    },
+    {
+      "id": "volcanic-material-signatures-32",
+      "cardNumber": "32",
+      "subjects": [
+        {
+          "playerId": "obsidian-jaedyn-shaw",
+          "playerName": "Jaedyn Shaw",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 117
+    },
+    {
+      "id": "volcanic-material-signatures-33",
+      "cardNumber": "33",
+      "subjects": [
+        {
+          "playerId": "obsidian-lindsey-heaps",
+          "playerName": "Lindsey Heaps",
+          "teamEn": "United States (WNT)",
+          "rookie": false
+        }
+      ],
+      "subset": "Volcanic Material Signatures",
+      "category": "auto-relic",
+      "printRun": 99
+    },
+    {
+      "id": "white-night-1",
+      "cardNumber": "1",
+      "subjects": [
+        {
+          "playerId": "obsidian-lionel-messi",
+          "playerName": "Lionel Messi",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "White Night",
+      "category": "insert"
+    },
+    {
+      "id": "white-night-2",
+      "cardNumber": "2",
+      "subjects": [
+        {
+          "playerId": "obsidian-vini-jr",
+          "playerName": "Vini Jr.",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "White Night",
+      "category": "insert"
+    },
+    {
+      "id": "white-night-3",
+      "cardNumber": "3",
+      "subjects": [
+        {
+          "playerId": "obsidian-gavi",
+          "playerName": "Gavi",
+          "teamEn": "FC Barcelona",
+          "rookie": false
+        }
+      ],
+      "subset": "White Night",
+      "category": "insert"
+    },
+    {
+      "id": "white-night-4",
+      "cardNumber": "4",
+      "subjects": [
+        {
+          "playerId": "obsidian-jhon-duran",
+          "playerName": "Jhon Duran",
+          "teamEn": "Al Nassr FC",
+          "rookie": false
+        }
+      ],
+      "subset": "White Night",
+      "category": "insert"
+    },
+    {
+      "id": "white-night-5",
+      "cardNumber": "5",
+      "subjects": [
+        {
+          "playerId": "obsidian-kylian-mbappe",
+          "playerName": "Kylian Mbappe",
+          "teamEn": "Real Madrid",
+          "rookie": false
+        }
+      ],
+      "subset": "White Night",
+      "category": "insert"
+    },
+    {
+      "id": "white-night-6",
+      "cardNumber": "6",
+      "subjects": [
+        {
+          "playerId": "obsidian-jamal-musiala",
+          "playerName": "Jamal Musiala",
+          "teamEn": "Germany",
+          "rookie": false
+        }
+      ],
+      "subset": "White Night",
+      "category": "insert"
+    },
+    {
+      "id": "white-night-7",
+      "cardNumber": "7",
+      "subjects": [
+        {
+          "playerId": "obsidian-diego-maradona",
+          "playerName": "Diego Maradona",
+          "teamEn": "Argentina",
+          "rookie": false
+        }
+      ],
+      "subset": "White Night",
+      "category": "insert"
+    },
+    {
+      "id": "white-night-8",
+      "cardNumber": "8",
+      "subjects": [
+        {
+          "playerId": "obsidian-pele",
+          "playerName": "Pele",
+          "teamEn": "Brazil",
+          "rookie": false
+        }
+      ],
+      "subset": "White Night",
+      "category": "insert"
+    }
+  ]
+}

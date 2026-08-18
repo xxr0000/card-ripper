@@ -116,4 +116,22 @@ describe('importChecklist', () => {
     expect(result.entries[0].subjects[0].playerName).toBe('Anthony Gordon');
     expect(result.entries[0].subjects[0].playerId).toBe('anthony-gordon');
   });
+
+  it('为扩展系列隔离球员 ID，并从新秀子系列传播 RC 标记', () => {
+    const result = importExpandedChecklist([
+      ['Set', 'Number', 'Name', 'Team', 'Print Run'],
+      ['Base', 1, 'Future Star', 'Example FC', null],
+      ['Future', 'F-1', 'Future Star', 'Example FC', null],
+    ], {
+      ...options,
+      seriesId: 'example-series',
+      setCategories: { Base: 'base', Future: 'insert' },
+      rookieSubsets: ['Future'],
+    });
+
+    expect(result.entries[0].subjects[0]).toMatchObject({
+      playerId: 'example-series-future-star',
+      rookie: true,
+    });
+  });
 });

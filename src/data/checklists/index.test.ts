@@ -5,6 +5,10 @@ import {
   PRIZM_EPL_CHECKLIST,
   PRIZM_EPL_INSERT_PLAYERS,
   PRIZM_EPL_PILOT_CARD_IDS,
+  OBSIDIAN_CHECKLIST,
+  SELECT_LALIGA_CHECKLIST,
+  SERIES_PLAYER_POOLS,
+  TOPPS_UCL_CHECKLIST,
 } from './index';
 
 describe('Prizm EPL checklist', () => {
@@ -53,5 +57,30 @@ describe('Prizm EPL checklist', () => {
     })).toBe(true);
     expect(PRIZM_EPL_CHECKLIST.entries.find((entry) => entry.id === 'base-12')?.assets)
       .toBeUndefined();
+  });
+});
+
+describe('M6 expanded checklists', () => {
+  it.each([
+    ['select-laliga', SELECT_LALIGA_CHECKLIST, 250, 646],
+    ['obsidian', OBSIDIAN_CHECKLIST, 107, 471],
+    ['topps-ucl', TOPPS_UCL_CHECKLIST, 200, 738],
+  ])('%s 使用独立、可追溯的正式卡目', (seriesId, checklist, baseCount, totalCount) => {
+    expect(checklist.seriesId).toBe(seriesId);
+    expect(checklist.entries.filter((entry) => entry.category === 'base')).toHaveLength(baseCount);
+    expect(checklist.entries).toHaveLength(totalCount);
+    expect(new Set(checklist.entries.map((entry) => entry.id))).toHaveLength(totalCount);
+    expect(checklist.sources.every((source) => source.url && source.accessedAt)).toBe(true);
+    expect(SERIES_PLAYER_POOLS[seriesId].base.length).toBeGreaterThan(0);
+    expect(SERIES_PLAYER_POOLS[seriesId].insert.length).toBeGreaterThan(0);
+    expect(SERIES_PLAYER_POOLS[seriesId].auto.length).toBeGreaterThan(0);
+  });
+
+  it('Select 与 Obsidian 分离签名、物料和签物名单', () => {
+    for (const checklist of [SELECT_LALIGA_CHECKLIST, OBSIDIAN_CHECKLIST]) {
+      expect(checklist.entries.some((entry) => entry.category === 'auto')).toBe(true);
+      expect(checklist.entries.some((entry) => entry.category === 'relic')).toBe(true);
+      expect(checklist.entries.some((entry) => entry.category === 'auto-relic')).toBe(true);
+    }
   });
 });

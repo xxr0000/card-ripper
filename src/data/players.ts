@@ -1,5 +1,5 @@
 import type { Player } from '../types';
-import { PRIZM_EPL_PLAYERS } from './checklists';
+import { CHECKLIST_PLAYERS } from './checklists';
 
 const p = (
   id: string,
@@ -138,7 +138,7 @@ export const PLAYERS: Player[] = [
 ];
 
 export const PLAYER_MAP: Record<string, Player> = Object.fromEntries(
-  [...PLAYERS, ...PRIZM_EPL_PLAYERS].map((pl) => [pl.id, pl]),
+  [...PLAYERS, ...CHECKLIST_PLAYERS].map((pl) => [pl.id, pl]),
 );
 
 /** 球队主色（卡面渐变用） */

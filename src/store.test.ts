@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { PulledCard } from './types';
-import { parseCollection } from './store';
+import { parseCollection, serializeCollection } from './store';
 
 const card: PulledCard = {
   uid: 'legacy-1',
@@ -39,5 +39,26 @@ describe('parseCollection', () => {
 
   it('拒绝未知版本，避免错误解释未来格式', () => {
     expect(parseCollection(JSON.stringify({ version: 99, cards: [card] }))).toEqual([]);
+  });
+
+  it('用 v2 紧凑格式往返保存，并显著降低大收藏体积', () => {
+    const cards = Array.from({ length: 1_000 }, (_, index) => ({
+      ...card,
+      uid: `card-${index}`,
+      pulledAt: card.pulledAt + index,
+    }));
+    const compact = serializeCollection(cards);
+    const legacy = JSON.stringify({ version: 1, cards });
+
+    const restored = parseCollection(compact);
+    expect(restored.map(({ parallel, ...rest }) => ({ ...rest, parallelId: parallel.id })))
+      .toEqual(cards.map(({ parallel, ...rest }) => ({ ...rest, parallelId: parallel.id })));
+    expect(compact.length).toBeLessThan(legacy.length * 0.55);
+  });
+
+  it('忽略 v2 中无法解析的系列或平行卡', () => {
+    const parsed = JSON.parse(serializeCollection([card])) as { cards: unknown[][] };
+    parsed.cards[0][5] = 'missing-parallel';
+    expect(parseCollection(JSON.stringify(parsed))).toEqual([]);
   });
 });

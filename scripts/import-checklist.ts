@@ -21,6 +21,7 @@ export interface ImportOptions {
   sources: ChecklistSource[];
   setCategories?: Record<string, ChecklistCategory>;
   rookieCardNumbers?: string[];
+  rookieSubsets?: string[];
   allowedTeams?: string[];
   teamTranslations?: Record<string, string>;
   nameCorrections?: Record<string, string>;
@@ -136,6 +137,16 @@ function assetsFromRow(row: CsvRow, rowNumber: number): CardAssetMetadata | unde
 
 function importRows(rows: CsvRow[], options: ImportOptions): SeriesChecklist {
   const rookieNumbers = new Set(options.rookieCardNumbers ?? []);
+  const rookieSubsets = new Set(options.rookieSubsets ?? []);
+  const rookieNames = new Set(
+    rows
+      .filter((row) => rookieSubsets.has(row.subset?.trim() || 'Base'))
+      .map((row) => {
+        const rawName = row.playerName?.trim();
+        return rawName ? options.nameCorrections?.[rawName] ?? rawName : '';
+      })
+      .filter((name) => name.length > 0),
+  );
   const allowedTeams = options.allowedTeams ? new Set(options.allowedTeams) : null;
   const grouped = new Map<string, ChecklistEntry>();
 
@@ -153,7 +164,9 @@ function importRows(rows: CsvRow[], options: ImportOptions): SeriesChecklist {
     if (!CATEGORIES.has(category)) {
       throw new Error(`第 ${rowNumber} 行 category 值无效：${category}`);
     }
-    const playerId = row.playerId?.trim() || slug(playerName);
+    const generatedPlayerId = slug(playerName);
+    const playerId = row.playerId?.trim() ||
+      (options.seriesId === 'prizm-epl' ? generatedPlayerId : `${options.seriesId}-${generatedPlayerId}`);
     if (!playerId) throw new Error(`第 ${rowNumber} 行无法生成 playerId`);
     const subsetId = slug(subset);
     if (!subsetId) throw new Error(`第 ${rowNumber} 行无法生成 subset ID`);
@@ -171,7 +184,8 @@ function importRows(rows: CsvRow[], options: ImportOptions): SeriesChecklist {
       ...(teamZh ? { teamZh } : {}),
       ...(row.countryEn?.trim() ? { countryEn: row.countryEn.trim() } : {}),
       ...(row.countryZh?.trim() ? { countryZh: row.countryZh.trim() } : {}),
-      rookie: parseRookie(row.rookie ?? '', rowNumber) || (subset === 'Base' && rookieNumbers.has(cardNumber)),
+      rookie: parseRookie(row.rookie ?? '', rowNumber) ||
+        (subset === 'Base' && rookieNumbers.has(cardNumber)) || rookieNames.has(playerName),
     };
     const id = `${subsetId}-${cardNumber.toLowerCase()}`;
     const existing = grouped.get(id);
@@ -287,15 +301,102 @@ const PRIZM_EPL_TEAM_TRANSLATIONS: Record<string, string> = {
   'Ipswich Town FC': '伊普斯维奇', Southampton: '南安普顿',
 };
 
-function profile(seriesId: string): Pick<ImportOptions, 'setCategories' | 'rookieCardNumbers' | 'allowedTeams' | 'teamTranslations' | 'nameCorrections'> {
-  if (seriesId !== 'prizm-epl') return {};
-  return {
-    setCategories: PRIZM_EPL_SET_CATEGORIES,
-    rookieCardNumbers: PRIZM_EPL_ROOKIES,
-    allowedTeams: PRIZM_EPL_TEAMS,
-    teamTranslations: PRIZM_EPL_TEAM_TRANSLATIONS,
-    nameCorrections: { 'Anthony rdon': 'Anthony Gordon' },
-  };
+const SELECT_LALIGA_SET_CATEGORIES: Record<string, ChecklistCategory> = {
+  'Base Set La Liga - Terrace': 'base',
+  'Base Set La Liga - Mezzanine': 'base',
+  'Base Set La Liga - Field Level': 'base',
+  'Artistic Impressions La Liga': 'insert',
+  'Equalizers La Liga': 'insert',
+  'Select Future La Liga': 'insert',
+  'Snapshots La Liga': 'insert',
+  'Stained Glass La Liga': 'insert',
+  'Team Badges La Liga': 'insert',
+  'Unstoppable La Liga': 'insert',
+  'Visionary La Liga': 'insert',
+  'Pitchside Signatures La Liga': 'auto',
+  'Select Signatures La Liga': 'auto',
+  'Signatures La Liga': 'auto',
+  'Dual Swatches La Liga': 'relic',
+  'Jumbo Swatches La Liga': 'relic',
+  'Select Memorabilia La Liga': 'relic',
+  'Select Swatches La Liga': 'relic',
+  'Autographed Memorabilia La Liga': 'auto-relic',
+};
+
+const OBSIDIAN_SET_CATEGORIES: Record<string, ChecklistCategory> = {
+  Base: 'base',
+  'Black Color Blast': 'insert',
+  'Cutting Edge': 'insert',
+  Equinox: 'insert',
+  Eruption: 'insert',
+  Iridescent: 'insert',
+  Nucleus: 'insert',
+  Orbital: 'insert',
+  Supernova: 'insert',
+  'White Night': 'insert',
+  'USWNT Class of 19': 'insert',
+  'USWNT Class of 99': 'insert',
+  'Dual Jersey Ink': 'auto',
+  'Galaxy Ink': 'auto',
+  'Lightning Strike': 'auto',
+  'Magmatic Signatures': 'auto',
+  'Atomic Material': 'relic',
+  'Galaxy Gear': 'relic',
+  'Solar Swatches': 'relic',
+  'Trifecta Material': 'relic',
+  'Matrix Material Autographs': 'auto-relic',
+  'Volcanic Material Signatures': 'auto-relic',
+};
+
+const TOPPS_UCL_SET_CATEGORIES: Record<string, ChecklistCategory> = {
+  Base: 'base',
+  'Bowman UEFA Youth League': 'insert',
+  'Circle of Power': 'insert',
+  'Final Destination': 'insert',
+  Golazo: 'insert',
+  Helix: 'insert',
+  'Hero Variations': 'insert',
+  'Munich at Night': 'insert',
+  'Radiating Rookies': 'insert',
+  'Shadow Etch': 'insert',
+  'Soccer Brush': 'insert',
+  'The Grail': 'insert',
+  Tifo: 'insert',
+  'White Noise': 'insert',
+  Wonderkids: 'insert',
+  Youthquake: 'insert',
+  'Black Lazer Autographs': 'auto',
+  'Chrome Autographs': 'auto',
+  'Chrome Dual Autographs': 'auto',
+  'Chrome Triple Autographs': 'auto',
+  'Chrome Quad Autographs': 'auto',
+  'Chrome Quad Autographs Pundits': 'auto',
+  'Future Stars Autographs': 'auto',
+  'Global Attractions Autographs': 'auto',
+  'Wonderkids Autographs': 'auto',
+};
+
+function profile(seriesId: string): Pick<ImportOptions, 'setCategories' | 'rookieCardNumbers' | 'rookieSubsets' | 'allowedTeams' | 'teamTranslations' | 'nameCorrections'> {
+  if (seriesId === 'prizm-epl') {
+    return {
+      setCategories: PRIZM_EPL_SET_CATEGORIES,
+      rookieCardNumbers: PRIZM_EPL_ROOKIES,
+      allowedTeams: PRIZM_EPL_TEAMS,
+      teamTranslations: PRIZM_EPL_TEAM_TRANSLATIONS,
+      nameCorrections: { 'Anthony rdon': 'Anthony Gordon' },
+    };
+  }
+  if (seriesId === 'select-laliga') {
+    return { setCategories: SELECT_LALIGA_SET_CATEGORIES, rookieSubsets: ['Select Future La Liga'] };
+  }
+  if (seriesId === 'obsidian') return { setCategories: OBSIDIAN_SET_CATEGORIES };
+  if (seriesId === 'topps-ucl') {
+    return {
+      setCategories: TOPPS_UCL_SET_CATEGORIES,
+      rookieSubsets: ['Bowman UEFA Youth League', 'Radiating Rookies', 'Wonderkids', 'Youthquake'],
+    };
+  }
+  return {};
 }
 
 function arg(name: string, requiredArg = true): string | undefined {

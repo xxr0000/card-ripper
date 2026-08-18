@@ -62,6 +62,16 @@
 }
 
 .app-main { flex: 1; padding-bottom: 32px; }
+.storage-warning {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border: 1px solid rgba(251, 191, 36, 0.42);
+  border-radius: 10px;
+  background: rgba(251, 191, 36, 0.1);
+  color: #fde68a;
+  font-size: 13px;
+  text-align: center;
+}
 .app-footer {
   padding: 14px 0 22px;
   text-align: center;
@@ -483,6 +493,8 @@
   padding: 0;
   transition: transform 0.12s;
 }
+.col-load-more { align-self: center; }
+.col-load-more span { margin-left: 6px; color: #8b96ad; font-size: 11px; }
 .col-card:hover { transform: translateY(-4px) scale(1.03); }
 
 /* 弹窗 */

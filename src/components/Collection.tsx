@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { PLAYER_MAP } from '../data/players';
 import { SERIES, SERIES_MAP } from '../data/series';
 import { rarityRank } from '../engine/rip';
@@ -6,6 +6,7 @@ import type { PulledCard } from '../types';
 import { CardFace } from './CardFace';
 
 type KindFilter = 'all' | 'auto' | 'relic' | 'numbered' | 'oneofone';
+const PAGE_SIZE = 48;
 
 function matchKind(card: PulledCard, f: KindFilter): boolean {
   switch (f) {
@@ -26,6 +27,7 @@ export function Collection({ cards }: { cards: PulledCard[] }) {
   const [seriesFilter, setSeriesFilter] = useState('all');
   const [kindFilter, setKindFilter] = useState<KindFilter>('all');
   const [selected, setSelected] = useState<PulledCard | null>(null);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const stats = useMemo(() => {
     return {
@@ -46,6 +48,10 @@ export function Collection({ cards }: { cards: PulledCard[] }) {
       )
       .sort((a, b) => rarityRank(b) - rarityRank(a) || b.pulledAt - a.pulledAt);
   }, [cards, seriesFilter, kindFilter]);
+
+  useEffect(() => setVisibleCount(PAGE_SIZE), [cards, seriesFilter, kindFilter]);
+
+  const visibleCards = shown.slice(0, visibleCount);
 
   const selPlayer = selected ? PLAYER_MAP[selected.playerId] : null;
   const selSeries = selected ? SERIES_MAP[selected.seriesId] : null;
@@ -87,12 +93,22 @@ export function Collection({ cards }: { cards: PulledCard[] }) {
         </p>
       ) : (
         <div className="col-grid">
-          {shown.map((c) => (
+          {visibleCards.map((c) => (
             <button key={c.uid} className="col-card" onClick={() => setSelected(c)}>
               <CardFace card={c} size="sm" />
             </button>
           ))}
         </div>
+      )}
+
+      {visibleCount < shown.length && (
+        <button
+          className="btn btn-ghost col-load-more"
+          onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
+        >
+          再显示 {Math.min(PAGE_SIZE, shown.length - visibleCount)} 张
+          <span>（已显示 {visibleCount}/{shown.length}）</span>
+        </button>
       )}
 
       {selected && selPlayer && selSeries && (

@@ -157,13 +157,14 @@ export default function App() {
   const [view, setView] = useState<View>('shop');
   const [balance, setBalance] = useState(loadBalance);
   const [collection, setCollection] = useState<PulledCard[]>(loadCollection);
+  const [storageWarning, setStorageWarning] = useState(false);
   const [currentBox, setCurrentBox] = useState<{
     series: SeriesConfig;
     packs: PackData[];
   } | null>(null);
 
-  useEffect(() => saveBalance(balance), [balance]);
-  useEffect(() => saveCollection(collection), [collection]);
+  useEffect(() => { saveBalance(balance); }, [balance]);
+  useEffect(() => { setStorageWarning(!saveCollection(collection)); }, [collection]);
 
   if (new URLSearchParams(window.location.search).has('preview')) {
     return <PreviewGallery />;
@@ -209,6 +210,11 @@ export default function App() {
       </header>
 
       <main className="app-main">
+        {storageWarning && (
+          <p className="storage-warning" role="status">
+            浏览器存储空间不足，本次新卡仍可查看，但刷新后可能无法保留。
+          </p>
+        )}
         {view === 'shop' && <Shop balance={balance} onBuy={buyBox} />}
         {view === 'rip' && currentBox && (
           <RipView

@@ -1,8 +1,6 @@
 import { PLAYERS } from '../data/players';
 import {
-  PRIZM_EPL_AUTO_PLAYERS,
-  PRIZM_EPL_BASE_PLAYERS,
-  PRIZM_EPL_INSERT_PLAYERS,
+  SERIES_PLAYER_POOLS,
   checklistEntriesFor,
 } from '../data/checklists';
 import type { ChecklistCategory } from '../data/checklists/types';
@@ -40,10 +38,13 @@ function weightedPick<T extends { weight: number }>(
 }
 
 function playersForSeries(series: SeriesConfig, kind: CardKind): Player[] {
-  if (series.id === 'prizm-epl') {
-    if (kind === 'insert') return PRIZM_EPL_INSERT_PLAYERS;
-    if (kind === 'auto' || kind === 'auto-relic') return PRIZM_EPL_AUTO_PLAYERS;
-    return PRIZM_EPL_BASE_PLAYERS;
+  const pools = SERIES_PLAYER_POOLS[series.id];
+  if (pools) {
+    if (kind === 'insert') return pools.insert;
+    if (kind === 'auto') return pools.auto;
+    if (kind === 'relic') return pools.relic;
+    if (kind === 'auto-relic') return pools.autoRelic;
+    return pools.base;
   }
   if (series.leagues === 'all') return PLAYERS;
   return PLAYERS.filter((p) => (series.leagues as string[]).includes(p.league));
@@ -73,8 +74,11 @@ function makeCard(
 ): PulledCard {
   const pool = playersForSeries(series, kind);
   const player = pickPlayer(pool, random);
-  const checklistCategory: ChecklistCategory = kind === 'auto-relic' ? 'auto' : kind;
-  const checklistEntries = checklistEntriesFor(series.id, player.id, checklistCategory);
+  const checklistCategory: ChecklistCategory = kind;
+  let checklistEntries = checklistEntriesFor(series.id, player.id, checklistCategory);
+  if (kind === 'auto-relic' && checklistEntries.length === 0) {
+    checklistEntries = checklistEntriesFor(series.id, player.id, 'auto');
+  }
   const checklistEntry = checklistEntries.length > 0
     ? checklistEntries[Math.floor(random() * checklistEntries.length)]
     : undefined;
