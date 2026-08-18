@@ -22,7 +22,7 @@ describe('card asset resolution', () => {
   it('honors Vite base path and explicit base metadata', () => {
     expect(resolveCardAsset(card(), '/card-ripper/')).toMatchObject({
       path: 'cards/prizm-epl/base-9.webp',
-      source: 'self-made',
+      source: 'reference',
       url: '/card-ripper/cards/prizm-epl/base-9.webp',
     });
     expect(joinAssetUrl('/', '/cards/a.webp')).toBe('/cards/a.webp');
@@ -42,6 +42,6 @@ describe('card asset resolution', () => {
 
   it('returns no asset for old saves and missing metadata', () => {
     expect(resolveCardAsset(card({ cardId: undefined }), '/')).toBeUndefined();
-    expect(resolveCardAsset(card({ cardId: 'base-11' }), '/')).toBeUndefined();
+    expect(resolveCardAsset(card({ cardId: 'base-12' }), '/')).toBeUndefined();
   });
 });

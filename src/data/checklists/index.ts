@@ -8,14 +8,36 @@ import type {
 } from './types';
 import type { Player } from '../../types';
 
-/** M3 自制测试素材；正式素材仍由导入器生成 assets 字段，不修改生成 JSON。 */
+export const PRIZM_EPL_PILOT_CARD_IDS = [
+  ...Array.from({ length: 10 }, (_, index) => `base-${index + 1}`),
+  ...Array.from({ length: 9 }, (_, index) => `base-${index + 21}`),
+  ...Array.from({ length: 10 }, (_, index) => `base-${index + 41}`),
+  ...Array.from({ length: 10 }, (_, index) => `base-${index + 271}`),
+];
+
+const TCDB_PILOT_ASSETS: Record<string, CardAssetMetadata> = Object.fromEntries(
+  PRIZM_EPL_PILOT_CARD_IDS.map((cardId) => {
+    const cardNumber = Number(cardId.slice('base-'.length));
+    const tcdbImageId = 28_923_325 + cardNumber;
+    return [cardId, {
+      base: {
+        path: `cards/prizm-epl/${cardId}.webp`,
+        source: 'reference',
+        note: `TCDB image ${tcdbImageId}; accessed 2026-08-18; private M4 pilot`,
+      },
+    }];
+  }),
+);
+
+/** M3/M4 试点素材；正式素材仍由导入器生成 assets 字段，不修改生成 JSON。 */
 const PRIZM_EPL_ASSET_OVERRIDES: Record<string, CardAssetMetadata> = {
+  ...TCDB_PILOT_ASSETS,
   'base-9': {
-    base: { path: 'cards/prizm-epl/base-9.webp', source: 'self-made', note: 'M3 test art' },
+    ...TCDB_PILOT_ASSETS['base-9'],
     auto: { path: 'cards/prizm-epl/base-9.auto.webp', source: 'self-made', note: 'M3 test art' },
     relic: { path: 'cards/prizm-epl/base-9.relic.webp', source: 'self-made', note: 'M3 test art' },
   },
-  'base-10': {
+  'base-11': {
     base: {
       path: 'cards/prizm-epl/broken.webp',
       source: 'self-made',

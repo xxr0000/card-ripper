@@ -15,6 +15,10 @@ import type { PackData, PulledCard, SeriesConfig } from './types';
 import { CardFace } from './components/CardFace';
 import { PLAYERS } from './data/players';
 import { SERIES } from './data/series';
+import {
+  CHECKLIST_ENTRY_MAP,
+  PRIZM_EPL_PILOT_CARD_IDS,
+} from './data/checklists';
 
 type View = 'shop' | 'rip' | 'collection';
 
@@ -63,6 +67,20 @@ function PreviewGallery() {
     });
   }
   const prizm = SERIES[0];
+  const m4Samples: PulledCard[] = PRIZM_EPL_PILOT_CARD_IDS.map((cardId, index) => {
+    const entry = CHECKLIST_ENTRY_MAP['prizm-epl'][cardId];
+    return {
+      uid: `m4-${cardId}`,
+      playerId: entry.subjects[0].playerId,
+      seriesId: 'prizm-epl',
+      cardId,
+      kind: 'base',
+      parallel: prizm.parallels[index % 3 === 0 ? 1 : 0],
+      serialNumber: null,
+      rookie: entry.subjects[0].rookie,
+      pulledAt: 0,
+    };
+  });
   const m3Samples: Array<{ label: string; card: PulledCard }> = [
     {
       label: '同底图 · Base',
@@ -96,14 +114,14 @@ function PreviewGallery() {
     {
       label: '缺少元数据 · 绘制回退',
       card: {
-        uid: 'm3-missing', playerId: 'jack-grealish', seriesId: 'prizm-epl', cardId: 'base-11',
+        uid: 'm3-missing', playerId: 'bernardo-silva', seriesId: 'prizm-epl', cardId: 'base-12',
         kind: 'base', parallel: prizm.parallels[0], serialNumber: null, rookie: false, pulledAt: 0,
       },
     },
     {
       label: '错误 URL · 加载失败回退',
       card: {
-        uid: 'm3-broken', playerId: 'rico-lewis', seriesId: 'prizm-epl', cardId: 'base-10',
+        uid: 'm3-broken', playerId: 'jack-grealish', seriesId: 'prizm-epl', cardId: 'base-11',
         kind: 'base', parallel: prizm.parallels[0], serialNumber: null, rookie: true, pulledAt: 0,
       },
     },
@@ -117,6 +135,12 @@ function PreviewGallery() {
             <CardFace card={card} size="sm" />
             <figcaption style={{ width: 148, marginTop: 6, fontSize: 12 }}>{label}</figcaption>
           </figure>
+        ))}
+      </div>
+      <h2 style={{ color: '#fff', marginTop: 32 }}>M4 Prizm 真实卡图试点（39 张）</h2>
+      <div data-preview-section="m4" style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+        {m4Samples.map((card) => (
+          <CardFace key={card.uid} card={card} size="sm" />
         ))}
       </div>
       <h2 style={{ color: '#fff', marginTop: 32 }}>全系列绘制卡面回归</h2>

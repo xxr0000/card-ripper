@@ -4,6 +4,7 @@ import {
   PRIZM_EPL_BASE_PLAYERS,
   PRIZM_EPL_CHECKLIST,
   PRIZM_EPL_INSERT_PLAYERS,
+  PRIZM_EPL_PILOT_CARD_IDS,
 } from './index';
 
 describe('Prizm EPL checklist', () => {
@@ -43,8 +44,14 @@ describe('Prizm EPL checklist', () => {
 
   it('支持显式素材元数据且保留无素材卡目', () => {
     expect(PRIZM_EPL_CHECKLIST.entries.find((entry) => entry.id === 'base-9')?.assets?.base)
-      .toMatchObject({ path: 'cards/prizm-epl/base-9.webp', source: 'self-made' });
-    expect(PRIZM_EPL_CHECKLIST.entries.find((entry) => entry.id === 'base-11')?.assets)
+      .toMatchObject({ path: 'cards/prizm-epl/base-9.webp', source: 'reference' });
+    expect(PRIZM_EPL_PILOT_CARD_IDS).toHaveLength(39);
+    expect(PRIZM_EPL_PILOT_CARD_IDS.every((cardId) => {
+      const entry = PRIZM_EPL_CHECKLIST.entries.find((candidate) => candidate.id === cardId);
+      return entry?.assets?.base?.path === `cards/prizm-epl/${cardId}.webp` &&
+        entry.assets.base.source === 'reference';
+    })).toBe(true);
+    expect(PRIZM_EPL_CHECKLIST.entries.find((entry) => entry.id === 'base-12')?.assets)
       .toBeUndefined();
   });
 });
