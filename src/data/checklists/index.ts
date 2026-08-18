@@ -38,6 +38,7 @@ function toPlayers(subjects: ChecklistSubject[]): Player[] {
 
 /** Prizm 的底卡与签字名单独立，避免“所有底卡球员都能出签”。 */
 export const PRIZM_EPL_BASE_PLAYERS = toPlayers(subjectsFor('base'));
+export const PRIZM_EPL_INSERT_PLAYERS = toPlayers(subjectsFor('insert'));
 export const PRIZM_EPL_AUTO_PLAYERS = toPlayers(subjectsFor('auto'));
 export const PRIZM_EPL_PLAYERS = toPlayers(
   PRIZM_EPL_CHECKLIST.entries.flatMap((entry) => entry.subjects),

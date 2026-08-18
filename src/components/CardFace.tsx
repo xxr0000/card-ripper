@@ -71,7 +71,7 @@ export function CardFace({
           {card.rookie && <div className="cf-rc">RC</div>}
         </div>
 
-        {card.kind === 'relic' && (
+        {(card.kind === 'relic' || card.kind === 'auto-relic') && (
           <div className={`cf-relic ${card.relicKind === 'patch' ? 'is-patch' : ''}`}>
             <div className="cf-relic-swatch" />
             <span>{card.relicKind === 'patch' ? 'PATCH' : 'JERSEY'}</span>

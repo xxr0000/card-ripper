@@ -33,7 +33,7 @@ export interface Parallel {
   name: string;
   /** null = 不带编 */
   serialTo: number | null;
-  /** 抽中权重（相对值） */
+  /** 仅用于同一盒槽位内的估算分配；出现频率由 odds.ts 的槽位/赔率决定。 */
   weight: number;
   rarity: Rarity;
   /** CardFace 使用的样式类名 */
@@ -41,11 +41,7 @@ export interface Parallel {
 }
 
 export type HitType = 'auto' | 'relic' | 'auto-relic';
-
-export interface HitSpec {
-  type: HitType;
-  count: number;
-}
+export type CardKind = 'base' | 'insert' | HitType;
 
 export interface SeriesDesign {
   /** 卡面主题类名 */
@@ -69,12 +65,12 @@ export interface SeriesConfig {
   design: SeriesDesign;
   /** 普通卡位的平行池（含普通底卡） */
   parallels: Parallel[];
+  /** 插卡与案例卡池 */
+  insertParallels: Parallel[];
   /** 签名卡的平行池 */
   autoParallels: Parallel[];
   /** 物料卡的平行池 */
   relicParallels: Parallel[];
-  /** 每盒保底命中 */
-  hitsPerBox: HitSpec[];
   /** 商店里的保底说明 */
   hitLabel: string;
 }
@@ -83,7 +79,7 @@ export interface PulledCard {
   uid: string;
   playerId: string;
   seriesId: string;
-  kind: 'base' | HitType;
+  kind: CardKind;
   parallel: Parallel;
   /** 例如 23（配合 parallel.serialTo 显示 23/99） */
   serialNumber: number | null;

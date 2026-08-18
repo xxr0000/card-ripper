@@ -1,9 +1,25 @@
 import { describe, expect, it } from 'vitest';
 import { PLAYER_MAP } from '../data/players';
-import { PRIZM_EPL_AUTO_PLAYERS, PRIZM_EPL_BASE_PLAYERS } from '../data/checklists';
+import {
+  PRIZM_EPL_AUTO_PLAYERS,
+  PRIZM_EPL_BASE_PLAYERS,
+  PRIZM_EPL_INSERT_PLAYERS,
+} from '../data/checklists';
+import { SERIES_ODDS_MAP, type BoxSlotRule } from '../data/odds';
 import { SERIES } from '../data/series';
 import type { PulledCard } from '../types';
 import { ripBox } from './rip';
+
+function countSlot(cards: PulledCard[], rule: BoxSlotRule): number {
+  if (rule.cardKind === 'hit') {
+    return cards.filter((card) =>
+      card.kind === 'auto' || card.kind === 'relic' || card.kind === 'auto-relic',
+    ).length;
+  }
+  if (rule.cardKind === 'insert') return cards.filter((card) => card.kind === 'insert').length;
+  const ids = new Set(rule.parallelIds);
+  return cards.filter((card) => card.kind === 'base' && ids.has(card.parallel.id)).length;
+}
 
 function seededRandom(seed: number): () => number {
   let state = seed >>> 0;
@@ -39,10 +55,8 @@ describe('ripBox', () => {
         expect(packs).toHaveLength(series.packsPerBox);
         expect(cards).toHaveLength(series.packsPerBox * series.cardsPerPack);
 
-        for (const spec of series.hitsPerBox) {
-          expect(cards.filter((card) => card.kind === spec.type).length).toBeGreaterThanOrEqual(
-            spec.count,
-          );
+        for (const rule of SERIES_ODDS_MAP[series.id].boxSlots) {
+          expect(countSlot(cards, rule)).toBe(rule.count);
         }
 
         for (const card of cards) {
@@ -78,13 +92,15 @@ describe('ripBox', () => {
 
   it('Prizm 基础卡和签字卡只从各自正式 checklist 抽取', () => {
     const baseIds = new Set(PRIZM_EPL_BASE_PLAYERS.map((player) => player.id));
+    const insertIds = new Set(PRIZM_EPL_INSERT_PLAYERS.map((player) => player.id));
     const autoIds = new Set(PRIZM_EPL_AUTO_PLAYERS.map((player) => player.id));
     const cards = ripBox(SERIES[0], {
       random: seededRandom(20240818),
       now: () => 1_700_000_000_000,
     }).flatMap((pack) => pack.cards);
     for (const card of cards) {
-      expect(card.kind === 'auto' ? autoIds : baseIds).toContain(card.playerId);
+      const expected = card.kind === 'auto' ? autoIds : card.kind === 'insert' ? insertIds : baseIds;
+      expect(expected).toContain(card.playerId);
     }
   });
 });

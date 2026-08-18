@@ -3,6 +3,7 @@ import {
   PRIZM_EPL_AUTO_PLAYERS,
   PRIZM_EPL_BASE_PLAYERS,
   PRIZM_EPL_CHECKLIST,
+  PRIZM_EPL_INSERT_PLAYERS,
 } from './index';
 
 describe('Prizm EPL checklist', () => {
@@ -16,6 +17,7 @@ describe('Prizm EPL checklist', () => {
 
   it('基础卡覆盖 20 队、300 名球员和 33 张 RC', () => {
     expect(PRIZM_EPL_BASE_PLAYERS).toHaveLength(300);
+    expect(PRIZM_EPL_INSERT_PLAYERS.length).toBeGreaterThan(0);
     expect(new Set(PRIZM_EPL_BASE_PLAYERS.map((player) => player.team))).toHaveLength(20);
     expect(PRIZM_EPL_BASE_PLAYERS.filter((player) => player.rookie)).toHaveLength(33);
   });

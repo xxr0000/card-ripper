@@ -32,7 +32,9 @@ export function RipView({
   const allDone = openedPacks.length === packs.length;
 
   const hits = useMemo(
-    () => revealed.filter((c) => c.kind !== 'base' || effectLevel(c) >= 2),
+    () => revealed.filter((c) =>
+      c.kind === 'auto' || c.kind === 'relic' || c.kind === 'auto-relic' || effectLevel(c) >= 2,
+    ),
     [revealed],
   );
 
