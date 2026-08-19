@@ -6,7 +6,7 @@ import {
 } from 'react';
 import { PLAYER_MAP, TEAM_COLORS } from '../data/players';
 import { SERIES_MAP } from '../data/series';
-import { resolveLandscapePlayerMediaAsset } from '../data/card-assets';
+import { resolveDisplayPlayerMediaAsset } from '../data/card-assets';
 import { effectLevel } from '../engine/rip';
 import type { Player, PulledCard, Rarity, SeriesConfig } from '../types';
 import './CardFace.css';
@@ -60,7 +60,7 @@ function RealCardLayer({
   ) : image;
 }
 
-export const CARD_FRAME_GRADES: Record<Rarity, string> = {
+const CARD_FRAME_GRADES: Record<Rarity, string> = {
   base: 'base',
   shine: 'shine',
   numbered: 'numbered',
@@ -150,8 +150,8 @@ export function CardFace({
 }) {
   const player = PLAYER_MAP[card.playerId];
   const series = SERIES_MAP[card.seriesId];
-  // 完整卡面扫描图不能进入新版照片窗；未复核的横图统一使用绘制回退。
-  const asset = player ? resolveLandscapePlayerMediaAsset(player) : undefined;
+  // 快速发布期复用已有球员图；完整卡面扫描图仍不进入新版照片窗。
+  const asset = player ? resolveDisplayPlayerMediaAsset(player) : undefined;
   const [loadedUrl, setLoadedUrl] = useState<string | null>(null);
   const [failedUrl, setFailedUrl] = useState<string | null>(null);
   const assetUrl = asset?.url;

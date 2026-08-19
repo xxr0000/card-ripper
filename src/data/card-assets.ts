@@ -1,6 +1,6 @@
 import { CHECKLIST_ENTRY_MAP } from './checklists';
 import type { CardAssetMetadata, CardAssetVariant } from './checklists/types';
-import { verifiedLandscapeMediaFor } from './player-media';
+import { playerMediaFor, verifiedLandscapeMediaFor } from './player-media';
 import type { Player, PulledCard } from '../types';
 
 function assetForKind(
@@ -46,5 +46,24 @@ export function resolveLandscapePlayerMediaAsset(
     ...media,
     url: joinAssetUrl(baseUrl, landscapeThumbnailPath),
     largeUrl: joinAssetUrl(baseUrl, landscapeLargePath),
+  };
+}
+
+/**
+ * 发布过渡期：优先已复核横图；缺失时复用 M10 的球员图，避免新版卡面大面积无图。
+ * M11 全量素材完成后，CardFace 将切回严格的 resolveLandscapePlayerMediaAsset。
+ */
+export function resolveDisplayPlayerMediaAsset(
+  player: Player,
+  baseUrl = import.meta.env.BASE_URL,
+) {
+  const landscape = resolveLandscapePlayerMediaAsset(player, baseUrl);
+  if (landscape) return landscape;
+  const media = playerMediaFor(player.name);
+  if (!media) return undefined;
+  return {
+    ...media,
+    url: joinAssetUrl(baseUrl, media.thumbnailPath),
+    largeUrl: joinAssetUrl(baseUrl, media.largePath),
   };
 }
