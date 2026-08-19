@@ -1,3 +1,5 @@
+import type { PulledCard } from './types';
+
 export interface ExperienceSettings {
   sound: boolean;
   vibration: boolean;
@@ -5,7 +7,40 @@ export interface ExperienceSettings {
   volume: number;
 }
 
-export type SoundCue = 'pack' | 'flip' | 'hit';
+export type SoundCue = 'pack-crinkle' | 'pack-tear' | 'pack-open' | 'flip';
+export type HitSoundTier = 'numbered' | 'premium' | 'case' | 'one-of-one';
+
+export interface RecordedSound {
+  path: string;
+  gain: number;
+  playbackRate: number;
+}
+
+const FLIP_SOUND_PATHS = [
+  'audio/flip-1.mp3',
+  'audio/flip-2.mp3',
+  'audio/flip-3.mp3',
+  'audio/flip-4.mp3',
+] as const;
+
+const PACK_SOUND_PATHS: Record<Exclude<SoundCue, 'flip'>, string> = {
+  'pack-crinkle': 'audio/pack-crinkle.mp3',
+  'pack-tear': 'audio/pack-tear.mp3',
+  'pack-open': 'audio/pack-open.mp3',
+};
+
+const HIT_SOUND_PATHS: Record<HitSoundTier, string> = {
+  numbered: 'audio/hit-numbered.mp3',
+  premium: 'audio/hit-premium.mp3',
+  case: 'audio/hit-case.mp3',
+  'one-of-one': 'audio/hit-one-of-one.mp3',
+};
+
+export const RECORDED_AUDIO_PATHS = [
+  ...Object.values(PACK_SOUND_PATHS),
+  ...FLIP_SOUND_PATHS,
+  ...Object.values(HIT_SOUND_PATHS),
+] as const;
 
 export const DEFAULT_EXPERIENCE_SETTINGS: ExperienceSettings = {
   sound: true,
@@ -65,22 +100,53 @@ export function vibrationPattern(level: number): number | number[] {
   return 10;
 }
 
-export function soundProfile(cue: SoundCue, level = 0): {
-  frequency: number;
-  endFrequency: number;
-  duration: number;
-  type: OscillatorType;
-} {
-  if (cue === 'pack') {
-    return { frequency: 180, endFrequency: 520, duration: 0.13, type: 'sawtooth' };
-  }
-  if (cue === 'hit') {
+function vary(random: () => number, amount: number): number {
+  return 1 + (random() * 2 - 1) * amount;
+}
+
+export function recordedSound(cue: SoundCue, random: () => number = Math.random): RecordedSound {
+  if (cue === 'flip') {
+    const index = Math.min(FLIP_SOUND_PATHS.length - 1, Math.floor(random() * FLIP_SOUND_PATHS.length));
     return {
-      frequency: level >= 4 ? 880 : 660,
-      endFrequency: level >= 4 ? 1320 : 990,
-      duration: level >= 4 ? 0.42 : 0.3,
-      type: 'sine',
+      path: FLIP_SOUND_PATHS[index],
+      gain: 0.52 * vary(random, 0.08),
+      playbackRate: vary(random, 0.035),
     };
   }
-  return { frequency: 320, endFrequency: 220, duration: 0.08, type: 'triangle' };
+  const gains: Record<Exclude<SoundCue, 'flip'>, number> = {
+    'pack-crinkle': 0.28,
+    'pack-tear': 0.5,
+    'pack-open': 0.42,
+  };
+  return {
+    path: PACK_SOUND_PATHS[cue],
+    gain: gains[cue] * vary(random, 0.05),
+    playbackRate: vary(random, 0.025),
+  };
+}
+
+export function hitSoundTier(card: PulledCard): HitSoundTier | null {
+  if (card.parallel.rarity === 'one-of-one') return 'one-of-one';
+  if (card.parallel.rarity === 'super') return 'case';
+  if (card.kind === 'auto' || card.kind === 'relic' || card.kind === 'auto-relic') return 'premium';
+  if (card.parallel.rarity === 'numbered' || card.parallel.rarity === 'low-numbered') return 'numbered';
+  return null;
+}
+
+export function recordedHitSound(tier: HitSoundTier, random: () => number = Math.random): RecordedSound {
+  const gains: Record<HitSoundTier, number> = {
+    numbered: 0.32,
+    premium: 0.38,
+    case: 0.44,
+    'one-of-one': 0.5,
+  };
+  return {
+    path: HIT_SOUND_PATHS[tier],
+    gain: gains[tier] * vary(random, 0.035),
+    playbackRate: vary(random, 0.018),
+  };
+}
+
+export function publicAssetUrl(path: string, baseUrl = '/'): string {
+  return `${baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`}${path.replace(/^\//, '')}`;
 }

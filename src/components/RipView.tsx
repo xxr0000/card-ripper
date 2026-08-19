@@ -10,12 +10,16 @@ import {
 import { effectLevel, rarityRank } from '../engine/rip';
 import {
   loadExperienceSettings,
+  hitSoundTier,
+  publicAssetUrl,
+  recordedHitSound,
+  recordedSound,
   saveExperienceSettings,
   shouldOpenFromTear,
-  soundProfile,
   tearProgress,
   vibrationPattern,
   type ExperienceSettings,
+  type RecordedSound,
   type SoundCue,
 } from '../experience';
 import type { PackData, PulledCard, SeriesConfig } from '../types';
@@ -72,21 +76,26 @@ function PackButton({
   series,
   opened,
   onOpen,
+  onSound,
 }: {
   pack: PackData;
   series: SeriesConfig;
   opened: boolean;
   onOpen: (pack: PackData) => void;
+  onSound: (cue: SoundCue) => void;
 }) {
   const startX = useRef<number | null>(null);
   const width = useRef(0);
   const dragged = useRef(false);
   const openedByGesture = useRef(false);
+  const lastSoundProgress = useRef(0);
+  const tearPlayed = useRef(false);
   const [progress, setProgress] = useState(0);
 
   function open() {
     if (opened || openedByGesture.current) return;
     openedByGesture.current = true;
+    if (!tearPlayed.current) onSound('pack-tear');
     onOpen(pack);
   }
 
@@ -95,6 +104,8 @@ function PackButton({
     startX.current = event.clientX;
     width.current = event.currentTarget.getBoundingClientRect().width;
     dragged.current = false;
+    lastSoundProgress.current = 0;
+    tearPlayed.current = false;
     event.currentTarget.setPointerCapture(event.pointerId);
   }
 
@@ -106,7 +117,17 @@ function PackButton({
       dragged.current = true;
       event.preventDefault();
     }
-    if (shouldOpenFromTear(next)) open();
+    if (next >= lastSoundProgress.current + 0.16 && !shouldOpenFromTear(next)) {
+      lastSoundProgress.current = next;
+      onSound('pack-crinkle');
+    }
+    if (shouldOpenFromTear(next)) {
+      if (!tearPlayed.current) {
+        tearPlayed.current = true;
+        onSound('pack-tear');
+      }
+      open();
+    }
   }
 
   function resetGesture() {
@@ -166,7 +187,7 @@ export function RipView({
   const [autoRipping, setAutoRipping] = useState(false);
   const [pausedCardUid, setPausedCardUid] = useState<string | null>(null);
   const [settings, setSettings] = useState(loadExperienceSettings);
-  const audioContext = useRef<AudioContext | null>(null);
+  const audioTemplates = useRef(new Map<string, HTMLAudioElement>());
   const revealedUids = useRef(new Set<string>());
 
   const allDone = openedPacks.length === packs.length;
@@ -178,37 +199,29 @@ export function RipView({
   );
 
   useEffect(() => saveExperienceSettings(settings), [settings]);
-  useEffect(() => () => {
-    if (audioContext.current) void audioContext.current.close();
-  }, []);
 
-  const playSound = useCallback((cue: SoundCue, level = 0) => {
+  const playRecordedSound = useCallback((sound: RecordedSound) => {
     if (!settings.sound || settings.volume <= 0) return;
-    const AudioContextClass = window.AudioContext
-      ?? (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
-    if (!AudioContextClass) return;
-
     try {
-      const context = audioContext.current ?? new AudioContextClass();
-      audioContext.current = context;
-      if (context.state === 'suspended') void context.resume();
-      const profile = soundProfile(cue, level);
-      const oscillator = context.createOscillator();
-      const gain = context.createGain();
-      const now = context.currentTime;
-      oscillator.type = profile.type;
-      oscillator.frequency.setValueAtTime(profile.frequency, now);
-      oscillator.frequency.exponentialRampToValueAtTime(profile.endFrequency, now + profile.duration);
-      gain.gain.setValueAtTime(Math.max(0.0001, settings.volume * 0.12), now);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + profile.duration);
-      oscillator.connect(gain);
-      gain.connect(context.destination);
-      oscillator.start(now);
-      oscillator.stop(now + profile.duration);
+      const url = publicAssetUrl(sound.path, import.meta.env.BASE_URL);
+      let template = audioTemplates.current.get(url);
+      if (!template) {
+        template = new Audio(url);
+        template.preload = 'metadata';
+        audioTemplates.current.set(url, template);
+      }
+      const audio = template.cloneNode(true) as HTMLAudioElement;
+      audio.volume = Math.min(1, settings.volume * sound.gain);
+      audio.playbackRate = sound.playbackRate;
+      void audio.play().catch(() => undefined);
     } catch {
       // Audio can be unavailable or blocked; opening cards must still work.
     }
   }, [settings.sound, settings.volume]);
+
+  const playSound = useCallback((cue: SoundCue) => {
+    playRecordedSound(recordedSound(cue));
+  }, [playRecordedSound]);
 
   const vibrate = useCallback((level: number) => {
     if (!settings.vibration || typeof navigator.vibrate !== 'function') return;
@@ -220,7 +233,7 @@ export function RipView({
   }, [settings.vibration]);
 
   function openPack(pack: PackData) {
-    playSound('pack');
+    playSound('pack-open');
     vibrate(1);
     setActive(pack);
     setRevealIdx(0);
@@ -236,7 +249,11 @@ export function RipView({
       if (revealedUids.current.has(current.uid)) return;
       revealedUids.current.add(current.uid);
       const level = effectLevel(current);
-      playSound(level >= 2 ? 'hit' : 'flip', level);
+      playSound('flip');
+      const hitTier = hitSoundTier(current);
+      if (hitTier) {
+        window.setTimeout(() => playRecordedSound(recordedHitSound(hitTier)), 55);
+      }
       vibrate(level);
       setFlipped(true);
       setRevealed((cards) => cards.some((card) => card.uid === current.uid) ? cards : [...cards, current]);
@@ -253,7 +270,7 @@ export function RipView({
       setAutoRipping(false);
       setPausedCardUid(null);
     }
-  }, [active, flipped, onCardRevealed, playSound, revealIdx, settings.motion, vibrate]);
+  }, [active, flipped, onCardRevealed, playRecordedSound, playSound, revealIdx, settings.motion, vibrate]);
 
   useEffect(() => {
     if (!autoRipping || !active) return;
@@ -372,6 +389,7 @@ export function RipView({
             series={series}
             opened={openedPacks.includes(pack.index)}
             onOpen={openPack}
+            onSound={playSound}
           />
         ))}
       </div>

@@ -6,6 +6,7 @@ import { gzipSync } from 'node:zlib';
 const root = fileURLToPath(new URL('../dist/', import.meta.url));
 const limits = {
   applicationBytes: 5 * 1024 * 1024,
+  audioBytes: 2 * 1024 * 1024,
   playerMediaBytes: 15 * 1024 * 1024,
   javascriptGzipBytes: 350 * 1024,
   cssGzipBytes: 80 * 1024,
@@ -21,12 +22,14 @@ async function filesIn(directory) {
 
 const files = await filesIn(root);
 let applicationBytes = 0;
+let audioBytes = 0;
 let playerMediaBytes = 0;
 const violations = [];
 
 for (const file of files) {
   const size = (await stat(file)).size;
   if (relative(root, file).startsWith('client/cards/players/')) playerMediaBytes += size;
+  else if (relative(root, file).startsWith('client/audio/')) audioBytes += size;
   else applicationBytes += size;
   if (!file.endsWith('.js') && !file.endsWith('.css')) continue;
   const gzipBytes = gzipSync(await readFile(file)).byteLength;
@@ -42,10 +45,13 @@ if (applicationBytes > limits.applicationBytes) {
 if (playerMediaBytes > limits.playerMediaBytes) {
   violations.push(`球员媒体 ${(playerMediaBytes / 1024 / 1024).toFixed(2)}MB > ${(limits.playerMediaBytes / 1024 / 1024).toFixed(0)}MB`);
 }
+if (audioBytes > limits.audioBytes) {
+  violations.push(`本地音效 ${(audioBytes / 1024 / 1024).toFixed(2)}MB > ${(limits.audioBytes / 1024 / 1024).toFixed(0)}MB`);
+}
 
 if (violations.length > 0) {
   console.error(`构建体积门禁未通过：\n${violations.join('\n')}`);
   process.exitCode = 1;
 } else {
-  console.log(`构建体积门禁通过：应用 ${(applicationBytes / 1024 / 1024).toFixed(2)}MB；延迟加载球员媒体 ${(playerMediaBytes / 1024 / 1024).toFixed(2)}MB。`);
+  console.log(`构建体积门禁通过：应用 ${(applicationBytes / 1024 / 1024).toFixed(2)}MB；延迟加载球员媒体 ${(playerMediaBytes / 1024 / 1024).toFixed(2)}MB；本地音效 ${(audioBytes / 1024 / 1024).toFixed(2)}MB。`);
 }
