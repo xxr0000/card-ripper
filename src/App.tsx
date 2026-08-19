@@ -13,7 +13,8 @@ import {
 } from './store';
 import type { PackData, PulledCard, SeriesConfig } from './types';
 import { CardFace } from './components/CardFace';
-import { PLAYERS } from './data/players';
+import { PLAYER_MAP, PLAYERS } from './data/players';
+import { landscapePilotForSeries } from './data/landscape-pilot';
 import { SERIES } from './data/series';
 import {
   CHECKLIST_ENTRY_MAP,
@@ -23,70 +24,67 @@ import {
 type View = 'shop' | 'rip' | 'collection';
 
 function DesignPreviewGallery() {
-  const prizm = SERIES.find((series) => series.id === 'prizm-epl')!;
-  const select = SERIES.find((series) => series.id === 'select-laliga')!;
-  const obsidian = SERIES.find((series) => series.id === 'obsidian')!;
-  const examples: Array<{
-    label: string;
-    note: string;
-    card: PulledCard;
-  }> = [
-    {
-      label: '银色基础框',
-      note: '图片完整收进照片窗，折射只经过边框和底板',
-      card: {
-        uid: 'design-silver', playerId: 'haaland', seriesId: prizm.id,
-        kind: 'base', parallel: prizm.parallels[1], serialNumber: null,
-        rookie: false, pulledAt: 0,
-      },
-    },
-    {
-      label: '蓝色编号框',
-      note: '等级颜色集中在边框，编号单独强化',
-      card: {
-        uid: 'design-numbered', playerId: 'mbappe', seriesId: select.id,
-        kind: 'base', parallel: select.parallels.find((p) => p.id === 'purple99')!, serialNumber: 23,
-        rookie: false, pulledAt: 0,
-      },
-    },
-    {
-      label: '金色低编签名框',
-      note: '签名移到照片外的浅色签名区，始终清晰',
-      card: {
-        uid: 'design-auto', playerId: 'messi', seriesId: obsidian.id,
-        kind: 'auto', parallel: obsidian.autoParallels[2], serialNumber: 3,
-        rookie: false, pulledAt: 0,
-      },
-    },
-    {
-      label: '黑金签物框',
-      note: '物料和签名共用独立认证区，不遮挡人物',
-      card: {
-        uid: 'design-auto-relic', playerId: 'ronaldo', seriesId: obsidian.id,
-        kind: 'auto-relic', parallel: obsidian.autoParallels[3], serialNumber: 1,
-        relicKind: 'patch', rookie: false, pulledAt: 0,
-      },
-    },
-  ];
+  const previewCard = (series: SeriesConfig, playerId: string, index: number): PulledCard => {
+    const player = PLAYER_MAP[playerId];
+    const patterns = [
+      { kind: 'base' as const, parallel: series.parallels[0] },
+      { kind: 'base' as const, parallel: series.parallels.find((parallel) => parallel.rarity === 'shine') ?? series.parallels[0] },
+      { kind: 'base' as const, parallel: series.parallels.find((parallel) => parallel.rarity === 'numbered') ?? series.parallels[0] },
+      { kind: 'base' as const, parallel: series.parallels.find((parallel) => parallel.rarity === 'low-numbered') ?? series.parallels[0] },
+      { kind: 'base' as const, parallel: series.parallels.find((parallel) => parallel.rarity === 'super') ?? series.parallels[0] },
+      { kind: 'base' as const, parallel: series.parallels.find((parallel) => parallel.rarity === 'one-of-one') ?? series.parallels[0] },
+      { kind: 'insert' as const, parallel: series.insertParallels[0] },
+      { kind: 'auto' as const, parallel: series.autoParallels[0] },
+      { kind: 'relic' as const, parallel: series.relicParallels[1] ?? series.relicParallels[0] },
+      { kind: 'auto-relic' as const, parallel: series.autoParallels.at(-1) ?? series.autoParallels[0] },
+    ];
+    const { kind, parallel } = patterns[index];
+    return {
+      uid: `design-${series.id}-${playerId}`,
+      playerId,
+      seriesId: series.id,
+      kind,
+      parallel,
+      serialNumber: parallel.serialTo ? Math.max(1, Math.ceil(parallel.serialTo / 2)) : null,
+      relicKind: kind === 'relic' || kind === 'auto-relic' ? 'patch' : undefined,
+      rookie: !!player?.rookie,
+      pulledAt: 0,
+    };
+  };
 
   return (
     <main className="design-preview-page">
       <header className="design-preview-header">
-        <span>Card face direction · review draft</span>
-        <h1>新版卡面边框样例</h1>
-        <p>正式卡面已使用相同结构。请重点确认边框等级、照片占比、签名区和物料区的位置。</p>
+        <span>Framed card face · M11.3 pilot matrix</span>
+        <h1>新版卡面试点矩阵</h1>
+        <p>四系列各 10 名高频主体，覆盖 Base、编号、低编、Super、1/1、插卡、签名、物料和签物。</p>
       </header>
-      <section className="design-preview-grid">
-        {examples.map(({ label, note, card }) => (
-          <figure key={card.uid}>
-            <CardFace card={card} size="md" />
-            <figcaption>
-              <strong>{label}</strong>
-              <span>{note}</span>
-            </figcaption>
-          </figure>
-        ))}
-      </section>
+      {SERIES.map((series) => {
+        const subjects = landscapePilotForSeries(series.id);
+        return (
+          <section className="design-preview-series" key={series.id}>
+            <header>
+              <span>{series.brand} · {series.year}</span>
+              <h2>{series.nameEn}</h2>
+              <p>{subjects.length} pilot subjects · landscape source review pending</p>
+            </header>
+            <div className="design-preview-grid">
+              {subjects.map((subject, index) => {
+                const card = previewCard(series, subject.playerId, index);
+                return (
+                  <figure key={card.uid}>
+                    <CardFace card={card} size="md" />
+                    <figcaption>
+                      <strong>{PLAYER_MAP[subject.playerId].name}</strong>
+                      <span>{card.kind} · {card.parallel.nameEn}</span>
+                    </figcaption>
+                  </figure>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
     </main>
   );
 }

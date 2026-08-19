@@ -568,6 +568,32 @@
   max-width: 1120px;
   margin: 0 auto;
 }
+.design-preview-series {
+  max-width: 1120px;
+  margin: 0 auto 58px;
+}
+.design-preview-series > header {
+  margin: 0 0 24px;
+  text-align: center;
+}
+.design-preview-series > header span {
+  color: #7c8aa2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.design-preview-series > header h2 {
+  margin: 7px 0 4px;
+  color: #edf2f8;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 24px;
+}
+.design-preview-series > header p {
+  margin: 0;
+  color: #758298;
+  font-size: 12px;
+}
 .design-preview-grid figure {
   display: flex;
   flex-direction: column;
