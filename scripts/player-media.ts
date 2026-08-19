@@ -7,7 +7,10 @@ import { CHECKLIST_PLAYERS } from '../src/data/checklists';
 import { PLAYER_MEDIA } from '../src/data/player-media.generated';
 import { mediaKey, type PlayerMedia } from '../src/data/player-media';
 import {
+  processLandscapeAsset,
   processResponsiveAsset,
+  LANDSCAPE_LARGE_HEIGHT,
+  LANDSCAPE_LARGE_WIDTH,
   PLAYER_LARGE_HEIGHT,
   PLAYER_LARGE_WIDTH,
 } from './assets';
@@ -89,6 +92,7 @@ async function main(): Promise<void> {
   const offset = arg('--offset', 0);
   const limit = arg('--limit', 100);
   const concurrency = Math.max(1, arg('--concurrency', 8));
+  const landscape = process.argv.includes('--landscape');
   searchDelayMs = Math.max(0, arg('--search-delay', 0));
   const allPlayers = [...new Map(
     [...PLAYERS, ...CHECKLIST_PLAYERS].map((player) => [mediaKey(player.name), player]),
@@ -119,22 +123,70 @@ async function main(): Promise<void> {
     while (cursor < corePlayers.length) {
       const player = corePlayers[cursor];
       cursor += 1;
-      if (PLAYER_MEDIA[mediaKey(player.name)]) continue;
       const key = mediaKey(player.name);
+      const existing = PLAYER_MEDIA[key];
+      if (existing && !landscape) continue;
       try {
-        const sourcePlayer = await playerPhotoFor(player.name);
-        if (!sourcePlayer?.strThumb || (!sourcePlayer.idPlayer && !sourcePlayer.sourcePage)) {
-          throw new Error('未找到可核对的球员摄影图');
-        }
-        const sourceResponse = await fetch(sourcePlayer.strThumb, {
-          headers: { 'User-Agent': 'CardRipperMediaPilot/1.0 (private hobby project)' },
-        });
-        if (!sourceResponse.ok) throw new Error(`图片下载返回 ${sourceResponse.status}`);
         const sourcePath = resolve(INPUT_ROOT, `${key}.source`);
-        await writeFile(sourcePath, Buffer.from(await sourceResponse.arrayBuffer()));
-        const source = await readFile(sourcePath);
+        let source: Buffer;
+        try {
+          source = await readFile(sourcePath);
+        } catch {
+          const sourcePlayer = await playerPhotoFor(player.name);
+          if (!sourcePlayer?.strThumb || (!sourcePlayer.idPlayer && !sourcePlayer.sourcePage)) {
+            throw new Error('未找到可核对的球员摄影图');
+          }
+          const sourceResponse = await fetch(sourcePlayer.strThumb, {
+            headers: { 'User-Agent': 'CardRipperMediaPilot/1.0 (private hobby project)' },
+          });
+          if (!sourceResponse.ok) throw new Error(`图片下载返回 ${sourceResponse.status}`);
+          source = Buffer.from(await sourceResponse.arrayBuffer());
+          await writeFile(sourcePath, source);
+        }
         const metadata = await sharp(source).metadata();
         if (!metadata.width || !metadata.height) throw new Error('无法读取图片尺寸');
+        if (landscape) {
+          if (metadata.width < LANDSCAPE_LARGE_WIDTH || metadata.height < LANDSCAPE_LARGE_HEIGHT || metadata.width / metadata.height < 1.25) {
+            media[key] = {
+              ...(existing ?? {
+                playerName: player.name,
+                thumbnailPath: '',
+                largePath: '',
+                sourcePage: '',
+                accessedAt: ACCESS_DATE,
+                originalWidth: metadata.width,
+                originalHeight: metadata.height,
+                focalPoint: { x: 0.5, y: 0.4 },
+                status: 'verified' as const,
+              }),
+              landscapeStatus: 'needs-new-source',
+              landscapeReview: 'pending',
+            };
+            continue;
+          }
+          const thumbnailPath = resolve(OUTPUT_ROOT, `${key}-landscape-sm.webp`);
+          const largePath = resolve(OUTPUT_ROOT, `${key}-landscape-lg.webp`);
+          await processLandscapeAsset(sourcePath, thumbnailPath, largePath);
+          media[key] = {
+            ...(existing ?? {
+              playerName: player.name,
+              thumbnailPath: '',
+              largePath: '',
+              sourcePage: '',
+              accessedAt: ACCESS_DATE,
+              originalWidth: metadata.width,
+              originalHeight: metadata.height,
+              focalPoint: { x: 0.5, y: 0.4 },
+              status: 'verified' as const,
+            }),
+            landscapeStatus: 'crop-approved',
+            landscapeReview: 'pending',
+            landscapeThumbnailPath: `cards/players/${key}-landscape-sm.webp`,
+            landscapeLargePath: `cards/players/${key}-landscape-lg.webp`,
+          };
+          console.log(`待复核横图: ${player.name}`);
+          continue;
+        }
         const thumbnailPath = resolve(OUTPUT_ROOT, `${key}-sm.webp`);
         const largePath = resolve(OUTPUT_ROOT, `${key}-lg.webp`);
         await processResponsiveAsset(sourcePath, thumbnailPath, largePath);
@@ -166,7 +218,9 @@ async function main(): Promise<void> {
   }
   await writeFile(stagingPath, `${JSON.stringify(media, null, 2)}\n`, 'utf8');
   const alreadyCovered = corePlayers.filter((player) => PLAYER_MEDIA[mediaKey(player.name)]).length;
-  console.log(`批次完成 ${alreadyCovered + Object.keys(media).length}/${corePlayers.length}。`);
+  console.log(landscape
+    ? `横图批次完成 ${Object.keys(media).length}/${corePlayers.length}，请人工复核后再标记 verified。`
+    : `批次完成 ${alreadyCovered + Object.keys(media).length}/${corePlayers.length}。`);
   if (failures.length) {
     await writeFile(resolve(STAGING_ROOT, `${offset}.failures.txt`), `${failures.join('\n')}\n`, 'utf8');
   }

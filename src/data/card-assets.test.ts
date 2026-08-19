@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { SERIES } from './series';
-import { joinAssetUrl, resolveCardAsset, resolvePlayerMediaAsset } from './card-assets';
+import { joinAssetUrl, resolveCardAsset, resolveLandscapePlayerMediaAsset } from './card-assets';
 import { PLAYER_MAP } from './players';
 import { mediaKey } from './player-media';
 import type { PulledCard } from '../types';
@@ -47,14 +47,9 @@ describe('card asset resolution', () => {
     expect(resolveCardAsset(card({ cardId: 'base-12' }), '/')).toBeUndefined();
   });
 
-  it('uses a responsive player photo only after card-specific art is unavailable', () => {
+  it('keeps unreviewed portrait media out of the formal landscape-card path', () => {
     const haaland = PLAYER_MAP.haaland;
-    expect(resolvePlayerMediaAsset(haaland, '/card-ripper/')).toMatchObject({
-      thumbnailPath: 'cards/players/erling-haaland-sm.webp',
-      largePath: 'cards/players/erling-haaland-lg.webp',
-      url: '/card-ripper/cards/players/erling-haaland-sm.webp',
-      largeUrl: '/card-ripper/cards/players/erling-haaland-lg.webp',
-    });
+    expect(resolveLandscapePlayerMediaAsset(haaland, '/card-ripper/')).toBeUndefined();
   });
 
   it('canonicalizes known same-player name variants', () => {

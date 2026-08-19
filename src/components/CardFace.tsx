@@ -6,7 +6,7 @@ import {
 } from 'react';
 import { PLAYER_MAP, TEAM_COLORS } from '../data/players';
 import { SERIES_MAP } from '../data/series';
-import { resolveCardAsset, resolvePlayerMediaAsset } from '../data/card-assets';
+import { resolveLandscapePlayerMediaAsset } from '../data/card-assets';
 import { effectLevel } from '../engine/rip';
 import type { Player, PulledCard, Rarity, SeriesConfig } from '../types';
 import './CardFace.css';
@@ -150,7 +150,8 @@ export function CardFace({
 }) {
   const player = PLAYER_MAP[card.playerId];
   const series = SERIES_MAP[card.seriesId];
-  const asset = resolveCardAsset(card) ?? (player ? resolvePlayerMediaAsset(player) : undefined);
+  // 完整卡面扫描图不能进入新版照片窗；未复核的横图统一使用绘制回退。
+  const asset = player ? resolveLandscapePlayerMediaAsset(player) : undefined;
   const [loadedUrl, setLoadedUrl] = useState<string | null>(null);
   const [failedUrl, setFailedUrl] = useState<string | null>(null);
   const assetUrl = asset?.url;
@@ -191,6 +192,9 @@ export function CardFace({
         '--t1': c1,
         '--t2': c2,
         '--acc': series.design.accent,
+        '--photo-position': asset?.focalPoint
+          ? `${asset.focalPoint.x * 100}% ${asset.focalPoint.y * 100}%`
+          : 'center',
       } as CSSProperties}
       onPointerMove={handlePointerMove}
       onPointerLeave={resetTilt}

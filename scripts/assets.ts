@@ -11,6 +11,12 @@ export const MAX_CARD_BYTES = 120 * 1024;
 export const PLAYER_LARGE_WIDTH = 1000;
 export const PLAYER_LARGE_HEIGHT = 1400;
 export const MAX_PLAYER_LARGE_BYTES = 300 * 1024;
+export const LANDSCAPE_THUMB_WIDTH = 720;
+export const LANDSCAPE_THUMB_HEIGHT = 480;
+export const LANDSCAPE_LARGE_WIDTH = 1200;
+export const LANDSCAPE_LARGE_HEIGHT = 800;
+export const MAX_LANDSCAPE_THUMB_BYTES = 150 * 1024;
+export const MAX_LANDSCAPE_LARGE_BYTES = 360 * 1024;
 const SOURCE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.svg']);
 
 export interface AssetManifestEntry {
@@ -113,6 +119,47 @@ export async function processResponsiveAsset(
   }
   if (large.byteLength > MAX_PLAYER_LARGE_BYTES) {
     throw new Error(`${source}: 大图 ${large.byteLength} bytes 超过 ${MAX_PLAYER_LARGE_BYTES} bytes`);
+  }
+  return {
+    thumbnailPath: thumbnailOutput,
+    largePath: largeOutput,
+    thumbnailBytes: thumbnail.byteLength,
+    largeBytes: large.byteLength,
+  };
+}
+
+/**
+ * 生成新版照片窗专用的 3:2 横图。`cover` 只负责输出，不代表素材通过构图审核；
+ * 调用方必须先记录 crop-approved 和人工复核结果。
+ */
+export async function processLandscapeAsset(
+  source: string,
+  thumbnailOutput: string,
+  largeOutput: string,
+): Promise<ResponsiveAssetManifestEntry> {
+  await mkdir(resolve(thumbnailOutput, '..'), { recursive: true });
+  await mkdir(resolve(largeOutput, '..'), { recursive: true });
+  await sharp(source)
+    .resize(LANDSCAPE_THUMB_WIDTH, LANDSCAPE_THUMB_HEIGHT, { fit: 'cover', position: 'attention' })
+    .webp({ quality: 82, smartSubsample: true })
+    .toFile(thumbnailOutput);
+  await sharp(source)
+    .resize(LANDSCAPE_LARGE_WIDTH, LANDSCAPE_LARGE_HEIGHT, { fit: 'cover', position: 'attention' })
+    .webp({ quality: 84, smartSubsample: true })
+    .toFile(largeOutput);
+  const [thumbnail, large] = await Promise.all([readFile(thumbnailOutput), readFile(largeOutput)]);
+  const [thumbnailMetadata, largeMetadata] = await Promise.all([
+    sharp(thumbnail).metadata(),
+    sharp(large).metadata(),
+  ]);
+  if (thumbnailMetadata.width !== LANDSCAPE_THUMB_WIDTH || thumbnailMetadata.height !== LANDSCAPE_THUMB_HEIGHT) {
+    throw new Error(`${source}: 横图缩略图输出尺寸不是 ${LANDSCAPE_THUMB_WIDTH}x${LANDSCAPE_THUMB_HEIGHT}`);
+  }
+  if (largeMetadata.width !== LANDSCAPE_LARGE_WIDTH || largeMetadata.height !== LANDSCAPE_LARGE_HEIGHT) {
+    throw new Error(`${source}: 横图大图输出尺寸不是 ${LANDSCAPE_LARGE_WIDTH}x${LANDSCAPE_LARGE_HEIGHT}`);
+  }
+  if (thumbnail.byteLength > MAX_LANDSCAPE_THUMB_BYTES || large.byteLength > MAX_LANDSCAPE_LARGE_BYTES) {
+    throw new Error(`${source}: 横图文件超过体积门禁`);
   }
   return {
     thumbnailPath: thumbnailOutput,

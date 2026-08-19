@@ -6,11 +6,16 @@ import { afterEach, describe, expect, it } from 'vitest';
 import {
   CARD_HEIGHT,
   CARD_WIDTH,
+  LANDSCAPE_LARGE_HEIGHT,
+  LANDSCAPE_LARGE_WIDTH,
+  LANDSCAPE_THUMB_HEIGHT,
+  LANDSCAPE_THUMB_WIDTH,
   MAX_CARD_BYTES,
   MAX_PLAYER_LARGE_BYTES,
   PLAYER_LARGE_HEIGHT,
   PLAYER_LARGE_WIDTH,
   processAssets,
+  processLandscapeAsset,
   processResponsiveAsset,
 } from './assets';
 
@@ -59,5 +64,25 @@ describe('asset processing pipeline', () => {
     expect([thumbnailMeta.width, thumbnailMeta.height]).toEqual([CARD_WIDTH, CARD_HEIGHT]);
     expect([largeMeta.width, largeMeta.height]).toEqual([PLAYER_LARGE_WIDTH, PLAYER_LARGE_HEIGHT]);
     expect(result.largeBytes).toBeLessThanOrEqual(MAX_PLAYER_LARGE_BYTES);
+  });
+
+  it('creates the 3:2 landscape pair used by the new card photo window', async () => {
+    const root = await mkdtemp(resolve(tmpdir(), 'card-ripper-landscape-assets-'));
+    tempDirectories.push(root);
+    const input = resolve(root, 'source.png');
+    const thumbnail = resolve(root, 'landscape-sm.webp');
+    const large = resolve(root, 'landscape-lg.webp');
+    await sharp({
+      create: { width: 1600, height: 1000, channels: 3, background: '#246' },
+    }).png().toFile(input);
+
+    const result = await processLandscapeAsset(input, thumbnail, large);
+    const [thumbnailMeta, largeMeta] = await Promise.all([
+      sharp(await readFile(thumbnail)).metadata(),
+      sharp(await readFile(large)).metadata(),
+    ]);
+    expect([thumbnailMeta.width, thumbnailMeta.height]).toEqual([LANDSCAPE_THUMB_WIDTH, LANDSCAPE_THUMB_HEIGHT]);
+    expect([largeMeta.width, largeMeta.height]).toEqual([LANDSCAPE_LARGE_WIDTH, LANDSCAPE_LARGE_HEIGHT]);
+    expect(result.thumbnailBytes).toBeGreaterThan(0);
   });
 });
