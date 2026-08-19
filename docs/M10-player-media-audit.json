@@ -1,0 +1,707 @@
+{
+  "uniqueSubjects": 1043,
+  "covered": 904,
+  "fallback": 139,
+  "coveragePercent": 86.7,
+  "identityPending": 0,
+  "mediaFiles": 1808,
+  "mediaBytes": 114780164,
+  "mediaMiB": 109.46,
+  "fallbackSubjects": [
+    {
+      "name": "Ben Seghir",
+      "team": "AS Monaco",
+      "id": "benyedder"
+    },
+    {
+      "name": "Neymar Jr",
+      "team": "FC Barcelona",
+      "id": "topps-ucl-neymar-jr"
+    },
+    {
+      "name": "Martin Odegaard",
+      "team": "Arsenal",
+      "id": "martin-odegaard"
+    },
+    {
+      "name": "Ben White",
+      "team": "Arsenal FC",
+      "id": "topps-ucl-ben-white"
+    },
+    {
+      "name": "Gabriel",
+      "team": "Brazil",
+      "id": "obsidian-gabriel"
+    },
+    {
+      "name": "Andy Robertson",
+      "team": "Liverpool FC",
+      "id": "andy-robertson"
+    },
+    {
+      "name": "Toby Collyer",
+      "team": "Manchester United",
+      "id": "topps-ucl-toby-collyer"
+    },
+    {
+      "name": "Rasmus Hojlund",
+      "team": "Manchester United",
+      "id": "rasmus-hojlund"
+    },
+    {
+      "name": "Antony",
+      "team": "Manchester United",
+      "id": "antony"
+    },
+    {
+      "name": "Maximilian Kilman",
+      "team": "West Ham United",
+      "id": "maximilian-kilman"
+    },
+    {
+      "name": "Will Hughes",
+      "team": "Crystal Palace",
+      "id": "will-hughes"
+    },
+    {
+      "name": "Joao Pedro",
+      "team": "Brighton & Hove Albion",
+      "id": "joao-pedro"
+    },
+    {
+      "name": "Ferdi Kadioglu",
+      "team": "Brighton & Hove Albion",
+      "id": "ferdi-kadioglu"
+    },
+    {
+      "name": "Illia Zabarnyi",
+      "team": "AFC Bournemouth",
+      "id": "illia-zabarnyi"
+    },
+    {
+      "name": "Alex Scott",
+      "team": "AFC Bournemouth",
+      "id": "alex-scott"
+    },
+    {
+      "name": "Jose Sa",
+      "team": "Wolverhampton Wanderers",
+      "id": "jose-sa"
+    },
+    {
+      "name": "Andre",
+      "team": "Brazil",
+      "id": "obsidian-andre"
+    },
+    {
+      "name": "Jorgen Strand Larsen",
+      "team": "Wolverhampton Wanderers",
+      "id": "jorgen-strand-larsen"
+    },
+    {
+      "name": "Tommy Doyle",
+      "team": "Wolverhampton Wanderers",
+      "id": "tommy-doyle"
+    },
+    {
+      "name": "Toti",
+      "team": "Wolverhampton Wanderers",
+      "id": "toti"
+    },
+    {
+      "name": "Vitalii Mykolenko",
+      "team": "Everton",
+      "id": "vitalii-mykolenko"
+    },
+    {
+      "name": "Jesper Lindstrom",
+      "team": "Everton",
+      "id": "jesper-lindstrom"
+    },
+    {
+      "name": "Christian Norgaard",
+      "team": "Brentford",
+      "id": "christian-norgaard"
+    },
+    {
+      "name": "Murillo",
+      "team": "Nottingham Forest FC",
+      "id": "murillo"
+    },
+    {
+      "name": "Jens Cajuste",
+      "team": "Ipswich Town FC",
+      "id": "jens-cajuste"
+    },
+    {
+      "name": "Samuel Amo-Ameyaw",
+      "team": "Southampton",
+      "id": "samuel-amo-ameyaw"
+    },
+    {
+      "name": "Ji-Soo Kim",
+      "team": "Brentford",
+      "id": "ji-soo-kim"
+    },
+    {
+      "name": "Yehor Yarmoliuk",
+      "team": "Brentford",
+      "id": "yehor-yarmoliuk"
+    },
+    {
+      "name": "Bobby De Cordova-Reid",
+      "team": "Leicester City",
+      "id": "bobby-de-cordova-reid"
+    },
+    {
+      "name": "Tosin",
+      "team": "Chelsea FC",
+      "id": "tosin"
+    },
+    {
+      "name": "Will Smallbone",
+      "team": "Southampton",
+      "id": "will-smallbone"
+    },
+    {
+      "name": "Alexander Sorloth",
+      "team": "Atletico de Madrid",
+      "id": "obsidian-alexander-sorloth"
+    },
+    {
+      "name": "Fermín López",
+      "team": "FC Barcelona",
+      "id": "topps-ucl-fermin-lopez"
+    },
+    {
+      "name": "Vini Jr.",
+      "team": "Real Madrid C.F.",
+      "id": "topps-ucl-vini-jr"
+    },
+    {
+      "name": "David Otorbi",
+      "team": "Valencia CF",
+      "id": "select-laliga-david-otorbi"
+    },
+    {
+      "name": "Orjan Nyland",
+      "team": "Sevilla FC",
+      "id": "select-laliga-orjan-nyland"
+    },
+    {
+      "name": "Bertug Yildirim",
+      "team": "Getafe CF",
+      "id": "select-laliga-bertug-yildirim"
+    },
+    {
+      "name": "Oliver McBurnie",
+      "team": "UD Las Palmas",
+      "id": "select-laliga-oliver-mcburnie"
+    },
+    {
+      "name": "Cesar Tarrega",
+      "team": "Valencia CF",
+      "id": "select-laliga-cesar-tarrega"
+    },
+    {
+      "name": "Javi Hernandez",
+      "team": "CD Leganes",
+      "id": "select-laliga-javi-hernandez"
+    },
+    {
+      "name": "Oscar Rodriguez",
+      "team": "CD Leganes",
+      "id": "select-laliga-oscar-rodriguez"
+    },
+    {
+      "name": "Dani Carvajal",
+      "team": "Real Madrid",
+      "id": "select-laliga-dani-carvajal"
+    },
+    {
+      "name": "Peter Federico",
+      "team": "Getafe CF",
+      "id": "select-laliga-peter-federico"
+    },
+    {
+      "name": "Gerard Martin",
+      "team": "FC Barcelona",
+      "id": "obsidian-gerard-martin"
+    },
+    {
+      "name": "Sandro Ramirez",
+      "team": "UD Las Palmas",
+      "id": "select-laliga-sandro-ramirez"
+    },
+    {
+      "name": "Enzo Boyomo",
+      "team": "CA Osasuna",
+      "id": "select-laliga-enzo-boyomo"
+    },
+    {
+      "name": "Ivan Sanchez",
+      "team": "Real Valladolid CF",
+      "id": "select-laliga-ivan-sanchez"
+    },
+    {
+      "name": "Karl Hein",
+      "team": "Real Valladolid CF",
+      "id": "select-laliga-karl-hein"
+    },
+    {
+      "name": "Dani Parejo",
+      "team": "Villarreal CF",
+      "id": "select-laliga-dani-parejo"
+    },
+    {
+      "name": "Fran Perez",
+      "team": "Valencia CF",
+      "id": "select-laliga-fran-perez"
+    },
+    {
+      "name": "Mario Martin",
+      "team": "Real Valladolid CF",
+      "id": "select-laliga-mario-martin"
+    },
+    {
+      "name": "Peque Fernandez",
+      "team": "Sevilla FC",
+      "id": "select-laliga-peque-fernandez"
+    },
+    {
+      "name": "Michel",
+      "team": "Girona FC",
+      "id": "select-laliga-michel"
+    },
+    {
+      "name": "Bernd Schuster",
+      "team": "FC Barcelona",
+      "id": "select-laliga-bernd-schuster"
+    },
+    {
+      "name": "Juan Foyth",
+      "team": "Villarreal CF",
+      "id": "select-laliga-juan-foyth"
+    },
+    {
+      "name": "Joan Martinez",
+      "team": "Real Madrid",
+      "id": "select-laliga-joan-martinez"
+    },
+    {
+      "name": "Rodri Sanchez",
+      "team": "Real Betis",
+      "id": "select-laliga-rodri-sanchez"
+    },
+    {
+      "name": "Adrian Embarba",
+      "team": "Rayo Vallecano",
+      "id": "select-laliga-adrian-embarba"
+    },
+    {
+      "name": "Valencia CF",
+      "team": "Valencia CF",
+      "id": "select-laliga-valencia-cf"
+    },
+    {
+      "name": "RCD Mallorca",
+      "team": "RCD Mallorca",
+      "id": "select-laliga-rcd-mallorca"
+    },
+    {
+      "name": "CD Leganes",
+      "team": "CD Leganes",
+      "id": "select-laliga-cd-leganes"
+    },
+    {
+      "name": "Real Madrid",
+      "team": "Real Madrid",
+      "id": "select-laliga-real-madrid"
+    },
+    {
+      "name": "RC Celta",
+      "team": "RC Celta",
+      "id": "select-laliga-rc-celta"
+    },
+    {
+      "name": "Sevilla FC",
+      "team": "Sevilla FC",
+      "id": "select-laliga-sevilla-fc"
+    },
+    {
+      "name": "Rayo Vallecano",
+      "team": "Rayo Vallecano",
+      "id": "select-laliga-rayo-vallecano"
+    },
+    {
+      "name": "Real Betis",
+      "team": "Real Betis",
+      "id": "select-laliga-real-betis"
+    },
+    {
+      "name": "Getafe CF",
+      "team": "Getafe CF",
+      "id": "select-laliga-getafe-cf"
+    },
+    {
+      "name": "Real Sociedad",
+      "team": "Real Sociedad",
+      "id": "select-laliga-real-sociedad"
+    },
+    {
+      "name": "FC Barcelona",
+      "team": "FC Barcelona",
+      "id": "select-laliga-fc-barcelona"
+    },
+    {
+      "name": "UD Las Palmas",
+      "team": "UD Las Palmas",
+      "id": "select-laliga-ud-las-palmas"
+    },
+    {
+      "name": "CA Osasuna",
+      "team": "CA Osasuna",
+      "id": "select-laliga-ca-osasuna"
+    },
+    {
+      "name": "Athletic Club",
+      "team": "Athletic Club",
+      "id": "select-laliga-athletic-club"
+    },
+    {
+      "name": "D. Alaves",
+      "team": "D. Alaves",
+      "id": "select-laliga-d-alaves"
+    },
+    {
+      "name": "Real Valladolid CF",
+      "team": "Real Valladolid CF",
+      "id": "select-laliga-real-valladolid-cf"
+    },
+    {
+      "name": "Villarreal CF",
+      "team": "Villarreal CF",
+      "id": "select-laliga-villarreal-cf"
+    },
+    {
+      "name": "RCD Espanyol",
+      "team": "RCD Espanyol",
+      "id": "select-laliga-rcd-espanyol"
+    },
+    {
+      "name": "Girona FC",
+      "team": "Girona FC",
+      "id": "select-laliga-girona-fc"
+    },
+    {
+      "name": "Atletico de Madrid",
+      "team": "Atletico de Madrid",
+      "id": "select-laliga-atletico-de-madrid"
+    },
+    {
+      "name": "Cristhian Stuani",
+      "team": "Girona FC",
+      "id": "select-laliga-cristhian-stuani"
+    },
+    {
+      "name": "Stanko Juric",
+      "team": "Real Valladolid CF",
+      "id": "select-laliga-stanko-juric"
+    },
+    {
+      "name": "Sophia Wilson",
+      "team": "United States (WNT)",
+      "id": "obsidian-sophia-wilson"
+    },
+    {
+      "name": "Wesley Fofana",
+      "team": "Chelsea FC",
+      "id": "obsidian-wesley-fofana"
+    },
+    {
+      "name": "Angelo",
+      "team": "Al Nassr FC",
+      "id": "obsidian-angelo"
+    },
+    {
+      "name": "Wesley",
+      "team": "Al Nassr FC",
+      "id": "obsidian-wesley"
+    },
+    {
+      "name": "Pele",
+      "team": "Brazil",
+      "id": "obsidian-pele"
+    },
+    {
+      "name": "Anthony rdon",
+      "team": "England",
+      "id": "obsidian-anthony-rdon"
+    },
+    {
+      "name": "Marquinhos (D)",
+      "team": "Brazil",
+      "id": "obsidian-marquinhos-d"
+    },
+    {
+      "name": "Dida",
+      "team": "Brazil",
+      "id": "obsidian-dida"
+    },
+    {
+      "name": "Carlos Augusto",
+      "team": "FC Internazionale Milano",
+      "id": "obsidian-carlos-augusto"
+    },
+    {
+      "name": "Pascal Gross",
+      "team": "Germany",
+      "id": "obsidian-pascal-gross"
+    },
+    {
+      "name": "Christian Rasmussen",
+      "team": "AFC Ajax",
+      "id": "obsidian-christian-rasmussen"
+    },
+    {
+      "name": "Korbin Albert",
+      "team": "United States (WNT)",
+      "id": "obsidian-korbin-albert"
+    },
+    {
+      "name": "Brandi Chastain",
+      "team": "United States (WNT)",
+      "id": "obsidian-brandi-chastain"
+    },
+    {
+      "name": "Cindy Parlow Cone",
+      "team": "United States (WNT)",
+      "id": "obsidian-cindy-parlow-cone"
+    },
+    {
+      "name": "Danielle Fotopoulos",
+      "team": "United States (WNT)",
+      "id": "obsidian-danielle-fotopoulos"
+    },
+    {
+      "name": "Julie Foudy",
+      "team": "United States (WNT)",
+      "id": "obsidian-julie-foudy"
+    },
+    {
+      "name": "Kate Markgraf",
+      "team": "United States (WNT)",
+      "id": "obsidian-kate-markgraf"
+    },
+    {
+      "name": "Kristine Lilly",
+      "team": "United States (WNT)",
+      "id": "obsidian-kristine-lilly"
+    },
+    {
+      "name": "Lorrie Fair",
+      "team": "United States (WNT)",
+      "id": "obsidian-lorrie-fair"
+    },
+    {
+      "name": "Mia Hamm",
+      "team": "United States (WNT)",
+      "id": "obsidian-mia-hamm"
+    },
+    {
+      "name": "Michelle Akers",
+      "team": "United States (WNT)",
+      "id": "obsidian-michelle-akers"
+    },
+    {
+      "name": "Sara Whalen",
+      "team": "United States (WNT)",
+      "id": "obsidian-sara-whalen"
+    },
+    {
+      "name": "Saskia Webber",
+      "team": "United States (WNT)",
+      "id": "obsidian-saskia-webber"
+    },
+    {
+      "name": "Shannon MacMillan",
+      "team": "United States (WNT)",
+      "id": "obsidian-shannon-macmillan"
+    },
+    {
+      "name": "Tiffany Roberts",
+      "team": "United States (WNT)",
+      "id": "obsidian-tiffany-roberts"
+    },
+    {
+      "name": "Tiffeny Milbrett",
+      "team": "United States (WNT)",
+      "id": "obsidian-tiffeny-milbrett"
+    },
+    {
+      "name": "Tisha Venturini",
+      "team": "United States (WNT)",
+      "id": "obsidian-tisha-venturini"
+    },
+    {
+      "name": "Tracy Noonan",
+      "team": "United States (WNT)",
+      "id": "obsidian-tracy-noonan"
+    },
+    {
+      "name": "Chido Obi",
+      "team": "Manchester United",
+      "id": "topps-ucl-chido-obi"
+    },
+    {
+      "name": "Kevin Zeroli",
+      "team": "AC Milan",
+      "id": "topps-ucl-kevin-zeroli"
+    },
+    {
+      "name": "Viggo Gebel",
+      "team": "RB Leipzig",
+      "id": "topps-ucl-viggo-gebel"
+    },
+    {
+      "name": "Serhou Guirassy",
+      "team": "Borussia Dortmund",
+      "id": "topps-ucl-serhou-guirassy"
+    },
+    {
+      "name": "Unai Hernández",
+      "team": "FC Barcelona",
+      "id": "topps-ucl-unai-hernandez"
+    },
+    {
+      "name": "Minjae Kim",
+      "team": "FC Bayern München",
+      "id": "topps-ucl-minjae-kim"
+    },
+    {
+      "name": "Jamie Bynoe-Gittens",
+      "team": "Borussia Dortmund",
+      "id": "topps-ucl-jamie-bynoe-gittens"
+    },
+    {
+      "name": "Daniel Yañez",
+      "team": "Real Madrid C.F.",
+      "id": "topps-ucl-daniel-yanez"
+    },
+    {
+      "name": "Mattia Liberali",
+      "team": "AC Milan",
+      "id": "topps-ucl-mattia-liberali"
+    },
+    {
+      "name": "Matty Warhurst",
+      "team": "Manchester City",
+      "id": "topps-ucl-matty-warhurst"
+    },
+    {
+      "name": "Gleison Bremer",
+      "team": "Juventus",
+      "id": "topps-ucl-gleison-bremer"
+    },
+    {
+      "name": "Samu Aghehowa",
+      "team": "FC Porto",
+      "id": "topps-ucl-samu-aghehowa"
+    },
+    {
+      "name": "Kjell Wätjen",
+      "team": "Borussia Dortmund",
+      "id": "topps-ucl-kjell-watjen"
+    },
+    {
+      "name": "Justin Oboavwoduo",
+      "team": "Manchester City",
+      "id": "topps-ucl-justin-oboavwoduo"
+    },
+    {
+      "name": "Aingeru Olabarrieta",
+      "team": "Athletic Club",
+      "id": "topps-ucl-aingeru-olabarrieta"
+    },
+    {
+      "name": "Kevin",
+      "team": "FC Shakhtar Donetsk",
+      "id": "topps-ucl-kevin"
+    },
+    {
+      "name": "Trey Nyoni",
+      "team": "Liverpool FC",
+      "id": "topps-ucl-trey-nyoni"
+    },
+    {
+      "name": "Jayden Danns",
+      "team": "Liverpool FC",
+      "id": "topps-ucl-jayden-danns"
+    },
+    {
+      "name": "Isaac Babadi",
+      "team": "PSV Eindhoven",
+      "id": "topps-ucl-isaac-babadi"
+    },
+    {
+      "name": "Ronaldo",
+      "team": "FC Internazionale Milano",
+      "id": "topps-ucl-ronaldo"
+    },
+    {
+      "name": "Ben Broggio",
+      "team": "Aston Villa",
+      "id": "topps-ucl-ben-broggio"
+    },
+    {
+      "name": "Guille Fernández",
+      "team": "FC Barcelona",
+      "id": "topps-ucl-guille-fernandez"
+    },
+    {
+      "name": "Quim Junyent",
+      "team": "FC Barcelona",
+      "id": "topps-ucl-quim-junyent"
+    },
+    {
+      "name": "Reigan Heskey",
+      "team": "Manchester City",
+      "id": "topps-ucl-reigan-heskey"
+    },
+    {
+      "name": "Shea Lacey",
+      "team": "Manchester United",
+      "id": "topps-ucl-shea-lacey"
+    },
+    {
+      "name": "Deco",
+      "team": "FC Porto",
+      "id": "topps-ucl-deco"
+    },
+    {
+      "name": "Petr Cech",
+      "team": "Chelsea FC",
+      "id": "topps-ucl-petr-cech"
+    },
+    {
+      "name": "Rui Costa",
+      "team": "AC Milan",
+      "id": "topps-ucl-rui-costa"
+    },
+    {
+      "name": "Sir Alex Ferguson",
+      "team": "Manchester United",
+      "id": "topps-ucl-sir-alex-ferguson"
+    },
+    {
+      "name": "Kate Abdo",
+      "team": "NO TEAM",
+      "id": "topps-ucl-kate-abdo"
+    },
+    {
+      "name": "Samuel Eto'o",
+      "team": "FC Barcelona",
+      "id": "topps-ucl-samuel-etoo"
+    }
+  ]
+}

@@ -13,12 +13,15 @@ export interface PlayerMedia {
 }
 
 export function mediaKey(name: string): string {
-  return name
+  const normalized = name
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/gu, '')
     .toLowerCase()
     .replace(/[^a-z0-9]+/gu, '-')
     .replace(/^-|-$/gu, '');
+  return {
+    'heung-min-son': 'son-heung-min',
+  }[normalized] ?? normalized;
 }
 
 export function playerMediaFor(name: string): PlayerMedia | undefined {

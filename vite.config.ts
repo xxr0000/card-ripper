@@ -5,7 +5,7 @@ import { sites } from '@openai/sites-vite-plugin'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  // GitHub Pages 默认使用子路径；私有 Vercel 部署可设置 VITE_BASE_PATH=/。
+  // GitHub Pages 默认使用子路径；Sites/Cloudflare 或私有根路径部署设置 VITE_BASE_PATH=/。
   base: process.env.VITE_BASE_PATH || '/card-ripper/',
   plugins: [
     react(),

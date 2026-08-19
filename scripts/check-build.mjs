@@ -7,7 +7,7 @@ const root = fileURLToPath(new URL('../dist/', import.meta.url));
 const limits = {
   applicationBytes: 5 * 1024 * 1024,
   audioBytes: 2 * 1024 * 1024,
-  playerMediaBytes: 15 * 1024 * 1024,
+  playerMediaBytes: 120 * 1024 * 1024,
   javascriptGzipBytes: 350 * 1024,
   cssGzipBytes: 80 * 1024,
 };

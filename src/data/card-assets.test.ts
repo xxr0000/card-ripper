@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { SERIES } from './series';
 import { joinAssetUrl, resolveCardAsset, resolvePlayerMediaAsset } from './card-assets';
 import { PLAYER_MAP } from './players';
+import { mediaKey } from './player-media';
 import type { PulledCard } from '../types';
 
 function card(overrides: Partial<PulledCard> = {}): PulledCard {
@@ -54,5 +55,9 @@ describe('card asset resolution', () => {
       url: '/card-ripper/cards/players/erling-haaland-sm.webp',
       largeUrl: '/card-ripper/cards/players/erling-haaland-lg.webp',
     });
+  });
+
+  it('canonicalizes known same-player name variants', () => {
+    expect(mediaKey('Heung-min Son')).toBe(mediaKey('Son Heung-min'));
   });
 });

@@ -21,7 +21,7 @@ Topps Chrome 的平行概率直接采用官方逐包赔率。未公开的内部�
 npm ci
 npm run dev     # 开发服务器
 npm run build   # 生产构建，输出到 dist/
-npm run check   # lint + 42 项测试 + 类型检查 + 生产构建 + 体积门禁
+npm run check   # lint + 测试 + 类型检查 + 生产构建 + 体积门禁
 ```
 
 调试辅助：
@@ -29,6 +29,7 @@ npm run check   # lint + 42 项测试 + 类型检查 + 生产构建 + 体积门�
 - 访问 `/?preview` 可一次性预览所有系列、所有平行的卡面样式
 - `npm run simulate -- --boxes 10000 --seed 20240818` 输出盒规与官方赔率对表
 - `npm run import-checklist -- ...` 将 CSV/XLSX 规范化为系列独立卡目
+- `npm run media:audit` 核对全量球员媒体尺寸、重复内容、来源清单与回退率
 
 ## 文档
 
@@ -38,15 +39,17 @@ npm run check   # lint + 42 项测试 + 类型检查 + 生产构建 + 体积门�
 - [M2 概率与盒规来源、估算项及模拟报告](docs/M2概率与盒规报告.md)
 - [M6 系列扩展、性能与部署报告](docs/M6-扩展性能与部署报告.md)
 
-## 私有部署
+## 部署
 
-仓库保密后可直接导入 Vercel。项目已包含 `vercel.json`；将环境变量
-`VITE_BASE_PATH` 设为 `/`。不设置该变量时继续使用 GitHub Pages 的
-`/card-ripper/` 子路径。图片随构建产物发布，不需要额外对象存储。
+当前项目通过 `.openai/hosting.json`、Sites Vite 插件和 Cloudflare Worker 静态资源绑定构建；
+`VITE_BASE_PATH=/` 用于根路径托管，不设置时保持 GitHub Pages 的 `/card-ripper/` 子路径兼容。
+`vercel.json` 继续作为私有 Vercel 备选配置。球员图片按需加载并随构建产物发布；M10
+验收完成后仍需用户明确确认，才会更新线上版本。
 
 ## 技术
 
-Vite + React + TypeScript，无后端。卡面全部由代码绘制（CSS + SVG），
+Vite + React + TypeScript，Cloudflare Worker 仅负责静态资源与 SPA 回退。卡面由真实素材与
+代码绘制回退层（CSS + SVG）共同组成，
 余额与收藏数据存于 localStorage。
 
 > 仅供娱乐，卡面为程序生成的致敬设计，与 Panini / Topps 无关。
