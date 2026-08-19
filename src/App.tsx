@@ -22,6 +22,75 @@ import {
 
 type View = 'shop' | 'rip' | 'collection';
 
+function DesignPreviewGallery() {
+  const prizm = SERIES.find((series) => series.id === 'prizm-epl')!;
+  const select = SERIES.find((series) => series.id === 'select-laliga')!;
+  const obsidian = SERIES.find((series) => series.id === 'obsidian')!;
+  const examples: Array<{
+    label: string;
+    note: string;
+    card: PulledCard;
+  }> = [
+    {
+      label: '银色基础框',
+      note: '图片完整收进照片窗，折射只经过边框和底板',
+      card: {
+        uid: 'design-silver', playerId: 'haaland', seriesId: prizm.id,
+        kind: 'base', parallel: prizm.parallels[1], serialNumber: null,
+        rookie: false, pulledAt: 0,
+      },
+    },
+    {
+      label: '蓝色编号框',
+      note: '等级颜色集中在边框，编号单独强化',
+      card: {
+        uid: 'design-numbered', playerId: 'mbappe', seriesId: select.id,
+        kind: 'base', parallel: select.parallels.find((p) => p.id === 'purple99')!, serialNumber: 23,
+        rookie: false, pulledAt: 0,
+      },
+    },
+    {
+      label: '金色低编签名框',
+      note: '签名移到照片外的浅色签名区，始终清晰',
+      card: {
+        uid: 'design-auto', playerId: 'messi', seriesId: obsidian.id,
+        kind: 'auto', parallel: obsidian.autoParallels[2], serialNumber: 3,
+        rookie: false, pulledAt: 0,
+      },
+    },
+    {
+      label: '黑金签物框',
+      note: '物料和签名共用独立认证区，不遮挡人物',
+      card: {
+        uid: 'design-auto-relic', playerId: 'ronaldo', seriesId: obsidian.id,
+        kind: 'auto-relic', parallel: obsidian.autoParallels[3], serialNumber: 1,
+        relicKind: 'patch', rookie: false, pulledAt: 0,
+      },
+    },
+  ];
+
+  return (
+    <main className="design-preview-page">
+      <header className="design-preview-header">
+        <span>Card face direction · review draft</span>
+        <h1>新版卡面边框样例</h1>
+        <p>正式卡面已使用相同结构。请重点确认边框等级、照片占比、签名区和物料区的位置。</p>
+      </header>
+      <section className="design-preview-grid">
+        {examples.map(({ label, note, card }) => (
+          <figure key={card.uid}>
+            <CardFace card={card} size="md" />
+            <figcaption>
+              <strong>{label}</strong>
+              <span>{note}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </section>
+    </main>
+  );
+}
+
 /** 开发用：?preview 一次性渲染各系列/各稀有度卡面 */
 function PreviewGallery() {
   const samples: PulledCard[] = [];
@@ -166,7 +235,11 @@ export default function App() {
   useEffect(() => { saveBalance(balance); }, [balance]);
   useEffect(() => { setStorageWarning(!saveCollection(collection)); }, [collection]);
 
-  if (new URLSearchParams(window.location.search).has('preview')) {
+  const searchParams = new URLSearchParams(window.location.search);
+  if (searchParams.has('design-preview')) {
+    return <DesignPreviewGallery />;
+  }
+  if (searchParams.has('preview')) {
     return <PreviewGallery />;
   }
 

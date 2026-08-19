@@ -528,3 +528,72 @@
   .col-stats { grid-template-columns: repeat(3, 1fr); }
   .rip-tray .card-face { width: 72px; }
 }
+
+/* ===== 独立卡面设计评审页 ===== */
+.design-preview-page {
+  min-height: 100vh;
+  padding: clamp(28px, 6vw, 72px) clamp(18px, 5vw, 64px);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(63, 90, 140, 0.18), transparent 38%),
+    #070a11;
+}
+.design-preview-header {
+  max-width: 780px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+.design-preview-header > span {
+  color: #7c8aa2;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.design-preview-header h1 {
+  margin: 10px 0 8px;
+  color: #f8fafc;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(28px, 4vw, 44px);
+}
+.design-preview-header p {
+  margin: 0;
+  color: #98a4b8;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.design-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(210px, 1fr));
+  gap: clamp(22px, 3vw, 42px);
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.design-preview-grid figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+}
+.design-preview-grid figcaption {
+  width: 210px;
+  text-align: center;
+}
+.design-preview-grid figcaption strong {
+  display: block;
+  color: #edf2f8;
+  font-size: 14px;
+}
+.design-preview-grid figcaption span {
+  display: block;
+  margin-top: 5px;
+  color: #758298;
+  font-size: 12px;
+  line-height: 1.55;
+}
+@media (max-width: 980px) {
+  .design-preview-grid { grid-template-columns: repeat(2, minmax(210px, 1fr)); }
+}
+@media (max-width: 520px) {
+  .design-preview-grid { grid-template-columns: 1fr; }
+}

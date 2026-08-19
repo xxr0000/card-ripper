@@ -8,7 +8,7 @@ import { PLAYER_MAP, TEAM_COLORS } from '../data/players';
 import { SERIES_MAP } from '../data/series';
 import { resolveCardAsset, resolvePlayerMediaAsset } from '../data/card-assets';
 import { effectLevel } from '../engine/rip';
-import type { Player, PulledCard, SeriesConfig } from '../types';
+import type { Player, PulledCard, Rarity, SeriesConfig } from '../types';
 import './CardFace.css';
 
 function initialsOf(name: string): string {
@@ -60,52 +60,77 @@ function RealCardLayer({
   ) : image;
 }
 
-function FallbackCardLayer({
+export const CARD_FRAME_GRADES: Record<Rarity, string> = {
+  base: 'base',
+  shine: 'shine',
+  numbered: 'numbered',
+  'low-numbered': 'low-numbered',
+  super: 'super',
+  'one-of-one': 'one-of-one',
+};
+
+function FramedCardLayer({
   card,
   player,
   series,
-  colors,
+  hasRealImage,
 }: {
   card: PulledCard;
   player: Player;
   series: SeriesConfig;
-  colors: [string, string];
+  hasRealImage: boolean;
 }) {
-  const [c1, c2] = colors;
+  const hasAuto = card.kind === 'auto' || card.kind === 'auto-relic';
+  const hasRelic = card.kind === 'relic' || card.kind === 'auto-relic';
+
   return (
     <>
-      <div className="cf-header">
-        <span className="cf-brand">{series.brand}</span>
-        <span className="cf-series">
-          {series.year} {series.nameEn}
-        </span>
+      <div className="cf-frame-header">
+        <span>{series.brand}</span>
+        <span>{series.year}</span>
       </div>
-      <div className="cf-photo">
-        <svg viewBox="0 0 100 92" className="cf-jersey" aria-hidden>
-          <defs>
-            <linearGradient id={`jg-${card.uid}`} x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor={c1} />
-              <stop offset="100%" stopColor={c2} />
-            </linearGradient>
-          </defs>
-          <path
-            d="M32 8 L14 16 L2 34 L16 44 L22 36 L22 90 L78 90 L78 36 L84 44 L98 34 L86 16 L68 8 Q60 18 50 18 Q40 18 32 8 Z"
-            fill={`url(#jg-${card.uid})`}
-            stroke="rgba(255,255,255,0.35)"
-            strokeWidth="1.5"
-          />
-          <path
-            d="M32 8 Q40 18 50 18 Q60 18 68 8 L62 6 Q50 14 38 6 Z"
-            fill="rgba(255,255,255,0.5)"
-          />
-        </svg>
-        <div className="cf-initials">{initialsOf(player.name)}</div>
-        <div className="cf-pos">{player.position}</div>
+
+      <div className="cf-photo-window">
+        {!hasRealImage && (
+          <div className="cf-photo-fallback">
+            <strong>{initialsOf(player.name)}</strong>
+            <span>{player.position}</span>
+          </div>
+        )}
       </div>
-      <div className="cf-namebar">
-        <div className="cf-name">{player.name}</div>
-        <div className="cf-meta">
-          {player.teamEn}{player.countryEn ? ` · ${player.countryEn}` : ''}
+
+      {card.rookie && <div className="cf-frame-rc">RC</div>}
+
+      <div className={`cf-info-panel ${hasAuto || hasRelic ? 'has-hit' : ''}`}>
+        <div className="cf-player-info">
+          <div>
+            <strong>{player.name}</strong>
+            <span>{player.teamEn} · {player.countryEn} · {player.position}</span>
+          </div>
+        </div>
+
+        {(hasAuto || hasRelic) && (
+          <div className="cf-hit-panel">
+            {hasRelic && (
+              <div className={`cf-relic-panel ${card.relicKind === 'patch' ? 'is-patch' : ''}`}>
+                <span className="cf-relic-swatch" />
+                <small>{card.relicKind === 'patch' ? 'PLAYER-WORN PATCH' : 'MATCH-WORN JERSEY'}</small>
+              </div>
+            )}
+            {hasAuto && (
+              <div className="cf-autograph-panel">
+                <small>CERTIFIED AUTOGRAPH</small>
+                <span>{signatureText(player.name)}</span>
+              </div>
+            )}
+          </div>
+        )}
+
+        <div className="cf-frame-footer">
+          <span>{card.parallel.nameEn}</span>
+          {card.serialNumber !== null && card.parallel.serialTo !== null && (
+            <strong>{pad(card.serialNumber, card.parallel.serialTo)}/{card.parallel.serialTo}</strong>
+          )}
         </div>
       </div>
     </>
@@ -161,8 +186,12 @@ export function CardFace({
 
   return (
     <div
-      className={`card-face theme-${series.design.theme} pstyle-${card.parallel.style} size-${size} fx-${fx} ${hasRealImage ? 'has-real-image' : 'uses-fallback'} ${interactive && motionEnabled ? 'is-interactive' : ''}`}
-      style={{ '--t1': c1, '--t2': c2, '--acc': series.design.accent } as CSSProperties}
+      className={`card-face theme-${series.design.theme} pstyle-${card.parallel.style} grade-${CARD_FRAME_GRADES[card.parallel.rarity]} size-${size} fx-${fx} ${hasRealImage ? 'has-real-image' : 'uses-fallback'} ${interactive && motionEnabled ? 'is-interactive' : ''}`}
+      style={{
+        '--t1': c1,
+        '--t2': c2,
+        '--acc': series.design.accent,
+      } as CSSProperties}
       onPointerMove={handlePointerMove}
       onPointerLeave={resetTilt}
       onPointerCancel={resetTilt}
@@ -181,31 +210,12 @@ export function CardFace({
       <div className="cf-foil" />
       {interactive && motionEnabled && <div className="cf-interactive-holo" />}
       <div className="cf-inner">
-        {!hasRealImage && (
-          <FallbackCardLayer card={card} player={player} series={series} colors={[c1, c2]} />
-        )}
-
-        {card.rookie && <div className="cf-rc">RC</div>}
-
-        {(card.kind === 'relic' || card.kind === 'auto-relic') && (
-          <div className={`cf-relic ${card.relicKind === 'patch' ? 'is-patch' : ''}`}>
-            <div className="cf-relic-swatch" />
-            <span>{card.relicKind === 'patch' ? 'PATCH' : 'JERSEY'}</span>
-          </div>
-        )}
-
-        {(card.kind === 'auto' || card.kind === 'auto-relic') && (
-          <div className="cf-signature">{signatureText(player.name)}</div>
-        )}
-
-        <div className="cf-footer">
-          <span className="cf-parallel">{card.parallel.nameEn}</span>
-          {card.serialNumber !== null && card.parallel.serialTo !== null && (
-            <span className="cf-serial">
-              {pad(card.serialNumber, card.parallel.serialTo)}/{card.parallel.serialTo}
-            </span>
-          )}
-        </div>
+        <FramedCardLayer
+          card={card}
+          player={player}
+          series={series}
+          hasRealImage={hasRealImage}
+        />
       </div>
     </div>
   );
