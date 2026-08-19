@@ -6,7 +6,7 @@ import {
 } from 'react';
 import { PLAYER_MAP, TEAM_COLORS } from '../data/players';
 import { SERIES_MAP } from '../data/series';
-import { resolveCardAsset } from '../data/card-assets';
+import { resolveCardAsset, resolvePlayerMediaAsset } from '../data/card-assets';
 import { effectLevel } from '../engine/rip';
 import type { Player, PulledCard, SeriesConfig } from '../types';
 import './CardFace.css';
@@ -27,18 +27,20 @@ const pad = (n: number, to: number) => String(n).padStart(String(to).length, '0'
 
 function RealCardLayer({
   url,
+  largeUrl,
   alt,
   loaded,
   onLoad,
   onError,
 }: {
   url: string;
+  largeUrl?: string;
   alt: string;
   loaded: boolean;
   onLoad: () => void;
   onError: () => void;
 }) {
-  return (
+  const image = (
     <img
       className={`cf-real-image ${loaded ? 'is-loaded' : ''}`}
       src={url}
@@ -50,6 +52,12 @@ function RealCardLayer({
       onError={onError}
     />
   );
+  return largeUrl ? (
+    <picture>
+      <source media="(min-width: 480px)" srcSet={largeUrl} />
+      {image}
+    </picture>
+  ) : image;
 }
 
 function FallbackCardLayer({
@@ -115,7 +123,9 @@ export function CardFace({
   interactive?: boolean;
   motionEnabled?: boolean;
 }) {
-  const asset = resolveCardAsset(card);
+  const player = PLAYER_MAP[card.playerId];
+  const series = SERIES_MAP[card.seriesId];
+  const asset = resolveCardAsset(card) ?? (player ? resolvePlayerMediaAsset(player) : undefined);
   const [loadedUrl, setLoadedUrl] = useState<string | null>(null);
   const [failedUrl, setFailedUrl] = useState<string | null>(null);
   const assetUrl = asset?.url;
@@ -126,9 +136,8 @@ export function CardFace({
     setFailedUrl(null);
   }, [assetUrl]);
 
-  const player = PLAYER_MAP[card.playerId];
-  const series = SERIES_MAP[card.seriesId];
   if (!player || !series) return null;
+
   const [c1, c2] = TEAM_COLORS[player.team] ?? ['#334155', '#0f172a'];
   const fx = effectLevel(card);
 
@@ -162,6 +171,7 @@ export function CardFace({
       {assetUrl && failedUrl !== assetUrl && (
         <RealCardLayer
           url={assetUrl}
+          largeUrl={'largeUrl' in asset ? asset.largeUrl : undefined}
           alt={`${player.name} ${series.nameEn}`}
           loaded={hasRealImage}
           onLoad={() => setLoadedUrl(assetUrl)}

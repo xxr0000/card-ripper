@@ -3,7 +3,16 @@ import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
 import sharp from 'sharp';
 import { afterEach, describe, expect, it } from 'vitest';
-import { CARD_HEIGHT, CARD_WIDTH, MAX_CARD_BYTES, processAssets } from './assets';
+import {
+  CARD_HEIGHT,
+  CARD_WIDTH,
+  MAX_CARD_BYTES,
+  MAX_PLAYER_LARGE_BYTES,
+  PLAYER_LARGE_HEIGHT,
+  PLAYER_LARGE_WIDTH,
+  processAssets,
+  processResponsiveAsset,
+} from './assets';
 
 const tempDirectories: string[] = [];
 
@@ -30,5 +39,25 @@ describe('asset processing pipeline', () => {
     expect(metadata.height).toBe(CARD_HEIGHT);
     expect(manifest[0].bytes).toBeLessThanOrEqual(MAX_CARD_BYTES);
     expect(JSON.parse(await readFile(resolve(output, 'manifest.json'), 'utf8')).assets).toHaveLength(1);
+  });
+
+  it('creates responsive thumbnail and high-resolution variants within their budgets', async () => {
+    const root = await mkdtemp(resolve(tmpdir(), 'card-ripper-responsive-assets-'));
+    tempDirectories.push(root);
+    const input = resolve(root, 'source.png');
+    const thumbnail = resolve(root, 'sm.webp');
+    const large = resolve(root, 'lg.webp');
+    await sharp({
+      create: { width: 1600, height: 900, channels: 3, background: '#1d4ed8' },
+    }).png().toFile(input);
+
+    const result = await processResponsiveAsset(input, thumbnail, large);
+    const [thumbnailMeta, largeMeta] = await Promise.all([
+      sharp(await readFile(thumbnail)).metadata(),
+      sharp(await readFile(large)).metadata(),
+    ]);
+    expect([thumbnailMeta.width, thumbnailMeta.height]).toEqual([CARD_WIDTH, CARD_HEIGHT]);
+    expect([largeMeta.width, largeMeta.height]).toEqual([PLAYER_LARGE_WIDTH, PLAYER_LARGE_HEIGHT]);
+    expect(result.largeBytes).toBeLessThanOrEqual(MAX_PLAYER_LARGE_BYTES);
   });
 });

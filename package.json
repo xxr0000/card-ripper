@@ -11,6 +11,7 @@
     "test": "vitest run",
     "simulate": "tsx scripts/simulate.ts",
     "assets": "tsx scripts/assets.ts",
+    "player-media": "tsx scripts/player-media.ts --limit 100",
     "import-checklist": "tsx scripts/import-checklist.ts",
     "check": "oxlint && vitest run && npm run build"
   },

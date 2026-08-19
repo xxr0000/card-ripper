@@ -8,6 +8,9 @@ import { CHECKLIST_MAP } from '../src/data/checklists';
 export const CARD_WIDTH = 500;
 export const CARD_HEIGHT = 700;
 export const MAX_CARD_BYTES = 120 * 1024;
+export const PLAYER_LARGE_WIDTH = 1000;
+export const PLAYER_LARGE_HEIGHT = 1400;
+export const MAX_PLAYER_LARGE_BYTES = 300 * 1024;
 const SOURCE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.svg']);
 
 export interface AssetManifestEntry {
@@ -16,6 +19,13 @@ export interface AssetManifestEntry {
   height: number;
   bytes: number;
   sha256: string;
+}
+
+export interface ResponsiveAssetManifestEntry {
+  thumbnailPath: string;
+  largePath: string;
+  thumbnailBytes: number;
+  largeBytes: number;
 }
 
 async function filesBelow(root: string): Promise<string[]> {
@@ -72,6 +82,44 @@ export async function processAssets(
     'utf8',
   );
   return manifest;
+}
+
+/** 为球员摄影图生成小卡与大卡两档资源，避免缩略图下载不必要的大图。 */
+export async function processResponsiveAsset(
+  source: string,
+  thumbnailOutput: string,
+  largeOutput: string,
+): Promise<ResponsiveAssetManifestEntry> {
+  await mkdir(resolve(thumbnailOutput, '..'), { recursive: true });
+  await mkdir(resolve(largeOutput, '..'), { recursive: true });
+  await sharp(source)
+    .resize(CARD_WIDTH, CARD_HEIGHT, { fit: 'cover', position: 'attention' })
+    .webp({ quality: 82, smartSubsample: true })
+    .toFile(thumbnailOutput);
+  await sharp(source)
+    .resize(PLAYER_LARGE_WIDTH, PLAYER_LARGE_HEIGHT, { fit: 'cover', position: 'attention' })
+    .webp({ quality: 84, smartSubsample: true })
+    .toFile(largeOutput);
+  const [thumbnail, large] = await Promise.all([readFile(thumbnailOutput), readFile(largeOutput)]);
+  const [thumbnailMetadata, largeMetadata] = await Promise.all([
+    sharp(thumbnail).metadata(),
+    sharp(large).metadata(),
+  ]);
+  if (thumbnailMetadata.width !== CARD_WIDTH || thumbnailMetadata.height !== CARD_HEIGHT) {
+    throw new Error(`${source}: 缩略图输出尺寸不是 ${CARD_WIDTH}x${CARD_HEIGHT}`);
+  }
+  if (largeMetadata.width !== PLAYER_LARGE_WIDTH || largeMetadata.height !== PLAYER_LARGE_HEIGHT) {
+    throw new Error(`${source}: 大图输出尺寸不是 ${PLAYER_LARGE_WIDTH}x${PLAYER_LARGE_HEIGHT}`);
+  }
+  if (large.byteLength > MAX_PLAYER_LARGE_BYTES) {
+    throw new Error(`${source}: 大图 ${large.byteLength} bytes 超过 ${MAX_PLAYER_LARGE_BYTES} bytes`);
+  }
+  return {
+    thumbnailPath: thumbnailOutput,
+    largePath: largeOutput,
+    thumbnailBytes: thumbnail.byteLength,
+    largeBytes: large.byteLength,
+  };
 }
 
 async function exists(path: string): Promise<boolean> {

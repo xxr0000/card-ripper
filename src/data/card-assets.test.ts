@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { SERIES } from './series';
-import { joinAssetUrl, resolveCardAsset } from './card-assets';
+import { joinAssetUrl, resolveCardAsset, resolvePlayerMediaAsset } from './card-assets';
+import { PLAYER_MAP } from './players';
 import type { PulledCard } from '../types';
 
 function card(overrides: Partial<PulledCard> = {}): PulledCard {
@@ -43,5 +44,15 @@ describe('card asset resolution', () => {
   it('returns no asset for old saves and missing metadata', () => {
     expect(resolveCardAsset(card({ cardId: undefined }), '/')).toBeUndefined();
     expect(resolveCardAsset(card({ cardId: 'base-12' }), '/')).toBeUndefined();
+  });
+
+  it('uses a responsive player photo only after card-specific art is unavailable', () => {
+    const haaland = PLAYER_MAP.haaland;
+    expect(resolvePlayerMediaAsset(haaland, '/card-ripper/')).toMatchObject({
+      thumbnailPath: 'cards/players/erling-haaland-sm.webp',
+      largePath: 'cards/players/erling-haaland-lg.webp',
+      url: '/card-ripper/cards/players/erling-haaland-sm.webp',
+      largeUrl: '/card-ripper/cards/players/erling-haaland-lg.webp',
+    });
   });
 });
