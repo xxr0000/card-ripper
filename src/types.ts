@@ -10,10 +10,16 @@ export type League =
 export interface Player {
   id: string;
   name: string;
+  /** 中文球队名，供商店和收藏册等网页 UI 使用。 */
   team: string;
+  /** 卡面视觉层使用的英文球队名。 */
+  teamEn: string;
   league: League;
   position: string;
+  /** 中文国籍，供网页 UI 使用。 */
   country: string;
+  /** 卡面视觉层使用的英文国籍。 */
+  countryEn: string;
   /** 1 = 顶级巨星, 2 = 球星, 3 = 主力, 4 = 轮换 */
   tier: 1 | 2 | 3 | 4;
   rookie?: boolean;
@@ -30,7 +36,10 @@ export type Rarity =
 
 export interface Parallel {
   id: string;
+  /** 中文平行名称，供网页 UI 使用。 */
   name: string;
+  /** 卡面视觉层使用的英文平行名称。 */
+  nameEn: string;
   /** null = 不带编 */
   serialTo: number | null;
   /** 仅用于同一盒槽位内的估算分配；出现频率由 odds.ts 的槽位/赔率决定。 */
@@ -53,7 +62,10 @@ export interface SeriesDesign {
 export interface SeriesConfig {
   id: string;
   brand: string;
+  /** 中文系列名，供商店和拆包界面使用。 */
   name: string;
+  /** 卡面视觉层使用的完整英文产品名。 */
+  nameEn: string;
   year: string;
   /** 简介，显示在商店 */
   blurb: string;

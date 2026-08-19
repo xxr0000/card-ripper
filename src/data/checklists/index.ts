@@ -128,9 +128,11 @@ function toPlayers(seriesId: string, subjects: ChecklistSubject[]): Player[] {
       id: subject.playerId,
       name: subject.playerName,
       team: subject.teamEn,
+      teamEn: subject.teamEn,
       league: leagueFor(seriesId, subject.teamEn),
       position: '',
       country: subject.countryEn ?? '',
+      countryEn: subject.countryEn ?? '',
       tier: 4,
       rookie: subject.rookie,
     });

@@ -69,7 +69,7 @@ function FallbackCardLayer({
       <div className="cf-header">
         <span className="cf-brand">{series.brand}</span>
         <span className="cf-series">
-          {series.year} {series.name}
+          {series.year} {series.nameEn}
         </span>
       </div>
       <div className="cf-photo">
@@ -97,7 +97,7 @@ function FallbackCardLayer({
       <div className="cf-namebar">
         <div className="cf-name">{player.name}</div>
         <div className="cf-meta">
-          {player.team}{player.country ? ` · ${player.country}` : ''}
+          {player.teamEn}{player.countryEn ? ` · ${player.countryEn}` : ''}
         </div>
       </div>
     </>
@@ -162,7 +162,7 @@ export function CardFace({
       {assetUrl && failedUrl !== assetUrl && (
         <RealCardLayer
           url={assetUrl}
-          alt={`${player.name} ${series.name}`}
+          alt={`${player.name} ${series.nameEn}`}
           loaded={hasRealImage}
           onLoad={() => setLoadedUrl(assetUrl)}
           onError={() => setFailedUrl(assetUrl)}
@@ -189,7 +189,7 @@ export function CardFace({
         )}
 
         <div className="cf-footer">
-          <span className="cf-parallel">{card.parallel.name}</span>
+          <span className="cf-parallel">{card.parallel.nameEn}</span>
           {card.serialNumber !== null && card.parallel.serialTo !== null && (
             <span className="cf-serial">
               {pad(card.serialNumber, card.parallel.serialTo)}/{card.parallel.serialTo}

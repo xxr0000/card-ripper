@@ -1,5 +1,18 @@
 import type { Parallel, SeriesConfig } from '../types';
 
+const ENGLISH_PARALLEL_LABELS: Record<string, string> = {
+  '底卡': 'Base', '银折 Silver Prizm': 'Silver Prizm', '蓝折 Blue Prizm': 'Blue Prizm', '红折 Red Prizm': 'Red Prizm',
+  '金折': 'Gold Prizm', '签名卡': 'Autograph', '蓝折签名': 'Blue Prizm Autograph', '金折签名': 'Gold Prizm Autograph',
+  '黑金签名': 'Black Gold Autograph', '球衣物料卡': 'Memorabilia', 'Patch 物料卡': 'Patch Memorabilia', '队徽 Patch': 'Logo Patch',
+  'Terrace 底卡': 'Terrace Base', 'Mezzanine 底卡': 'Mezzanine Base', 'Field Level 底卡': 'Field Level Base',
+  '银折 Silver': 'Silver Prizm', '紫折 Purple': 'Purple Prizm', 'Tie-Dye 扎染': 'Tie-Dye Prizm', '黑折 1/1': 'Black Prizm 1/1',
+  '紫折签名': 'Purple Prizm Autograph', '扎染签名': 'Tie-Dye Autograph', '黑折签名': 'Black Prizm Autograph',
+  '绿电签名': 'Electric Etch Green Autograph', '红电签名': 'Electric Etch Red Autograph', 'Contra 签名 1/1': 'Contra Autograph 1/1',
+  'Refractor 折射': 'Refractor', '金折射': 'Gold Refractor', '橙折射': 'Orange Refractor',
+  '金折射签名': 'Gold Refractor Autograph', '红折射': 'Red Refractor', '红折射签名': 'Red Refractor Autograph',
+  'SuperFractor 签名 1/1': 'SuperFractor Autograph 1/1',
+};
+
 const par = (
   id: string,
   name: string,
@@ -7,13 +20,14 @@ const par = (
   weight: number,
   rarity: Parallel['rarity'],
   style: string,
-): Parallel => ({ id, name, serialTo, weight, rarity, style });
+): Parallel => ({ id, name, nameEn: ENGLISH_PARALLEL_LABELS[name] ?? name, serialTo, weight, rarity, style });
 
 export const SERIES: SeriesConfig[] = [
   {
     id: 'prizm-epl',
     brand: 'Panini',
     name: 'Prizm 英超',
+    nameEn: 'Prizm Premier League',
     year: '2024-25',
     blurb: '最受欢迎的折射系列，银折保值，Color Blast 为箱级大热门。',
     price: 3880,
@@ -68,6 +82,7 @@ export const SERIES: SeriesConfig[] = [
     id: 'select-laliga',
     brand: 'Panini',
     name: 'Select 西甲',
+    nameEn: 'Select LaLiga',
     year: '2024-25',
     blurb: '分层底卡设计（Terrace / Field / Stadium），Tie-Dye 扎染人气极高。',
     price: 2680,
@@ -117,6 +132,7 @@ export const SERIES: SeriesConfig[] = [
     id: 'obsidian',
     brand: 'Panini',
     name: 'Obsidian 黑曜石（全球）',
+    nameEn: 'Obsidian Soccer',
     year: '2024-25',
     blurb: '高端黑底系列，收录梅西、C罗等全球巨星，全部底卡带编，签物含量极高。',
     price: 2280,
@@ -158,6 +174,7 @@ export const SERIES: SeriesConfig[] = [
     id: 'topps-ucl',
     brand: 'Topps',
     name: 'Chrome 欧冠',
+    nameEn: 'Topps Chrome UEFA Club Competitions',
     year: '2024-25',
     blurb: '欧冠正版授权，Refractor 折射经典配色，入门首选性价比之王。',
     price: 1580,

@@ -10,6 +10,7 @@ const card: PulledCard = {
   parallel: {
     id: 'base',
     name: '底卡',
+    nameEn: 'Base',
     serialTo: null,
     weight: 1,
     rarity: 'base',

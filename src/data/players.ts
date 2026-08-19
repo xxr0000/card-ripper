@@ -1,6 +1,26 @@
 import type { Player } from '../types';
 import { CHECKLIST_PLAYERS } from './checklists';
 
+const TEAM_EN: Record<string, string> = {
+  曼城: 'Manchester City', 利物浦: 'Liverpool FC', 阿森纳: 'Arsenal', 切尔西: 'Chelsea FC',
+  曼联: 'Manchester United', 热刺: 'Tottenham Hotspur', 纽卡斯尔: 'Newcastle United',
+  阿斯顿维拉: 'Aston Villa', 西汉姆联: 'West Ham United', 布伦特福德: 'Brentford', 布莱顿: 'Brighton & Hove Albion',
+  皇家马德里: 'Real Madrid', 巴塞罗那: 'FC Barcelona', 马德里竞技: 'Atletico de Madrid',
+  毕尔巴鄂竞技: 'Athletic Club', 皇家社会: 'Real Sociedad', 皇家贝蒂斯: 'Real Betis', 比利亚雷亚尔: 'Villarreal CF',
+  拜仁慕尼黑: 'FC Bayern München', 勒沃库森: 'Bayer 04 Leverkusen', RB莱比锡: 'RB Leipzig', 多特蒙德: 'Borussia Dortmund',
+  国际米兰: 'Inter Milan', AC米兰: 'AC Milan', 那不勒斯: 'SSC Napoli', 尤文图斯: 'Juventus', 罗马: 'AS Roma',
+  巴黎圣日耳曼: 'Paris Saint-Germain', 里昂: 'Olympique Lyonnais', 摩纳哥: 'AS Monaco',
+  迈阿密国际: 'Inter Miami CF', 利雅得胜利: 'Al Nassr FC', 利雅得新月: 'Al Hilal', 吉达联合: 'Al Ittihad',
+};
+
+const COUNTRY_EN: Record<string, string> = {
+  挪威: 'Norway', 比利时: 'Belgium', 英格兰: 'England', 西班牙: 'Spain', 克罗地亚: 'Croatia', 巴西: 'Brazil',
+  埃及: 'Egypt', 荷兰: 'Netherlands', 匈牙利: 'Hungary', 乌拉圭: 'Uruguay', 德国: 'Germany', 法国: 'France',
+  塞内加尔: 'Senegal', 葡萄牙: 'Portugal', 丹麦: 'Denmark', 瑞典: 'Sweden', 阿根廷: 'Argentina', 喀麦隆: 'Cameroon',
+  韩国: 'South Korea', 日本: 'Japan', 加纳: 'Ghana', 土耳其: 'Turkey', 波兰: 'Poland', 斯洛文尼亚: 'Slovenia', 尼日利亚: 'Nigeria',
+  加拿大: 'Canada', 意大利: 'Italy', 格鲁吉亚: 'Georgia', 塞尔维亚: 'Serbia', 摩洛哥: 'Morocco', 美国: 'United States',
+};
+
 const p = (
   id: string,
   name: string,
@@ -10,7 +30,18 @@ const p = (
   country: string,
   tier: Player['tier'],
   rookie?: boolean,
-): Player => ({ id, name, team, league, position, country, tier, rookie });
+): Player => ({
+  id,
+  name,
+  team,
+  teamEn: TEAM_EN[team] ?? team,
+  league,
+  position,
+  country,
+  countryEn: COUNTRY_EN[country] ?? country,
+  tier,
+  rookie,
+});
 
 export const PLAYERS: Player[] = [
   // ===== 英超 =====
