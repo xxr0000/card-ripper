@@ -1,0 +1,291 @@
+{
+  "assets": [
+    {
+      "path": "cards/prizm-epl/base-1.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 28134,
+      "sha256": "2a88357aea13c52ac0c6a14f87a155e8cae409e02fe92344de3efee650042714"
+    },
+    {
+      "path": "cards/prizm-epl/base-10.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 30286,
+      "sha256": "f6c59b5525f3fdd1b6aab8dcca5b068ac0a2200791654b17cf0aebc51e66baeb"
+    },
+    {
+      "path": "cards/prizm-epl/base-2.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 29332,
+      "sha256": "134d98e298a568288de52417e1dd75d0b34cd8b0ed8ff9f61d39b40a854905f9"
+    },
+    {
+      "path": "cards/prizm-epl/base-21.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 26920,
+      "sha256": "68bbbbc6c613d94ef5fd725a9f65281d298ba04df35b7a613bdb49e35a5d89ed"
+    },
+    {
+      "path": "cards/prizm-epl/base-22.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 27948,
+      "sha256": "911ce5aea2d2806e32734b49f155571ac574b1db337cf24a61ec7750f60c795e"
+    },
+    {
+      "path": "cards/prizm-epl/base-23.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 27732,
+      "sha256": "a37d12269fa497b25363f3cce3c8b6432571bda258d06ddb80d03710b588585d"
+    },
+    {
+      "path": "cards/prizm-epl/base-24.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 28680,
+      "sha256": "63aa573dab8ddcad843a5d6de999f56a2331fe7147a3d628ada0665fd2bb5dbc"
+    },
+    {
+      "path": "cards/prizm-epl/base-25.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 34464,
+      "sha256": "5bf7bd1ad9d89bb9bdf8272f25e3a4f2163b43549453c14a0131f5437c74adf4"
+    },
+    {
+      "path": "cards/prizm-epl/base-26.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 32028,
+      "sha256": "ca0868307d69954f040dc7ea92e450fd3284bdd82a1a85b5730aa01cd034f732"
+    },
+    {
+      "path": "cards/prizm-epl/base-27.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 32200,
+      "sha256": "a42938c2413f107a9cfbfc262b6db3160c0377c215e873367a6697a92ac4951b"
+    },
+    {
+      "path": "cards/prizm-epl/base-271.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 31338,
+      "sha256": "ed237b20c73b3f370844e9a5930a895e83d1821b45c4e7ef922b7f06c1c680b0"
+    },
+    {
+      "path": "cards/prizm-epl/base-272.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 26756,
+      "sha256": "553de93b6297663b4f6bc3ad828b822b8fd3a26fa3c017c320a0f9ceac5c715f"
+    },
+    {
+      "path": "cards/prizm-epl/base-273.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 29796,
+      "sha256": "973c78d83a9f95522cff1068eb810e6af27179d8b9aea25cbc3a0d3a15308d6f"
+    },
+    {
+      "path": "cards/prizm-epl/base-274.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 24152,
+      "sha256": "542f517521f7ac19818f025b6a1fe2159d58802a6205385c7c5745ea500f1762"
+    },
+    {
+      "path": "cards/prizm-epl/base-275.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 25124,
+      "sha256": "61869566c136135714c6fb0171050bcb1523d89468d444ccda77f9acc5391a89"
+    },
+    {
+      "path": "cards/prizm-epl/base-276.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 27430,
+      "sha256": "aa93f5f463067573fd8f0877333e1fc65728ff6365f30d6eebdd81f57e79d7aa"
+    },
+    {
+      "path": "cards/prizm-epl/base-277.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 33220,
+      "sha256": "928427a571037b3b46719c698a12d6221bb3a4ad0a7c4159657ef2ff3b0cdc92"
+    },
+    {
+      "path": "cards/prizm-epl/base-278.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 27126,
+      "sha256": "197bc047e43d2542ffc4db66a0cfb800135b0dfbec99811c46ad8379c6f49ce6"
+    },
+    {
+      "path": "cards/prizm-epl/base-279.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 26982,
+      "sha256": "9751cc62b468c6c1be4e6dbb5fc341be7abf0923dd98bb731de2e8c9c51c9e73"
+    },
+    {
+      "path": "cards/prizm-epl/base-28.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 31404,
+      "sha256": "b519173147acb6ef78685619b3d3fab9155c2d8fa5da41e4993873fa2fbb92d7"
+    },
+    {
+      "path": "cards/prizm-epl/base-280.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 25488,
+      "sha256": "a5828143c7d574dc91c6a2f390acf93cc6ca3f60707b58c620f25391270b2836"
+    },
+    {
+      "path": "cards/prizm-epl/base-29.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 28502,
+      "sha256": "ee801ce74d8449d14c187078dd8eb97c6d55e176ebafb1e36e0b3a98e1bb1688"
+    },
+    {
+      "path": "cards/prizm-epl/base-3.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 27444,
+      "sha256": "ebf9e2776b86fd349703a36fef15f6cec83e16a3a2cc55124fc060b6ebfb5542"
+    },
+    {
+      "path": "cards/prizm-epl/base-4.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 28420,
+      "sha256": "efded9891ff6dc4d9b4a2dcde2d314973a2dba194f04e942c2e3a6ddc2e0557e"
+    },
+    {
+      "path": "cards/prizm-epl/base-41.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 27194,
+      "sha256": "bbd537d693bb37770b292f1548f029efe268d851fcef652ef4d54d9c1fa4cf93"
+    },
+    {
+      "path": "cards/prizm-epl/base-42.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 26810,
+      "sha256": "561a9a3d5494dec81f6ee652bcfca6a86e3a9dce2a7815ff7d73a68c83a900cb"
+    },
+    {
+      "path": "cards/prizm-epl/base-43.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 30116,
+      "sha256": "98e251fd4321cc5339b0608cd13ea8e0e004e209dcc11decc004ab1ef53ab1ee"
+    },
+    {
+      "path": "cards/prizm-epl/base-44.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 25704,
+      "sha256": "5c00eeb72bc40b0b895162f69e2ec1c39345cce4a7824950c9dc65c83ee98837"
+    },
+    {
+      "path": "cards/prizm-epl/base-45.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 27202,
+      "sha256": "f92bcfe32f3246a62f92a8e16086f55ef0a173c29d40f7664b89a01199a21147"
+    },
+    {
+      "path": "cards/prizm-epl/base-46.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 24308,
+      "sha256": "4b527660d1c20e8cc1a533cdd01edadc0042402ea6de97e0b3864e892a285c94"
+    },
+    {
+      "path": "cards/prizm-epl/base-47.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 27526,
+      "sha256": "946dabd44dd6ef53031c75bd28f04155b75fd94eb3437c1dc06ff69764600ae0"
+    },
+    {
+      "path": "cards/prizm-epl/base-48.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 25582,
+      "sha256": "d7471fc4c7624dd607c7df97bb0a3bc2a69046814875c6bbe0caa0db207f802e"
+    },
+    {
+      "path": "cards/prizm-epl/base-49.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 31036,
+      "sha256": "7d8ed697d4a32b11bcc38f8ca2bc29b188a017fcc29081c119a2936fb778bc02"
+    },
+    {
+      "path": "cards/prizm-epl/base-5.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 27394,
+      "sha256": "9b42074c6fa9b2890a2a7ed33dad19a4f30db6903c6cf13283e259e909a39e4d"
+    },
+    {
+      "path": "cards/prizm-epl/base-50.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 27108,
+      "sha256": "45b5cdf0b6bbdd67ea4a54d33d6ba8cbad53f4a9138963a7c9354134831b610c"
+    },
+    {
+      "path": "cards/prizm-epl/base-6.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 26074,
+      "sha256": "cd7c731daa02f2d4062918092bddee48dfa2024e37ccdecef9711a7a02b708d5"
+    },
+    {
+      "path": "cards/prizm-epl/base-7.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 30930,
+      "sha256": "8ab3426450b29f6e72308f2c5b397a7c77c629bfd4afe0a761e33e3fe1461aaa"
+    },
+    {
+      "path": "cards/prizm-epl/base-8.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 26860,
+      "sha256": "5cc9f5851b9f74d82bbfa271820de5f9d20e2bbc4cf869b89fbabbba641185c9"
+    },
+    {
+      "path": "cards/prizm-epl/base-9.auto.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 15642,
+      "sha256": "b4b2cd0228bca89e9f0ef9b4089d6bb41f932aaf7b386f963cdc26529101344c"
+    },
+    {
+      "path": "cards/prizm-epl/base-9.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 34566,
+      "sha256": "3cb0288027dc51e322bc1a1651b2db0a111000bfe2b6fbb5ae4548f1e2a7eb7e"
+    },
+    {
+      "path": "cards/prizm-epl/base-9.relic.webp",
+      "width": 500,
+      "height": 700,
+      "bytes": 14862,
+      "sha256": "0928785019ae25cbc1d47e64b8aa44e601930e83312b964798c75c1bd2b5828c"
+    }
+  ]
+}
